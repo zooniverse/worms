@@ -39,10 +39,11 @@ class Game
 			console.log "current subject is #{@currentSubject}"
 			if @currentSubject?
 				previousGame = @currentSubject.randomPrevious()
-				console.log "previous game is previousGame", previousGame
 				if previousGame?
 					@teamMateTimes = previousGame.times
 					@otherPlayer   = previousGame.name
+				else
+					@score = 200
 			else
 				alert('out of subjects')
 			Spine.trigger("gameSetup")
@@ -56,7 +57,7 @@ class Game
 		if Math.abs(time1 - time2)  < 1000
 			points = 20
 			@score += points 
-			Spine.trigger('score', {points: points, totalScore: @score, message: 'great!'}) 
+			Spine.trigger('score', {points: points, totalScore: @score, message: 'great!', playerTime: time1, otherPlayerTime: time2}) 
 			console.log "scoring high"
 
 		else if Math.abs(time1 - time2)  < 2000
@@ -82,7 +83,7 @@ class Game
 		# @socket.emit 'timeMarked', ({user_id: User.current.id, time: diff})	 
 		@times.push diff 
 		@compareTimes(diff, timeO) for timeO in @teamMateTimes
-		time.diff(@startTime)
+		time.diff(@startTime, 'seconds', true)
 
 	@requestJoin:->
 		if User.current?

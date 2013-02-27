@@ -13,7 +13,7 @@
 	<% if @gameStatus == 'waiting' or !@gameStatus? : %>
 		<a class='button'> Click to start a game </a>
 	<%else : %>
-		<p> Press space if you see the worm lay an egg </p>
+		<p class='message'> Press space if you see the worm lay an egg </p>
 	<%end%>
 </div>
 
@@ -21,8 +21,8 @@
 <div class='players'>
 	<div class='player1 player'>
 		<% if @player1? : %>
-			<p class='name'> <%=@player1.name%>  <span class=score>0</span></p> 
-			<p class='times'></p>
+			<p class='name'> <%=@player1.name%>  <span class=score><%=@score%></span></p> 
+			<div class='times'></div>
 		<% else : %>
 			<p class='name'> Sign in to play</p>
 		<% end %>
@@ -31,6 +31,7 @@
 	<div class='player2 player'>
 		<% if @player2? : %>
 			<p class='name'> <%=@player2%> </p>
+			<div class='times'></div>
 		<%else : %>
 			<p class='name'>First spotter!</p>
 			<p class='time'>You are the first person to see this worm! You get a 200 point spotter award</p>

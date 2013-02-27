@@ -12,8 +12,8 @@ class PeerClassificationController extends Spine.Controller
     '.countdown' : 'countdown'
     '.message'   : 'messageBox'
     '.score'     : 'scoreBox'
-    '.times'     : 'times'
-
+    '.player1 .times'     : 'p1Times'
+    '.player2 .times'     : 'p2Times'
   events:
     'click .button' : "startGame"
 
@@ -41,17 +41,18 @@ class PeerClassificationController extends Spine.Controller
     ,200
 
   score:(data)=>
-    @scoreBox.html "Score: #{data.totalScore}"
-    @message("+ #{data.points} #{data.message}")
-   
+    @scoreBox.html "#{data.totalScore}"
+    @p2Times.append("<p class='time'> <span>Match at :</span> #{data.otherPlayerTime} s </p>  ")
+    @message("You matched with #{Game.otherPlayer} earn #{data.points}!")
+    
 
   markEvent:(e)=>
-    if e.keyCode == 32
+    if e.keyCode == 32 and Game.status=='playing'
       e.preventDefault()
 
       time = Game.markTime( moment() )
       @refreshElements()
-      @times.append( "<p class='time'> #{time}, </p> " )
+      @p1Times.append( "<p class='time'> <span>Egg at :</span> #{time} s</p>  " )
 
 
   message:(text)=>
@@ -85,7 +86,14 @@ class PeerClassificationController extends Spine.Controller
 
 
   saveClassification:=>
+    @finalScoreMessage()
     Game.saveClassification()
+
+  finalScoreMessage:=>
+    if Game.otherPlayer?
+      @messageBox.html("You marked #{Game.times} eggs and #{Game.otherPlayer.length} marked #{Game.teamMateTimes.length} eggs.")
+    else
+      @messageBox.html("You marked #{Game.times.length} eggs. Click finish to see another video!")  
 
   startVideo:(e)=>
 
@@ -106,6 +114,7 @@ class PeerClassificationController extends Spine.Controller
       player1     : User.current
       player2     : Game.otherPlayer
       gameStatus  : Game.status
+      score       : Game.score
       
 
     @refreshElements()
