@@ -1,0 +1,46 @@
+<div class='section wormSeciton'>
+
+	<img src='images/worm.png'></img>
+	<div class='details'>
+			<h3 class='name'>unc-38</h3>
+			<p>This nematod's sense of coordination has been affected by a genetic alteration</p>
+	</div>
+</div>
+
+
+
+<div class='bubble section prompt'>
+	<% if @gameStatus == 'waiting' or !@gameStatus? : %>
+		<a class='button'> Click to start a game </a>
+	<%else : %>
+		<p> Press space if you see the worm lay an egg </p>
+	<%end%>
+</div>
+
+
+<div class='players'>
+	<div class='player1 player'>
+		<% if @player1? : %>
+			<p class='name'> <%=@player1.name%>  <span class=score>0</span></p> 
+			<p class='times'></p>
+		<% else : %>
+			<p class='name'> Sign in to play</p>
+		<% end %>
+	</div>
+
+	<div class='player2 player'>
+		<% if @player2? : %>
+			<p class='name'> <%=@player2%> </p>
+		<%else : %>
+			<p class='name'>First spotter!</p>
+			<p class='time'>You are the first person to see this worm! You get a 200 point spotter award</p>
+		<%end%>
+	</div>
+</div>
+
+
+<div class='buttons'>
+	<button class='favourite'>Favourite</button>
+	<button class='discuss'>Discuss</button>
+	<button class='Finished'>Finished</button>
+</div>

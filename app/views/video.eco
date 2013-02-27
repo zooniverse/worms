@@ -1,0 +1,8 @@
+<div style= 'position:absolute; top: 0px; left:0px 'class='countdown'></div>
+<%console.log @%>
+<div class='videoContainer'>
+	<% if @subject? : %>
+		<video src='<%=@subject.location.standard %>'> </video>
+	<% end %>
+</div>
+	

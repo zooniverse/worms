@@ -1,0 +1,21 @@
+{
+  "dependencies": [
+    "es5-shimify", 
+    "json2ify", 
+    "jqueryify", 
+    "spine",
+    "spine/lib/local",
+    "spine/lib/ajax",
+    "spine/lib/route",
+    "spine/lib/manager",
+    "underscore",
+    "zooniverse/lib/controllers/top_bar",
+    "zooniverse"
+
+  ],
+
+  "libs": [
+    "node_modules/Zooniverse/vendor/base64.js"
+  ],
+  "minify": false 
+}
