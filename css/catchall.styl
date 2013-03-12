@@ -1,0 +1,212 @@
+.homeController
+  color: #ffffff
+  text-shadow: 0 1px 0 #0089c8
+  padding-top:100px
+  h1 
+    font-size: 30px 
+    font-weight: bold 
+  h3 
+    font-size: 22px
+    font-weight: bold
+  p
+    font-size: 14px
+
+  .left
+    display:inline-block
+    vertical-align: middle
+    width: 400px
+    text-align: center
+    position: relative
+    .details
+      display: inline-block;
+      vertical-align: middle;
+      width: 80px;
+      margin-right: 30px;
+      text-align: right;
+    img 
+      display:inline-block
+      vertical-align: middle
+    p
+      font-weight: bold
+
+  .right
+    display: inline-block
+    vertical-align: middle
+    width: 540px
+
+    h1
+      margin: 0 0 30px 0
+
+    p
+      font-size: 16px
+      font-weight: 700
+      line-height: 1.5em
+      margin-bottom: 40px
+
+ul
+  list-style: none 
+  margin: 0px
+  padding: 0px
+
+#app > header
+  color: white
+  font-size: 12px
+  font-weight: 700
+  margin-top: 80px
+  text-shadow: 0 1px 0 rgba(#000, 0.6)
+
+  .logo
+    float: left
+    padding: 8px
+
+  ul
+    margin: 0 auto
+    text-align: right
+    width: 1000px
+
+    li
+      border-radius: 30px
+      box-sizing: border-box
+      display: inline-block
+      cursor: pointer
+      height: 30px
+      line-height: 30px
+      text-align: center
+      vertical-align: top
+      width: 100px
+
+      &.active 
+        background-color: #0383AF
+
+      a
+        color: #fff
+        display: block
+        text-decoration: none
+
+    &.selected 
+      background-color: #0384B0
+
+.peerClassifier
+  width: 1000px
+  height: 47px
+  margin-top: 100px
+
+  .left 
+    width: 575px
+    height: 432px
+    padding: 0px 40px 20px 20px
+    display: inline-block
+    vertical-align: top_bar
+    position: relative
+
+    .videoContainer
+      position: absolute
+      top: 0px
+      left: 0px
+      width: 575px
+      height: 432px
+      border: 2px solid black
+      z-index: 0
+      video 
+        width: 575px
+        height: 432px
+      
+    .countdown
+      width: 575px
+      height: 432px
+      z-index:1 
+      font-size: 350px
+      text-align: center 
+      color: white
+      position: absolute
+      top: 0px
+      left: 0px
+
+  .right
+    color: white
+    display: inline-block
+    text-shadow: 1px 1px #333
+    vertical-align: top
+    width: 360px
+
+    a.button
+      border: 1px solid #00b1f3
+      border-radius: 50x
+      height: 50px
+      line-height: 50px
+      margin: 20px 0
+      width: 100%
+
+    .prompt 
+      text-shadow: none
+      font-size: 22px
+      box-shadow: 1px 1px solid rgba(0,0,0,0.6)
+
+    .wormSeciton  
+      width: 100%
+
+      padding: 15px 0px 15px 0px
+      border-top: 1px solid #0283AF
+      border-bottom: 1px solid #0283AF
+      img 
+        display: inline-block
+        vertical-align: top
+        padding:0px
+        margin:0px
+        margin-right:10wpx
+      .details
+        display: inline-block
+        vertical-align: top
+        width: 285px
+        h3
+          padding: 0px
+          margin: 0px
+        p
+          font-size: 12px
+          margin-top: 0px
+    .players
+      border-top: 1px solid #0283AF 
+      border-bottom: 1px solid #0283AF 
+      height: 196px 
+      padding:  0px
+      .player
+        display: inline-block
+        vertical-align: top
+        width: 170px
+        padding: 10px 0px  0px 20px
+        margin: 0px
+        height: 100%
+        border-box()
+        &:first-child 
+          border-right: 1px solid #0283AF 
+        .name
+          color : #003140
+          font-size: 12px
+          font-weight: 700
+          text-shadow: none
+    .times
+      overflow-y: hidden
+      .time
+        font-size: 12px
+        span
+          color: black
+    .score
+      font-size: 12px
+      color: white
+      margin-left: 40px
+
+    .buttons
+      margin-top: 23px
+      button 
+        height: 30px
+        border-box()
+        border-box 1px white inset, 1px 1px solid rgba(0,0,0,0.6)
+        min-width: 100px
+        text-align: center
+        color: #003140
+        border-radius(2px)
+        background-color: #EBF2F7
+        border: none
+        cursor: pointer
+        &:last-child 
+          margin-left: 40px

@@ -8,13 +8,15 @@
     "spine/lib/route",
     "spine/lib/manager",
     "underscore",
-    "zooniverse/lib/controllers/top_bar",
-    "zooniverse"
-
+    "zooniverse/controllers/footer",
+    "zooniverse/controllers/top-bar",
+    "zooniverse/lib/api",
+    "zooniverse/models/subject",
+    "zooniverse/models/user"
   ],
 
   "libs": [
-    "node_modules/Zooniverse/vendor/base64.js",
+    "node_modules/zooniverse/vendor/base64.js",
     "./lib/jquery.js",
     "./lib/moment.js"
   ],

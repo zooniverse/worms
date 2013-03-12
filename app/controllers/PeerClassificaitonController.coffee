@@ -1,9 +1,11 @@
-User    = require('zooniverse/lib/models/user')
-Game    = require('models/Game')
-Subject = require('models/Subject')
+User    = require 'zooniverse/models/user'
+
+Game    = require 'models/Game'
+Subject = require 'models/Subject'
 
 class PeerClassificationController extends Spine.Controller
   className: 'peerClassifier'
+
   elements:
     '.left'      : 'left'
     '.right'     : 'right'
@@ -13,11 +15,11 @@ class PeerClassificationController extends Spine.Controller
     '.score'     : 'scoreBox'
     '.player1 .times'     : 'p1Times'
     '.player2 .times'     : 'p2Times'
+
   events:
     'click .button' : "startGame"
 
-
-  constructor:->
+  constructor: ->
     super 
     @render()
     User.bind('sign-in', @renderStats)

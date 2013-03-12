@@ -1,7 +1,7 @@
-Spine = require 'spine'
 Api = require 'zooniverse/lib/api'
+User = require 'zooniverse/models/user'
+
 Subject = require 'models/Subject'
-User = require 'zooniverse/lib/models/user'
 
 class Classification extends Spine.Model
   @configure 'Classification', 'subject_id', 'annotations', 'workflow_id'

@@ -1,0 +1,64 @@
+::selection
+  background: #0089c8
+
+html, body 
+  margin: 0px
+  padding: 0px 
+
+body
+  background: #01bbff url(images/bg-site.png) repeat
+  font-family: "Helvetica Neue, Helvetica", Arial, sans-serif
+
+  > .background
+    background: url(images/background.png) center
+    height: 720px
+    left: calc(50% \- ($site-width / 2))
+    left: -webkit-calc(50% \- ($site-width / 2))
+    margin: 0 auto
+    position: absolute
+    top: 0
+    width: $site-width
+    z-index: -1
+
+  > footer
+    background: #16c0ff url(images/bg-footer.png) repeat
+    border-top: 1px solid #00b5f8
+    border-bottom: 22px solid #000
+    box-sizing: border-box
+    color: #0175a0
+    height: 309px
+    padding: 47px 0 40px 0
+    position: absolute
+    width: 100%
+    bottom: (-@height)
+
+    > .zooniverse-footer
+      @extends #site-container
+      background: url(images/zoo-logo.png) no-repeat 0 7px
+      box-sizing: border-box
+
+      .title
+        font-family: $sans-serif
+        font-size: 19px
+        font-weight: 300
+        line-height: 1.5em
+
+      .category
+        font-size: 12px
+        line-height: 20px
+
+        .category-title
+          font-size: 11px
+          font-weight: 700
+
+.stack
+  > div
+    display: none
+  > div.active
+    display: block
+
+#app
+  position: relative
+  z-index: 1
+  > header, > .stack
+    @extends #site-container

@@ -1,5 +1,3 @@
-Spine = require('spine')
-
 class AboutController extends Spine.Controller
   className: 'aboutController'
 

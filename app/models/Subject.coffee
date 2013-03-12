@@ -1,35 +1,31 @@
-BaseSubject= require('zooniverse/lib/models/subject')
+BaseSubject = require 'zooniverse/models/subject'
 
-Spine = require('spine')
-_ = require('underscore/underscore')
+_ = require 'underscore/underscore'
 
-class Subject extends BaseSubject
+class Subject extends Spine.Model
   @configure 'Subject', 'preloaded', 'location', 'metadata', 'active', 'workflow_ids', 'project_id', 'workflow_ids'
-  projectName : 'worms'
   
-  constructor:->
+  constructor: ->
     super
-    @preloaded=false
+    @preloaded = false
     @active = true
 
-  retire:=>
-    @active= false
+  retire: =>
+    @active = false
     @save()
-    @trigger('retire')
+    @trigger 'retire'
 
-  randomPrevious:=>
+  randomPrevious: =>
   	_(@metadata.timings).shuffle()[0]
 
-
-  @getMore:->
+  @getMore: ->
     @fetch(5)
 
-  @randomSubject:->
+  @randomSubject: ->
     _(@activeSubjects()).shuffle()[0]
     
-  
-  @activeSubjects:->
-    @select (subject)->
+  @activeSubjects: ->
+    @select (subject) ->
       subject.active
 
 module.exports = Subject

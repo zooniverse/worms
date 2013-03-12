@@ -1,9 +1,7 @@
-User  = require('zooniverse/lib/models/user')
-Subject = require('models/Subject')
-Classification = require('models/Classification')
+User  = require 'zooniverse/models/user'
 
-_ = require('underscore/underscore')
-Spine = require('spine')
+Classification = require 'models/Classification'
+Subject = require 'models/Subject'
 
 class Game
 

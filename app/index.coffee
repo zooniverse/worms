@@ -1,21 +1,20 @@
 require 'lib/setup'
+Config = require 'lib/config'
 
-ZooniverseBar = require 'zooniverse/lib/controllers/top_bar'
-User = require 'zooniverse/lib/models/user'
+Api = require 'zooniverse/lib/api'
+TopBar = require 'zooniverse/controllers/top-bar'
+Footer = require 'zooniverse/controllers/footer'
 
 Game = require 'models/Game'
 Subject = require 'models/Subject'
 
-HomeController = require('controllers/HomeController')
-AboutController = require('controllers/AboutController')
+NavBar = require 'controllers/NavBarController'
 
-PeerClassificationController = require("controllers/PeerClassificaitonController")
-NavBar = require('controllers/NavBarController')
-Api = require('zooniverse/lib/api')
-Config = require('lib/config')
+HomeController = require 'controllers/HomeController'
+AboutController = require 'controllers/AboutController'
+PeerClassificationController = require 'controllers/PeerClassificaitonController'
 
-
-Api.init host: Config.apiHost
+new Api project: 'worms'
 
 app = {}
 app.container = '#app'
@@ -38,9 +37,10 @@ app.stack = new Spine.Stack
 
 app.stack.el.appendTo app.container
 
-app.topBar = new ZooniverseBar
-  app: 'worms'
-  appName:'Worms'
+app.footer = new Footer
+app.footer.el.appendTo 'body > footer'
+
+app.topBar = new TopBar
 app.topBar.el.prependTo 'body'
 
 Subject.getMore(2)
