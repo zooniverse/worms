@@ -1,6 +1,6 @@
 Config =
   development:
-    apiHost: 'http://localhost:3000'
+    apiHost: 'https://dev.zooniverse.org'
     
   production:
     apiHost: 'https://dev.zooniverse.org'

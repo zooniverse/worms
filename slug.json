@@ -2,7 +2,6 @@
   "dependencies": [
     "es5-shimify", 
     "json2ify", 
-    "jqueryify", 
     "spine",
     "spine/lib/local",
     "spine/lib/ajax",
@@ -15,7 +14,9 @@
   ],
 
   "libs": [
-    "node_modules/Zooniverse/vendor/base64.js"
+    "node_modules/Zooniverse/vendor/base64.js",
+    "./lib/jquery.js",
+    "./lib/moment.js"
   ],
   "minify": false 
 }

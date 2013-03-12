@@ -1,4 +1,3 @@
-Spine   = require('spine')
 User    = require('zooniverse/lib/models/user')
 Game    = require('models/Game')
 Subject = require('models/Subject')
@@ -95,12 +94,14 @@ class PeerClassificationController extends Spine.Controller
     else
       @messageBox.html("You marked #{Game.times.length} eggs. Click finish to see another video!")  
 
-  startVideo:(e)=>
+  startVideo: (e) =>
+    e.preventDefault() if e?
 
     Game.setStartTime moment()
-    e.preventDefault() if e?
-    @video[0].playbackRate = 1000
+
+    @video[0].playbackRate = 1
     @video[0].play()
+
     @video.on "ended", @saveClassification
 
   renderVideo :=>
@@ -118,6 +119,5 @@ class PeerClassificationController extends Spine.Controller
       
 
     @refreshElements()
-
 
 module.exports = PeerClassificationController

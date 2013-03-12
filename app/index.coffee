@@ -1,63 +1,53 @@
-require('lib/setup')
-Spine = require('spine')
-Game  = require('models/Game')
-User  = require('zooniverse/lib/models/user')
+require 'lib/setup'
+
+ZooniverseBar = require 'zooniverse/lib/controllers/top_bar'
+User = require 'zooniverse/lib/models/user'
+
+Game = require 'models/Game'
+Subject = require 'models/Subject'
 
 HomeController = require('controllers/HomeController')
 AboutController = require('controllers/AboutController')
 
-
 PeerClassificationController = require("controllers/PeerClassificaitonController")
 NavBar = require('controllers/NavBarController')
-ZooniverseBar = require('zooniverse/lib/controllers/top_bar')
 Api = require('zooniverse/lib/api')
 Config = require('lib/config')
-Subject = require('models/Subject')
 
-class Content extends Spine.Stack
-  
+
+Api.init host: Config.apiHost
+
+app = {}
+app.container = '#app'
+
+app.navBar = new NavBar
+app.navBar.el.appendTo app.container
+
+app.stack = new Spine.Stack
   controllers:
-    'peer' : PeerClassificationController
-    'home' : HomeController
+    'home': HomeController
+    'peer': PeerClassificationController
     'about': AboutController  
   
   routes: 
-    '/classify' : 'peer'
-    '/'         : 'home'
-    '/about'    : 'about'
+    '/': 'home'
+    '/classify': 'peer'
+    '/about': 'about'
 
   default: 'home'
 
+app.stack.el.appendTo app.container
 
-class App extends Spine.Controller
-  constructor: ->
-    super
-    @append new NavBar()
-    @append new Content()
-    # @append require('views/footer')
+app.topBar = new ZooniverseBar
+  app: 'worms'
+  appName:'Worms'
+app.topBar.el.prependTo 'body'
 
-    Api.init host: Config.apiHost
+Subject.getMore(2)
+Subject.bind 'create', =>
+  Game.setupGame()
 
-    Subject.getMore(2)
-  
-    Subject.bind 'create', =>
-      Game.setupGame()
+Spine.Route.setup()
 
-    topBar = new ZooniverseBar
-      el: '.zooniverseTopBar'
-      languages:
-        en: 'English'
-      app: 'worms'
-      appName:'worms'
-
-    Spine.Route.setup()
-
-    # g  = new Game()
-
-    # Game.current  = g
-  
-    # User.bind 'sign-in', =>
-    #   g.requestJoin()
-
-module.exports = App
+module.exports = app
     
