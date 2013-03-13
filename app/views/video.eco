@@ -1,8 +1,6 @@
-<div style= 'position:absolute; top: 0px; left:0px 'class='countdown'></div>
-
-<div class='videoContainer'>
-	<% if @subject? : %>
-		<video src='<%=@subject.location.mp4 %>'> </video>
+<div class="countdown"></div>
+<div class="videoContainer">
+	<% if @subject?: %>
+		<video src="<%= @subject.location.mp4 %>"> </video>
 	<% end %>
 </div>
-	

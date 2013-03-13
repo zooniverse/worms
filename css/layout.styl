@@ -3,10 +3,11 @@
 
 html, body 
   margin: 0px
-  padding: 0px 
+  padding: 0px
 
 body
   background: #01bbff url(images/bg-site.png) repeat
+  border-top: 5px solid #000
   font-family: "Helvetica Neue, Helvetica", Arial, sans-serif
 
   > .background
@@ -52,6 +53,8 @@ body
           font-weight: 700
 
 .stack
+  @extends #clearfix
+
   > div
     display: none
   > div.active

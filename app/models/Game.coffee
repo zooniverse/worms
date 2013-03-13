@@ -1,57 +1,33 @@
-User  = require 'zooniverse/models/user'
+_ = require 'underscore/underscore'
 
-Classification = require 'models/Classification'
-Subject = require 'models/Subject'
+Classification = require 'zooniverse/models/classification'
+Subject = require 'zooniverse/models/subject'
+User = require 'zooniverse/models/user'
 
-class Game
+class Game extends Spine.Events
 
-		# @socket = io.connect "http://worms.zooniverse.org"
-		# window.scocketConnection = @socket
-		
-		
-		# @socket.on 'playerJoined', (player) =>
-		# 	console.log "player joined ",player
-		# 	@otherPlayer = player
-		# 	@trigger 'playerJoined', (player)
-		# 	@save()
+	constructor: ->
+		console.log 'a brand new game'
 
-		# @socket.on 'start', =>
-		# 	@status = 'playing'
-		# 	@trigger 'gameStarted'
-		# 	@save()
-
-		# @socket.on 'teamMateTime', (data)=>
-		# 	console.log "teammate" , data
-		# 	@teamMateTimes.push data.time
-		# 	@compareTimes(time, data.time) for time in @times  
-	
-	@setupGame:->
 		@status ||= 'waiting'
 
 		unless @currentSubject?
-		
-			@times  = []
+			@times = []
 			@teamMateTimes = []
-			@score  =  0
-			@currentSubject = Subject.randomSubject()
-			console.log "current subject is #{@currentSubject}"
+			@score =  0
+			@currentSubject = Subject.current
+
 			if @currentSubject?
-				previousGame = @currentSubject.randomPrevious()
+				previousGame = _(@currentSubject.metadata.timings).shuffle()[0]
 				if previousGame?
 					@teamMateTimes = previousGame.times
 					@otherPlayer   = previousGame.name
 				else
 					@score = 200
 			else
-				alert('out of subjects')
-			Spine.trigger("gameSetup")
+				console.log 'no subjects'
 
-	@startGame:=>
-		@setStartTime()
-		@status = 'playing'
-		Spine.trigger('gameStarted')
-
-	@compareTimes: (time1, time2)=>
+	compareTimes: (time1, time2) =>
 		if Math.abs(time1 - time2)  < 1000
 			points = 20
 			@score += points 
@@ -61,32 +37,22 @@ class Game
 		else if Math.abs(time1 - time2)  < 2000
 			points = 10
 			@score += points 
-			Spine.trigger('score', {points: points, totalScore: @score, message: 'good'})
+			@trigger('score', {points: points, totalScore: @score, message: 'good'})
 			console.log "scoring low"
 
-	@setStartTime:(time)=>
-		@startTime= time
-
-	@saveClassification:=>
-		c = new Classification
-			subject_id : @currentSubject.id
-			workflow_id: @currentSubject.workflow_ids[0]
-			annotations : [{timings: @times} , {score: @score}]
-		console.log "new classifcation ", c
-		c.save()
-		c.send()
+	setStartTime: =>
+		@startTime = moment()
 		
-	@markTime:(time)=>
-		diff = ( time.diff(@startTime))
-		# @socket.emit 'timeMarked', ({user_id: User.current.id, time: diff})	 
+	markTime: =>
+		time = moment()
+		diff = (time.diff(@startTime))
 		@times.push diff 
 		@compareTimes(diff, timeO) for timeO in @teamMateTimes
 		time.diff(@startTime, 'seconds', true)
 
-	@requestJoin:->
-		if User.current?
-			@socket.emit 'joinGame', {id : User.current.id, name: User.current.name}
-		else 
-			console.log "could not find user"
+	getGameStatus: => [{timings: @times} , {score: @score}]
+
+	start: ->
+		@status = 'playing'
 
 module.exports = Game 

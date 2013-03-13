@@ -1,18 +1,18 @@
 require 'lib/setup'
 Config = require 'lib/config'
 
-Api = require 'zooniverse/lib/api'
-TopBar = require 'zooniverse/controllers/top-bar'
 Footer = require 'zooniverse/controllers/footer'
+TopBar = require 'zooniverse/controllers/top-bar'
+Api = require 'zooniverse/lib/api'
+Subject = require 'zooniverse/models/subject'
 
 Game = require 'models/Game'
-Subject = require 'models/Subject'
 
 NavBar = require 'controllers/NavBarController'
 
-HomeController = require 'controllers/HomeController'
-AboutController = require 'controllers/AboutController'
-PeerClassificationController = require 'controllers/PeerClassificaitonController'
+Home = require 'controllers/HomeController'
+About = require 'controllers/AboutController'
+Classifier = require 'controllers/PeerClassificaitonController'
 
 new Api project: 'worms'
 
@@ -24,13 +24,13 @@ app.navBar.el.appendTo app.container
 
 app.stack = new Spine.Stack
   controllers:
-    'home': HomeController
-    'peer': PeerClassificationController
-    'about': AboutController  
+    'home': Home
+    'classifier': Classifier
+    'about': About
   
-  routes: 
+  routes:
     '/': 'home'
-    '/classify': 'peer'
+    '/classify': 'classifier'
     '/about': 'about'
 
   default: 'home'
@@ -43,11 +43,8 @@ app.footer.el.appendTo 'body > footer'
 app.topBar = new TopBar
 app.topBar.el.prependTo 'body'
 
-Subject.getMore(2)
-Subject.bind 'create', =>
-  Game.setupGame()
-
+Subject.queueLength = 1
+Subject.next()
 Spine.Route.setup()
 
 module.exports = app
-    
