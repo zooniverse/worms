@@ -7,8 +7,6 @@ User = require 'zooniverse/models/user'
 class Game extends Spine.Events
 
 	constructor: ->
-		console.log 'a brand new game'
-
 		@status ||= 'waiting'
 
 		unless @currentSubject?

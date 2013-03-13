@@ -1,14 +1,13 @@
 require 'lib/setup'
 Config = require 'lib/config'
 
-Footer = require 'zooniverse/controllers/footer'
-TopBar = require 'zooniverse/controllers/top-bar'
 Api = require 'zooniverse/lib/api'
 Subject = require 'zooniverse/models/subject'
-
-Game = require 'models/Game'
+Footer = require 'zooniverse/controllers/footer'
+TopBar = require 'zooniverse/controllers/top-bar'
 
 NavBar = require 'controllers/NavBarController'
+SubPage = require 'controllers/SubPage'
 
 Home = require 'controllers/HomeController'
 About = require 'controllers/AboutController'
@@ -27,10 +26,14 @@ app.stack = new Spine.Stack
     'home': Home
     'classifier': Classifier
     'about': About
+    'science': class extends SubPage then content: require 'views/pages/science'
+    'team': class extends SubPage then content: require 'views/pages/team'
   
   routes:
     '/': 'home'
     '/classify': 'classifier'
+    '/science': 'science'
+    '/team': 'team' 
     '/about': 'about'
 
   default: 'home'

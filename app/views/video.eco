@@ -1,6 +1,7 @@
 <div class="countdown"></div>
 <div class="videoContainer">
 	<% if @subject?: %>
+    <div class="overlay"></div>
 		<video src="<%= @subject.location.mp4 %>"> </video>
 	<% end %>
 </div>

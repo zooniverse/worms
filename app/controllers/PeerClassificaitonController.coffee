@@ -1,6 +1,7 @@
 Classification = require 'zooniverse/models/classification'
 Subject = require 'zooniverse/models/subject'
 User = require 'zooniverse/models/user'
+loginDialog = require 'zooniverse/controllers/login-dialog'
 
 Game = require 'models/Game'
 
@@ -11,6 +12,7 @@ class PeerClassificationController extends Spine.Controller
     '.left': 'left'
     '.right': 'right'
     'video': 'video'
+    '.overlay': 'videoOverlay'
     '.countdown': 'countdown'
     '.message': 'messageBox'
     '.score': 'scoreBox'
@@ -18,16 +20,21 @@ class PeerClassificationController extends Spine.Controller
     '.player2 .times': 'p2Times'
 
   events:
-    'click .start': 'startCountDown'
-    'click .finished': 'finish'
+    'click .start': 'onStartCountDown'
+    'click .countdown': 'onStartCountDown'
+    'click .finished': 'onFinish'
+    'click .favorite': 'onFavorite'
+    'click .discuss': 'onDiscuss'
+
+    'click .sign-in': 'onClickSignIn'
 
   constructor: ->
     super
     Game.bind 'score', @score
-    User.bind 'sign-in', @renderStats
 
     $(document).keypress @markEvent
 
+    User.on 'change', @renderStats
     Subject.on 'select', =>
       @classification = new Classification subject: Subject.current
       @game = new Game
@@ -52,12 +59,13 @@ class PeerClassificationController extends Spine.Controller
       player2: @game.otherPlayer
       gameStatus: @game.status
       score: @game.score
+
     @refreshElements()
 
   score: (data) =>
     @scoreBox.html "#{data.totalScore}"
-    @p2Times.append("<p class='time'> <span>Match at :</span> #{data.otherPlayerTime} s </p>  ")
-    @message("You matched with #{Game.otherPlayer} earn #{data.points}!")
+    # @p2Times.append("<p class='time'> <span>Match at :</span> #{data.otherPlayerTime} s </p>  ")
+    # @message("You matched with #{Game.otherPlayer} earn #{data.points}!")
     
   markEvent: (e) =>
     if e.keyCode is 32 and @game.status is 'playing'
@@ -65,14 +73,24 @@ class PeerClassificationController extends Spine.Controller
 
       time = @game.markTime()
       @refreshElements()
-      @p1Times.append( "<p class='time'> <span>Egg at :</span> #{time} s</p>  " )
+      @p1Times.prepend( "<p class='time'> <span>Egg at :</span> #{time} s</p>  " )
 
   message: (text) =>
     message = $("<p>#{text}</p>")
     @messageBox.append message
     message.fadeOut(2000)
 
-  startCountDown: =>
+  start: =>
+    @game.setStartTime moment()
+
+    @video[0].playbackRate = 1
+    @video[0].play()
+
+    @video.on 'ended', @onVideoEnd
+
+
+  # Events
+  onStartCountDown: =>
     @game.start()
 
     @renderStats()
@@ -94,36 +112,37 @@ class PeerClassificationController extends Spine.Controller
     , 4000
 
     setTimeout =>
-      @countdown.hide()
+      @countdown.remove()
       @start()
     , 5000
 
-  finalScoreMessage: =>
-    if @game.otherPlayer?
-      @messageBox.html("You marked #{@game.times} eggs and #{@game.otherPlayer.length} marked #{@game.teamMateTimes.length} eggs.")
-    else
-      @messageBox.html("You marked #{@game.times.length} eggs!")
-
-  start: (e) =>
-    e.preventDefault() if e?
-
-    @game.setStartTime moment()
-
-    @video[0].playbackRate = 1
-    @video[0].play()
-
-    @video.on 'ended', @onVideoEnd
-
   onVideoEnd: =>
-    @finalScoreMessage()
+    if @game.otherPlayer?
+      message = "You marked #{@game.times} eggs and #{@game.otherPlayer.length} marked #{@game.teamMateTimes.length} eggs."
+    else
+      if @game.times.length is 1
+        message = "You marked 1 egg!"
+      else
+        message = "You marked #{@game.times.length} eggs!"
+
+    @messageBox.html message
+    @videoOverlay.fadeIn()
+
     @refreshElements()
 
-  finish: =>
+  onFinish: =>
     annotations = @game.getGameStatus()
 
     @classification.annotate annotations
     @classification.send()
 
     Subject.next()
+
+  onFavorite: =>
+
+  onDiscuss: =>
+
+  onClickSignIn: =>
+    loginDialog.show()
 
 module.exports = PeerClassificationController

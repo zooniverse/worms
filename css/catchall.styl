@@ -17,12 +17,13 @@
     width: 400px
     text-align: center
     position: relative
+
     .details
-      display: inline-block;
-      vertical-align: middle;
-      width: 80px;
-      margin-right: 30px;
-      text-align: right;
+      display: inline-block
+      vertical-align: middle
+      width: 80px
+      margin-right: 30px
+      text-align: right
     img 
       display:inline-block
       vertical-align: middle
@@ -108,6 +109,15 @@ ul
       height: 432px
       border: 2px solid black
       z-index: 0
+
+      .overlay
+        background: rgba(#000, 0.5)
+        display: none
+        height: 100%
+        position: absolute
+        width: 100%
+        z-index: 1
+
       video 
         width: 575px
         height: 432px
@@ -136,7 +146,7 @@ ul
       border-top: 1px solid #0283AF
       padding: 18px 0
 
-    .prompt 
+    .prompt
       text-shadow: none
       font-size: 22px
       box-shadow: 1px 1px solid rgba(0,0,0,0.6)
@@ -146,6 +156,7 @@ ul
       width: 100%
 
       img 
+        box-shadow: 0 1px 0 0 rgba(#60d4ff, 1)
         display: inline-block
         margin: 0 10px 0 0
         padding: 0
@@ -156,47 +167,65 @@ ul
         vertical-align: top
         width: 285px
 
-        h3
+        h2, p
           padding: 0px
           margin: 0px
-        p
-          font-size: 12px
 
     .players
-      padding: 0px
+      @extends #clearfix
+      padding: 0
 
       .player
-        display: inline-block
-        vertical-align: top
-        width: 170px
-        padding: 10px 0px  0px 20px
-        margin: 0px
-        height: 100%
-        border-box()
+        box-sizing: border-box
+        float: left
+        height: 210px
+        overflow: hidden
+        margin: 0
+        padding: 10px
+        width: 50%
+
         &:first-child 
-          border-right: 1px solid #0283AF 
+          border-right: 1px solid #0283AF
+          box-sizing: border-box
+          position: relative
+
+          &:before
+            background: url(images/bg-site-gradient.png) repeat
+            bottom: 0
+            content: ""
+            height: 30px
+            position: absolute
+            width: 100%
+
         .name
-          color : #003140
+          color: #003140
           font-size: 12px
           font-weight: 700
           text-shadow: none
 
+        .sign-in
+          cursor: pointer
+
+        p
+          margin: 1px 0
+
     .times
-      overflow-y: hidden
+      @extends #semantic-list
 
       .time
         font-size: 12px
+        margin: 0
 
         span
           color: #000
-
-    .score
-      font-size: 12px
-      color: white
-      margin-left: 40px
+          text-shadow: 0 1px 0 rgba(#fff, 0.7)
 
     .actions
       padding: 22px 0 0 0
 
       button
         @extends #small-button
+
+        &.disabled
+          cursor: default
+          opacity: 0.5
