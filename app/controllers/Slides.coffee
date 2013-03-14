@@ -16,12 +16,13 @@ class BaseSlide extends Spine.Controller
 class Slide1 extends BaseSlide
 
   elements:
+    '.details': 'details'
     '.person': 'person'
 
   enter: =>
     @person.animate
       opacity: 1
-    super
+    @section.fadeIn()
 
   exit: (cb) =>
     @person.animate
@@ -39,6 +40,7 @@ class Slide2 extends BaseSlide
 
   elements:
     '.details': 'details'
+    '.right': 'right'
     '.worm': 'worm'
 
   constructor: (opts) ->
@@ -54,6 +56,7 @@ class Slide2 extends BaseSlide
     super
 
   exit: (cb) =>
+    @right.fadeOut()
     @worm.animate
       opacity: 0
       , 300
@@ -68,6 +71,15 @@ class Slide2 extends BaseSlide
 
 
 class Slide3 extends BaseSlide
+
+  elements:
+    '.genes': 'genes'
+
+  enter: =>
+    @section.show()
+    @animateTo = (@el.innerWidth() / 2) - (@genes.width() / 2)
+    @genes.animate {left: @animateTo}
+
 
 
 class Slide4 extends BaseSlide
