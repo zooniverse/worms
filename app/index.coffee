@@ -10,8 +10,8 @@ NavBar = require 'controllers/NavBarController'
 SubPage = require 'controllers/SubPage'
 
 Home = require 'controllers/HomeController'
-About = require 'controllers/AboutController'
 Classifier = require 'controllers/PeerClassificaitonController'
+Scene = require 'controllers/Scene'
 
 new Api project: 'worms'
 
@@ -25,9 +25,10 @@ app.stack = new Spine.Stack
   controllers:
     'home': Home
     'classifier': Classifier
-    'about': About
+    'about': class extends SubPage then content: require 'views/pages/about'
     'science': class extends SubPage then content: require 'views/pages/science'
     'team': class extends SubPage then content: require 'views/pages/team'
+    'scene': Scene
   
   routes:
     '/': 'home'
@@ -35,6 +36,7 @@ app.stack = new Spine.Stack
     '/science': 'science'
     '/team': 'team' 
     '/about': 'about'
+    '/scene': 'scene'
 
   default: 'home'
 

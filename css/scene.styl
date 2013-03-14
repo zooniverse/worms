@@ -1,0 +1,95 @@
+
+$reset-width = 100px
+#reset
+  background: none
+  border: 0
+  bottom: 20px
+  color: #fff
+  cursor: pointer
+  font-weight: 700
+  left: calc(50% \- ($reset-width / 2))
+  left: -webkit-calc(50% \- ($reset-width / 2))
+  position: absolute
+  width: $reset-width
+  z-index: 1
+
+.stack > .scene
+  height: 500px
+  left: 0
+  padding: 0 !important
+  position: fixed
+  top: 150px
+  width: 100%
+
+  .sections
+    @extends #site-container
+    position: relative
+
+  h1 
+    font-size: 30px 
+    font-weight: 700
+    margin: 0 0 30px 0
+
+  h3 
+    font-size: 22px
+    font-weight: 700
+  p
+    font-size: 14px
+
+  section
+    display: none
+    height: 500px
+    margin: 0 0 400px 0
+    position: absolute
+    top: 0
+    width: 100%
+
+    .left, .right
+      position: absolute
+
+    .left
+      width: 400px
+
+      .details
+        left: 50px
+        position: absolute
+        text-align: right
+        top: 100px
+        width: 90px
+
+
+    .right
+      left: 420px
+      top: 140px
+      width: 540px
+
+      p
+        font-size: 16px
+        font-weight: 700
+        line-height: 1.5em
+        margin-bottom: 40px
+
+    img
+      left: 150px
+      position: absolute
+      top: 0
+
+      &.genes
+        left: 165px
+        top: 105px
+
+      &.person
+        left: 220px
+
+      &.worm
+        left: 165px
+
+    // &:first-child
+
+    // &:nth-child(2)
+
+    // &:nth-child(3)
+
+    // &:nth-child(4)
+
+

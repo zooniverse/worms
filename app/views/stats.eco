@@ -9,9 +9,9 @@
 <section>
 	<div class="bubble">
 		<% if @gameStatus is 'waiting' or !@gameStatus?: %>
-			<a class="start">Click to start a game</a>
+			<span class="message start">Click to start a game</span>
 		<%else: %>
-			<p class="message">Press space if you see the worm lay an egg</p>
+			<span class="message">Press space if you see the worm lay an egg</span>
 		<% end %>
 	</div>
 </section>
