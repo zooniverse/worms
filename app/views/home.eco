@@ -1,13 +1,14 @@
 <div class="left">
-	<div class="details">
-		<h2> Human</h2>
-		<p>over 100 billion nerv cells</p>
-	</div>
-	<img src="images/guyGenes.png"></img>
+  <div class="details">
+    <h2>Human</h2>
+    <p>over 100 billion nerve cells</p>
+  </div>
+  <img class="img person" src="images/scene/person.png">
+  <img class="img genes" src="images/scene/genes.png">
 </div>
 
 <div class="right">
-	<h1>One little worm can help scientists understand big genetic mysteries</h1>
-	<p>Scientists with the Medical Research Council are discovering how genes express themselves in nematode worms. These discoveries can help us understand our own genes, too.</p>
-	<a href="#/classify" class="big-button">Begin Observing Worms</a>
+  <h1>One little worm can help scientists understand big genetic mysteries</h1>
+  <p>Scientists with the Medical Research Council are discovering how genes express themselves in nematode worms. These discoveries can help us understand our own genes, too.</p>
+  <a class="big-button" href="#/classify">Start classifying</a>
 </div>

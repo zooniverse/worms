@@ -1,0 +1,1231 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"animate",
+				"animateTo"
+			],
+			[
+				"cure",
+				"currentStep"
+			],
+			[
+				"tra",
+				"transitionOutSection"
+			],
+			[
+				"badge",
+				"badgeDefinitions"
+			],
+			[
+				"bad",
+				"badgeDefinitions"
+			],
+			[
+				"pre",
+				"prependTo"
+			],
+			[
+				"About",
+				"AboutController"
+			],
+			[
+				"modal",
+				"modalImage"
+			],
+			[
+				"step",
+				"stepGuide"
+			],
+			[
+				"inst",
+				"institute"
+			],
+			[
+				"curr",
+				"currentBox"
+			],
+			[
+				"box",
+				"boxToDelete"
+			],
+			[
+				"linear",
+				"linear-gradient"
+			],
+			[
+				"menu",
+				"menu-height"
+			],
+			[
+				"current",
+				"currentTarget"
+			],
+			[
+				"border",
+				"border-radius"
+			],
+			[
+				"update",
+				"updateInputField"
+			],
+			[
+				"prev",
+				"preventDefault"
+			],
+			[
+				"onClick",
+				"onClickDataEntry"
+			],
+			[
+				"remove",
+				"removeClass"
+			],
+			[
+				"data",
+				"dataEntry"
+			],
+			[
+				"click",
+				"clickNextBox"
+			],
+			[
+				"on",
+				"onDoneEntity"
+			],
+			[
+				"stop",
+				"stopPropagation"
+			],
+			[
+				"transc",
+				"transcriber"
+			],
+			[
+				"trans",
+				"transcriber"
+			],
+			[
+				"toggl",
+				"toggleDraggable"
+			],
+			[
+				"set",
+				"setElement"
+			],
+			[
+				"R",
+				"ROW_HEIGHT"
+			],
+			[
+				"zoom",
+				"zoomPoint"
+			],
+			[
+				"Birds",
+				"BirdsTranscriptionController"
+			],
+			[
+				"tran",
+				"transcriptionController"
+			],
+			[
+				"search",
+				"searchBySpecies"
+			],
+			[
+				"curet",
+				"currentGuideStep"
+			],
+			[
+				"sea",
+				"searchBySpecies"
+			],
+			[
+				"first",
+				"firstResult"
+			],
+			[
+				"nextLine",
+				"nextLineButton"
+			],
+			[
+				"draggable",
+				"draggableX"
+			],
+			[
+				"toggle",
+				"toggleXDraggable"
+			],
+			[
+				"watc",
+				"watchFiles"
+			],
+			[
+				"list-",
+				"list-contributors"
+			],
+			[
+				"mag",
+				"magnifier"
+			],
+			[
+				"magni",
+				"magnifierPosition"
+			],
+			[
+				"Arch",
+				"ArchiveStem"
+			],
+			[
+				"Arc",
+				"ArchiveStem"
+			],
+			[
+				"Inst",
+				"InstituteStem"
+			],
+			[
+				"ann",
+				"annotations"
+			],
+			[
+				"get",
+				"getPendingFieldCount"
+			],
+			[
+				"chai",
+				"chaiJquery"
+			],
+			[
+				"int",
+				"intDataSource2"
+			],
+			[
+				"bac",
+				"backbone-0"
+			],
+			[
+				"back",
+				"backbone-mediator"
+			],
+			[
+				"source",
+				"source_type"
+			],
+			[
+				"Bas",
+				"BaseModel"
+			],
+			[
+				"fet",
+				"fetchSpy"
+			],
+			[
+				"high",
+				"highestTool"
+			],
+			[
+				"at",
+				"attributes"
+			],
+			[
+				"max",
+				"maxZIndex"
+			],
+			[
+				"onSE",
+				"onSelectPrevSubject"
+			],
+			[
+				"select",
+				"selectKeys"
+			],
+			[
+				"sel",
+				"selectElements"
+			],
+			[
+				"tool",
+				"toolSelectElements"
+			],
+			[
+				"upd",
+				"updateValidSourceTools"
+			],
+			[
+				"exter",
+				"externalTools"
+			],
+			[
+				"getSea",
+				"getSearchTypes"
+			],
+			[
+				"sear",
+				"search-type"
+			],
+			[
+				"searc",
+				"searchType"
+			],
+			[
+				"se",
+				"searchType"
+			],
+			[
+				"external",
+				"externalSource"
+			],
+			[
+				"sou",
+				"sourceId"
+			],
+			[
+				"getS",
+				"getSearchTypes"
+			],
+			[
+				"selec",
+				"selectedSource"
+			],
+			[
+				"selectedS",
+				"selectedSource"
+			],
+			[
+				"searh",
+				"search_type"
+			],
+			[
+				"fetch",
+				"fetchExt"
+			],
+			[
+				"sett",
+				"settings_active"
+			],
+			[
+				"toolS",
+				"toolSettings"
+			],
+			[
+				"selc",
+				"selected_keys"
+			],
+			[
+				"dat",
+				"dataSource"
+			],
+			[
+				"add",
+				"addToolModel"
+			],
+			[
+				"sav",
+				"savedListView"
+			],
+			[
+				"dash",
+				"onDashboardInit"
+			],
+			[
+				"creat",
+				"createDashboard"
+			],
+			[
+				"has",
+				"hasOwnProperty"
+			],
+			[
+				"pr",
+				"project"
+			],
+			[
+				"project",
+				"projectId"
+			],
+			[
+				"uni",
+				"uniqueScripts"
+			],
+			[
+				"un",
+				"uniqueScripts"
+			],
+			[
+				"temp",
+				"tempScripts"
+			],
+			[
+				"dep",
+				"dependency"
+			],
+			[
+				"script",
+				"scriptObjects"
+			],
+			[
+				"sc",
+				"scriptObjects"
+			],
+			[
+				"obj",
+				"objectId"
+			],
+			[
+				"res",
+				"response"
+			],
+			[
+				"selected",
+				"selectedElements"
+			],
+			[
+				"gray",
+				"gray-light"
+			],
+			[
+				"dashboard",
+				"dashboardModel"
+			],
+			[
+				"Dashboard",
+				"DashboardView"
+			],
+			[
+				"B",
+				"BaseView"
+			],
+			[
+				"setings",
+				"settings-bg-color"
+			],
+			[
+				"onS",
+				"onSetSearchType"
+			],
+			[
+				"initial",
+				"initialize"
+			],
+			[
+				"params",
+				"paramsView"
+			],
+			[
+				"selecte",
+				"selectedSource"
+			],
+			[
+				"sele",
+				"selectedSearchType"
+			],
+			[
+				"create",
+				"createNewData"
+			],
+			[
+				"filt",
+				"filterSettings"
+			],
+			[
+				"title",
+				"titleBar"
+			],
+			[
+				"doc",
+				"doc_width"
+			],
+			[
+				"titleba",
+				"title-bar-height"
+			],
+			[
+				"titl",
+				"title-bar-vertical-padding"
+			],
+			[
+				"tit",
+				"title-bar-height"
+			],
+			[
+				"def",
+				"default_opts"
+			],
+			[
+				"start",
+				"startLeft"
+			],
+			[
+				"window",
+				"windowMinWidth"
+			],
+			[
+				"resize",
+				"resizeWindowEnd"
+			],
+			[
+				"Data",
+				"DataSource"
+			],
+			[
+				"vali",
+				"validSourceTools"
+			],
+			[
+				"sour",
+				"source_tool"
+			],
+			[
+				"che",
+				"checkedTools"
+			],
+			[
+				"cha",
+				"chainedTool"
+			],
+			[
+				"is",
+				"isValid"
+			],
+			[
+				"c",
+				"checkToolSource"
+			],
+			[
+				"ch",
+				"checkedTools"
+			],
+			[
+				"checked",
+				"checkedTools"
+			],
+			[
+				"chec",
+				"checkedTool"
+			],
+			[
+				"check",
+				"checkedTools"
+			],
+			[
+				"so",
+				"sourceTypeChosen"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "/Users/bumishness/Documents/Zooniverse/SpaceWarps/app/controllers/home_page.coffee",
+			"settings":
+			{
+				"buffer_size": 163,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/bumishness/Documents/Zooniverse/SpaceWarps/css/common.styl",
+			"settings":
+			{
+				"buffer_size": 1399,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/bumishness/Documents/Zooniverse/SpaceWarps/css/index.styl",
+			"settings":
+			{
+				"buffer_size": 2306,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/bumishness/Documents/Zooniverse/SpaceWarps/public/index.html",
+			"settings":
+			{
+				"buffer_size": 24759,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/bumishness/Documents/Zooniverse/SpaceWarps/css/pages.styl",
+			"settings":
+			{
+				"buffer_size": 2586,
+				"line_ending": "Unix",
+				"name": "pages.styl"
+			}
+		},
+		{
+			"file": "/Users/bumishness/Documents/Zooniverse/SpaceWarps/app/controllers/guide_page.coffee",
+			"settings":
+			{
+				"buffer_size": 490,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/bumishness/Documents/Zooniverse/SpaceWarps/css/classifier.styl",
+			"settings":
+			{
+				"buffer_size": 2445,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/bumishness/Documents/Zooniverse/SpaceWarps/app/controllers/classifier.coffee",
+			"settings":
+			{
+				"buffer_size": 14838,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 27.0,
+		"selected_items":
+		[
+			[
+				"packa",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Add Repository"
+			],
+			[
+				"pack",
+				"Package Control: Install Package"
+			],
+			[
+				"pac",
+				"Package Control: Add Repository"
+			]
+		],
+		"width": 561.0
+	},
+	"console":
+	{
+		"height": 139.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/bumishness/Documents/Zooniverse/SpaceWarps/package.json",
+		"/Users/bumishness/Documents/Zooniverse/SpaceWarps/app/index.coffee",
+		"/Users/bumishness/Documents/Zooniverse/SpaceWarps/slug.json",
+		"/Users/bumishness/Documents/Zooniverse/SpaceWarps/app/controllers/classifier.coffee",
+		"/Users/bumishness/Documents/Zooniverse/SpaceWarps/css/mixin.styl",
+		"/Users/bumishness/Documents/Zooniverse/SpaceWarps/css/content.styl",
+		"/Users/bumishness/Documents/Zooniverse/SpaceWarps/css/guide.styl",
+		"/Users/bumishness/Library/Application Support/Sublime Text 2/Packages/Default/Preferences.sublime-settings",
+		"/Users/bumishness/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings",
+		"/Users/bumishness/Documents/Zooniverse/Worms/lib/mediaelement.js",
+		"/Users/bumishness/Documents/Zooniverse/Worms/app/models/Game.coffee",
+		"/Users/bumishness/Documents/Zooniverse/Worms/app/controllers/PeerClassificaitonController.coffee",
+		"/Users/bumishness/Documents/Zooniverse/Worms/slug.json",
+		"/Users/bumishness/Documents/Zooniverse/Worms/app/views/navBar.eco",
+		"/Users/bumishness/Documents/Zooniverse/Worms/.gitignore",
+		"/Users/bumishness/Documents/Zooniverse/Worms/css/layout.styl",
+		"/Users/bumishness/Documents/Zooniverse/Worms/app/index.coffee",
+		"/Users/bumishness/Documents/Zooniverse/Worms/css/common.styl",
+		"/Users/bumishness/Documents/Zooniverse/Worms/css/sub-page.styl",
+		"/Users/bumishness/Documents/Zooniverse/Worms/lib/jquery.animate.js",
+		"/Users/bumishness/Documents/Zooniverse/Worms/css/index.styl",
+		"/Users/bumishness/Documents/Zooniverse/Worms/app/views/scene/index.eco",
+		"/Users/bumishness/Documents/Zooniverse/Worms/css/bubble.styl",
+		"/Users/bumishness/Documents/Zooniverse/Worms/css/mixin.styl",
+		"/Users/bumishness/Documents/Zooniverse/Worms/css/catchall.styl",
+		"/Users/bumishness/Documents/Zooniverse/Worms/app/views/pages/about.eco",
+		"/Users/bumishness/Documents/Zooniverse/Worms/app/views/stats.eco",
+		"/Users/bumishness/Documents/Zooniverse/Worms/public/index.html",
+		"/Users/bumishness/Documents/Zooniverse/Worms/app/controllers/SubPage.coffee",
+		"/Users/bumishness/Documents/Zooniverse/Worms/app/views/about.eco",
+		"/Users/bumishness/Documents/Zooniverse/Worms/app/views/video.eco",
+		"/Users/bumishness/Documents/Zooniverse/Worms/public/offline/subjects.json",
+		"/Users/bumishness/Documents/Zooniverse/Worms/node_modules/Zooniverse/src/models/subject.coffee",
+		"/Users/bumishness/Documents/Zooniverse/Worms/node_modules/Zooniverse/src/models/classification.coffee",
+		"/Users/bumishness/Documents/Zooniverse/Worms/app/views/sub-page.eco",
+		"/Users/bumishness/Documents/Zooniverse/Worms/app/views/pages/team.eco",
+		"/Users/bumishness/Documents/Zooniverse/Worms/app/views/pages/science.eco",
+		"/Users/bumishness/Documents/Zooniverse/Worms/app/controllers/Pages.coffee",
+		"/Users/bumishness/Documents/Zooniverse/Worms/node_modules/Zooniverse/src/lib/api.coffee",
+		"/Users/bumishness/Documents/Zooniverse/Worms/app/models/Subject.coffee",
+		"/Users/bumishness/Documents/Zooniverse/Worms/app/views/peerClassifier.eco",
+		"/Users/bumishness/Documents/Zooniverse/Worms/app/views/home.eco",
+		"/Users/bumishness/Documents/Zooniverse/Worms/package.json",
+		"/Users/bumishness/Documents/Zooniverse/Worms/app/models/Classification.coffee",
+		"/Users/bumishness/Documents/Zooniverse/Worms/app/controllers/HomeController.coffee",
+		"/Users/bumishness/Documents/Zooniverse/Worms/app/controllers/AboutController.coffee",
+		"/Users/bumishness/Documents/Zooniverse/Worms/app/controllers/NavBarController.coffee",
+		"/Users/bumishness/Documents/Zooniverse/Worms/app/lib/setup.coffee",
+		"/Users/bumishness/Documents/Zooniverse/Worms/lib/moment.js",
+		"/Users/bumishness/Documents/Zooniverse/Worms/lib/jquery.js",
+		"/Users/bumishness/Documents/Zooniverse/Worms/app/lib/config.coffee",
+		"/Users/bumishness/Documents/Zooniverse/Notes from Nature/app/models/Classification.coffee",
+		"/Users/bumishness/Documents/Zooniverse/Notes from Nature/app/lib/BadgeDefinitions.coffee",
+		"/Users/bumishness/Documents/Zooniverse/Notes from Nature/css/main.styl",
+		"/Users/bumishness/Documents/Zooniverse/Notes from Nature/app/views/notifications/badgeNotification.eco",
+		"/Users/bumishness/Documents/Zooniverse/Notes from Nature/app/views/notifications/notificationArea.eco",
+		"/Users/bumishness/Documents/Zooniverse/Notes from Nature/node_modules/spine/src/spine.coffee",
+		"/Users/bumishness/Documents/Zooniverse/Notes from Nature/app/lib/site.coffee",
+		"/Users/bumishness/Documents/Zooniverse/Notes from Nature/app/controllers/NotificationController.coffee",
+		"/Users/bumishness/Documents/Zooniverse/Notes from Nature/lib/nfn/ui/herbarium/transcriber.js",
+		"/Users/bumishness/Documents/Zooniverse/Notes from Nature/css/transcribing.styl",
+		"/Users/bumishness/Documents/Zooniverse/Notes from Nature/app/models/Subject.coffee",
+		"/Users/bumishness/Documents/Zooniverse/Notes from Nature/app/models/Archive.coffee",
+		"/Users/bumishness/Documents/Zooniverse/Notes from Nature/lib/nfn/ui/bugs/transcriber.js",
+		"/Users/bumishness/Documents/Zooniverse/Notes from Nature/app/controllers/InterfaceController.coffee",
+		"/Users/bumishness/Documents/Zooniverse/Notes from Nature/build.coffee",
+		"/Users/bumishness/Documents/Zooniverse/Notes from Nature/public/index.html",
+		"/Users/bumishness/Documents/Zooniverse/Notes from Nature/app/views/widgets/eol.eco",
+		"/Users/bumishness/Documents/Zooniverse/Notes from Nature/app/views/archives/archiveShow.eco",
+		"/Users/bumishness/Documents/Zooniverse/Notes from Nature/app/controllers/PageController.coffee",
+		"/Users/bumishness/Documents/Zooniverse/Notes from Nature/app/controllers/HomeController.coffee",
+		"/Users/bumishness/Documents/Zooniverse/Notes from Nature/app/controllers/archives/list.coffee",
+		"/Users/bumishness/Documents/Zooniverse/Notes from Nature/app/controllers/AboutController.coffee",
+		"/Users/bumishness/Documents/Zooniverse/Notes from Nature/app/controllers/archives/item.coffee",
+		"/Users/bumishness/Documents/Zooniverse/Notes from Nature/app/controllers/archives/index.coffee",
+		"/Users/bumishness/Documents/Zooniverse/Notes from Nature/app/controllers/InstituteShowController.coffee",
+		"/Users/bumishness/Documents/Zooniverse/Notes from Nature/app/controllers/layout/footer.coffee",
+		"/Users/bumishness/Documents/Zooniverse/Notes from Nature/app/controllers/layout/header.coffee",
+		"/Users/bumishness/Documents/Zooniverse/Notes from Nature/app/controllers/TranscriptionController.coffee",
+		"/Users/bumishness/Documents/Zooniverse/Notes from Nature/app/lib/setup.coffee",
+		"/Users/bumishness/Documents/Zooniverse/Notes from Nature/app/controllers/SectionController.coffee",
+		"/Users/bumishness/Documents/Zooniverse/Notes from Nature/app/views/home/splash.eco",
+		"/Users/bumishness/Documents/Zooniverse/Notes from Nature/app/controllers/FooterController.coffee",
+		"/Users/bumishness/Documents/Zooniverse/Notes from Nature/app/views/header.eco",
+		"/Users/bumishness/Documents/Zooniverse/Notes from Nature/app/controllers/FAQController.coffee",
+		"/Users/bumishness/Documents/Zooniverse/Notes from Nature/app/views/about/index.eco",
+		"/Users/bumishness/Documents/Zooniverse/Notes from Nature/slug.json",
+		"/Users/bumishness/Documents/Zooniverse/Notes from Nature/css/layout.styl",
+		"/Users/bumishness/Documents/Zooniverse/Notes from Nature/app/controllers/HeaderController.coffee",
+		"/Users/bumishness/Documents/Zooniverse/Notes from Nature/app/controllers/ArchivesShowController.coffee",
+		"/Users/bumishness/Documents/Zooniverse/Notes from Nature/app/controllers/BadgesController.coffee",
+		"/Users/bumishness/Documents/Zooniverse/Notes from Nature/app/views/layout/outer.eco",
+		"/Users/bumishness/Documents/Zooniverse/Notes from Nature/app/controllers/interfaces/Birds.coffee",
+		"/Users/bumishness/Documents/Zooniverse/Notes from Nature/app/lib/tools/Cursor.coffee",
+		"/Users/bumishness/Documents/Zooniverse/Notes from Nature/app/lib/tools/BaseTool.coffee",
+		"/Users/bumishness/Documents/Zooniverse/Notes from Nature/lib/nfn/ui/bugs/widget.js",
+		"/Users/bumishness/Documents/Zooniverse/Notes from Nature/app/index.coffee",
+		"/Users/bumishness/Documents/Zooniverse/Notes from Nature/node_modules/spine/src/route.coffee",
+		"/Users/bumishness/Documents/Zooniverse/Notes from Nature/app/controllers/ProfileController.coffee",
+		"/Users/bumishness/Documents/Zooniverse/Notes from Nature/app/controllers/DoubleTranscriptionController.coffee",
+		"/Users/bumishness/Documents/Zooniverse/Notes from Nature/app/controllers/ArchivesIndexController.coffee",
+		"/Users/bumishness/Documents/Zooniverse/Notes from Nature/app/controllers/LoginController.coffee",
+		"/Users/bumishness/Documents/Zooniverse/Notes from Nature/css/mixin.styl",
+		"/Users/bumishness/Documents/Zooniverse/Notes from Nature/app/views/about/outer.eco",
+		"/Users/bumishness/Documents/Zooniverse/Notes from Nature/app/views/transcription/interfaces/birds/main.eco",
+		"/Users/bumishness/Documents/Zooniverse/Notes from Nature/css/interfaces/birds.styl",
+		"/Users/bumishness/Documents/Zooniverse/Notes from Nature/css/interfaces/menu/index.styl",
+		"/Users/bumishness/Documents/Zooniverse/Notes from Nature/css/widgets/eol.styl",
+		"/Users/bumishness/Documents/Zooniverse/Notes from Nature/css/widgets/modal.styl",
+		"/Users/bumishness/Documents/Zooniverse/Notes from Nature/app/views/widgets/modal.eco",
+		"/Users/bumishness/Documents/Zooniverse/Notes from Nature/app/lib/modal.coffee",
+		"/Users/bumishness/Documents/Zooniverse/Notes from Nature/css/interfaces.styl",
+		"/Users/bumishness/Documents/Zooniverse/Notes from Nature/css/widgets/index.styl",
+		"/Users/bumishness/Documents/Zooniverse/Notes from Nature/css/index.styl",
+		"/Users/bumishness/Documents/Zooniverse/Notes from Nature/css/eol-widget.styl",
+		"/Users/bumishness/Documents/Zooniverse/Notes from Nature/app/lib/eol.coffee",
+		"/Users/bumishness/Documents/Zooniverse/Notes from Nature/app/views/transcription/eol.eco",
+		"/Users/bumishness/Documents/Zooniverse/Notes from Nature/app/views/transcription/interfaces/birds/modal.eco",
+		"/Users/bumishness/Documents/Zooniverse/Notes from Nature/data/archive_manifest.json",
+		"/Users/bumishness/Documents/Zooniverse/Notes from Nature/data/archives/parser.coffee",
+		"/Users/bumishness/Documents/Zooniverse/Notes from Nature/data/package.json",
+		"/Users/bumishness/Documents/Zooniverse/Notes from Nature/data/manifest.coffee",
+		"/Users/bumishness/Documents/Zooniverse/Notes from Nature/lib/nfn/ui/bugs/helper.js",
+		"/Users/bumishness/Documents/Zooniverse/Notes from Nature/app/views/institutes/instituteShow.eco",
+		"/Users/bumishness/Documents/Zooniverse/Notes from Nature/app/views/transcription/bugs.eco",
+		"/Users/bumishness/Documents/Zooniverse/Notes from Nature/lib/nfn/ui/herbarium/helper.js",
+		"/Users/bumishness/Documents/Zooniverse/Notes from Nature/lib/nfn/ui/closer.js",
+		"/Users/bumishness/Documents/Zooniverse/Notes from Nature/app/models/Institute.coffee"
+	],
+	"find":
+	{
+		"height": 45.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+			"/Users/bumishness/Documents/Zooniverse/SpaceWarps/",
+			"/Users/bumishness/Documents/Zooniverse/Notes from Nature/",
+			"/Users/bumishness/Documents/Zooniverse/YouHadMail/",
+			"/Users/bumishness/Documents/Zooniverse/Notes from Nature/",
+			"/Users/bumishness/Documents/Zooniverse/Notes from Nature/app/lib/BugsSubjects.coffee",
+			"/Users/bumishness/Documents/Zooniverse/Notes from Nature",
+			"/Users/bumishness/Documents/Zooniverse/Dashboard",
+			"/Users/bumishness/Documents/Zooniverse/node_modules/ubret",
+			"/Users/bumishness/Documents/Zooniverse/Dashboard",
+			"/Users/bumishness/Documents/Zooniverse/SETILive-Frontend",
+			"/Users/bumishness/Documents/Zooniverse/Dashboard",
+			"/Users/bumishness/Documents/Zooniverse/SETILive-Frontend",
+			"/Users/bumishness/Documents/Zooniverse/GZI",
+			"/Users/bumishness/Documents/Zooniverse/Bat-Detective",
+			"/Users/bumishness/Documents/Zooniverse/Bats-Detective",
+			"/Users/bumishness/Documents/Zooniverse/Ubret-DB/app",
+			"/Users/bumishness/Documents/Zooniverse/Ubret-DB",
+			"/Users/bumishness/Documents/Zooniverse/Ubret",
+			"/Users/bumishness/Documents/Zooniverse/SETILive-FrontEnd",
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"h3",
+			"jquery",
+			"window",
+			"h3",
+			"onuserchange",
+			"onFetch",
+			"active",
+			"Annotation",
+			"video",
+			"div",
+			"p",
+			"div",
+			"span",
+			"subject",
+			"_",
+			"condition",
+			"checkAward",
+			"bg-gre",
+			"getPend",
+			"finish",
+			"showFinish",
+			"startTra",
+			"skip",
+			"nextSubject",
+			"transc",
+			"divided",
+			"transcribing",
+			"header",
+			"heaer",
+			"subtitle",
+			"translucent",
+			"trans",
+			"translucent-box",
+			"h1",
+			"h2",
+			"h3",
+			"h2",
+			"span",
+			"Loaded",
+			"image",
+			"refresh",
+			"render",
+			"field",
+			"entry",
+			"gotoStep",
+			"nextStep",
+			"resize",
+			"bugs-widget",
+			"updateHelper",
+			"inputWidth",
+			"semantic",
+			"button",
+			"closer",
+			"gotoStep",
+			"Step",
+			"canCreate",
+			"span",
+			"form",
+			"button",
+			"deact",
+			"dea",
+			"deactivate",
+			"transcribingScreen",
+			"getValue",
+			"step",
+			".step",
+			".right .step",
+			"skip",
+			"nextStep",
+			"jquery",
+			"gotoStep",
+			"stepTooltip",
+			"stepToop",
+			"gotoStep",
+			"showStep",
+			"resize",
+			"dragg",
+			"not",
+			"notification",
+			"draggable",
+			"dragg",
+			"finished",
+			"finishedTranscription",
+			"after",
+			"getMediaForSpecies",
+			"backgroundMessage",
+			"updateHelper",
+			"css",
+			"setWidth",
+			"css",
+			"setWidth",
+			"transcriberWidget",
+			"updateHelp",
+			"nextStep",
+			"helper",
+			"saveCu",
+			"showFini",
+			"getPending",
+			"finish",
+			"hideNext",
+			"start",
+			"api",
+			"addScroll",
+			"nextStep",
+			"start",
+			"toggleStart",
+			"finishButton",
+			"btn.finish",
+			"api",
+			"scrollToY",
+			"zooniverse",
+			"p",
+			"jqueryify",
+			"$",
+			"easing",
+			"jQuery.easing",
+			"easing",
+			"saveCurrent",
+			"box-shadow",
+			"status-list",
+			"archive-list",
+			"archive",
+			"ul",
+			"about",
+			"vbg-gradient",
+			"border-radius",
+			"hr",
+			"link-footer"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"5008eb88ba40af06f10000016",
+			"bugs"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 5,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "/Users/bumishness/Documents/Zooniverse/SpaceWarps/app/controllers/home_page.coffee",
+					"settings":
+					{
+						"buffer_size": 163,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								35,
+								35
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CoffeeScript/CoffeeScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/Users/bumishness/Documents/Zooniverse/SpaceWarps/css/common.styl",
+					"settings":
+					{
+						"buffer_size": 1399,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								416,
+								416
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/SASS/Syntaxes/SASS.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 461.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "/Users/bumishness/Documents/Zooniverse/SpaceWarps/css/index.styl",
+					"settings":
+					{
+						"buffer_size": 2306,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								377,
+								377
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/SASS/Syntaxes/SASS.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1659.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "/Users/bumishness/Documents/Zooniverse/SpaceWarps/public/index.html",
+					"settings":
+					{
+						"buffer_size": 24759,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2227,
+								2227
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 558.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "/Users/bumishness/Documents/Zooniverse/SpaceWarps/css/pages.styl",
+					"settings":
+					{
+						"buffer_size": 2586,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								663,
+								663
+							]
+						],
+						"settings":
+						{
+							"auto_name": "pages.styl",
+							"syntax": "Packages/SASS/Syntaxes/SASS.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 268.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "/Users/bumishness/Documents/Zooniverse/SpaceWarps/app/controllers/guide_page.coffee",
+					"settings":
+					{
+						"buffer_size": 490,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								336,
+								336
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CoffeeScript/CoffeeScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "/Users/bumishness/Documents/Zooniverse/SpaceWarps/css/classifier.styl",
+					"settings":
+					{
+						"buffer_size": 2445,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								182,
+								182
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/SASS/Syntaxes/SASS.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "/Users/bumishness/Documents/Zooniverse/SpaceWarps/app/controllers/classifier.coffee",
+					"settings":
+					{
+						"buffer_size": 14838,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CoffeeScript/CoffeeScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 863.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"replace":
+	{
+		"height": 0.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"",
+				"untitled"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 225.0,
+	"status_bar_visible": true
+}

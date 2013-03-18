@@ -1,11 +1,7 @@
 <a href="#/"><img class="logo" src="images/logo.png"></a>
 
 <ul>
-	<li class="home"><a href="#/">Home</a></li>
-	<li class="classify"><a href="#/classify">Classify</a></li>
-<!-- 	<li class="science"><a href="#/science">Science</a></li>
-	<li class="team"><a href="#/team">Team</a></li>
- -->
- <li class="about"><a href="#/about">About</a></li>
-<!--  <li class="scene"><a href="#/scene">Scene</a></li> -->
+  <li class="home"><a href="#/">Home</a></li>
+  <li class="classify"><a href="#/classify">Classify</a></li>
+  <li class="about"><a href="#/about">About</a></li>
 </ul>

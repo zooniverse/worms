@@ -11,7 +11,6 @@ class PeerClassificationController extends Spine.Controller
   elements:
     '.left': 'left'
     '.right': 'right'
-    'video': 'video'
     '.overlay': 'videoOverlay'
     '.countdown': 'countdown'
     '.message': 'messageBox'
@@ -50,6 +49,8 @@ class PeerClassificationController extends Spine.Controller
   renderVideo: =>
     @left.html require('views/video')
       subject: Subject.current
+      
+    @video = _V_ 'worm-video', {}
 
     @refreshElements()
 
@@ -66,11 +67,12 @@ class PeerClassificationController extends Spine.Controller
     @scoreBox.html "#{data.totalScore}"
     # @p2Times.append("<p class='time'> <span>Match at :</span> #{data.otherPlayerTime} s </p>  ")
     # @message("You matched with #{Game.otherPlayer} earn #{data.points}!")
-    
+
   markEvent: (e) =>
-    if e.keyCode is 32 and @game.status is 'playing'
+    if e.which is 32
       e.preventDefault()
 
+    if @game.status is 'playing'
       time = @game.markTime()
       @refreshElements()
       @p1Times.prepend( "<p class='time'> <span>Egg at :</span> #{time} s</p>  " )
@@ -83,10 +85,8 @@ class PeerClassificationController extends Spine.Controller
   start: =>
     @game.setStartTime moment()
 
-    @video[0].playbackRate = 1
-    @video[0].play()
-
-    @video.on 'ended', @onVideoEnd
+    @video.play()
+    @video.addEvent 'ended', @onVideoEnd
 
 
   # Events
@@ -117,6 +117,7 @@ class PeerClassificationController extends Spine.Controller
     , 5000
 
   onVideoEnd: =>
+    @game.end()
     if @game.otherPlayer?
       message = "You marked #{@game.times} eggs and #{@game.otherPlayer.length} marked #{@game.teamMateTimes.length} eggs."
     else

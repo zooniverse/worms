@@ -20,9 +20,7 @@ class Slide1 extends BaseSlide
     '.person': 'person'
 
   enter: =>
-    @person.animate
-      opacity: 1
-    @section.fadeIn()
+    @section.show()
 
   exit: (cb) =>
     @person.animate

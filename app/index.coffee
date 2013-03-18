@@ -14,6 +14,7 @@ Classifier = require 'controllers/PeerClassificaitonController'
 Scene = require 'controllers/Scene'
 
 new Api project: 'worms'
+_V_.options.flash.swf = 'video/video-js.swf'
 
 app = {}
 app.container = '#app'
@@ -23,20 +24,14 @@ app.navBar.el.appendTo app.container
 
 app.stack = new Spine.Stack
   controllers:
-    'home': Home
+    'home': Scene
     'classifier': Classifier
     'about': class extends SubPage then content: require 'views/pages/about'
-    'science': class extends SubPage then content: require 'views/pages/science'
-    'team': class extends SubPage then content: require 'views/pages/team'
-    'scene': Scene
   
   routes:
     '/': 'home'
     '/classify': 'classifier'
-    '/science': 'science'
-    '/team': 'team' 
     '/about': 'about'
-    '/scene': 'scene'
 
   default: 'home'
 

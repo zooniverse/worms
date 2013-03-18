@@ -53,4 +53,7 @@ class Game extends Spine.Events
 	start: ->
 		@status = 'playing'
 
+	end: ->
+		@status = 'finished'
+
 module.exports = Game 
