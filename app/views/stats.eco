@@ -40,7 +40,7 @@
 
 <section class="actions">
 	<% if @player1: %>
-		<button class="favourite">Favourite</button>
+		<button class="favorite">Favourite</button>
 		<button class="discuss">Discuss</button>
 	<% else: %>
 		<button class="favourite disabled">Favourite</button>

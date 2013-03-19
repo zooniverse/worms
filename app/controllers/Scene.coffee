@@ -39,7 +39,7 @@ class Scene extends Spine.Controller
 
   deactivate: =>
     super
-    @resetAnimation false
+    # @resetAnimation false
     $('body > footer').show()
     $('body').height 'auto'
     $('body > .reset-button').remove()

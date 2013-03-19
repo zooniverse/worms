@@ -1,4 +1,5 @@
 Classification = require 'zooniverse/models/classification'
+Favorite = require 'zooniverse/models/favorite'
 Subject = require 'zooniverse/models/subject'
 User = require 'zooniverse/models/user'
 loginDialog = require 'zooniverse/controllers/login-dialog'
@@ -139,9 +140,13 @@ class PeerClassificationController extends Spine.Controller
 
     Subject.next()
 
-  onFavorite: =>
+  onFavorite: (e) =>
+    $(e.currentTarget).addClass 'disabled'
+    @favorite = new Favorite({subjects: [Subject.current]})
+    @favorite.send()
 
   onDiscuss: =>
+    window.location = Subject.current.talkHref()
 
   onClickSignIn: =>
     loginDialog.show()
