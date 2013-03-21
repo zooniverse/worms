@@ -2,7 +2,7 @@
 <div class="videoContainer">
 	<% if @subject?: %>
     <div class="overlay"></div>
-		<video id="worm-video" width="575" height="432">
+		<video controls preload id="worm-video" width="575" height="432">
       <source src="<%= @subject.location.mp4 %>" type="video/mp4" />
     </video>
 	<% end %>

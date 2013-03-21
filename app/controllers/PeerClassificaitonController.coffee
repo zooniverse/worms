@@ -7,7 +7,7 @@ loginDialog = require 'zooniverse/controllers/login-dialog'
 Game = require 'models/Game'
 
 class PeerClassificationController extends Spine.Controller
-  className: 'peerClassifier'
+  className: 'classifier'
 
   elements:
     '.left': 'left'
@@ -20,12 +20,11 @@ class PeerClassificationController extends Spine.Controller
     '.player2 .times': 'p2Times'
 
   events:
-    'click .start': 'onStartCountDown'
+    'click .bubble': 'onStartCountDown'
     'click .countdown': 'onStartCountDown'
     'click .finished': 'onFinish'
     'click .favorite': 'onFavorite'
     'click .discuss': 'onDiscuss'
-
     'click .sign-in': 'onClickSignIn'
 
   constructor: ->
