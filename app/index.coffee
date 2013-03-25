@@ -26,12 +26,14 @@ app.stack = new Spine.Stack
   controllers:
     'home': Scene
     'classifier': Classifier
-    'about': class extends SubPage then content: require 'views/pages/about'
-  
+    'science': class extends SubPage then content: require 'views/pages/science'
+    'team': class extends SubPage then content: require 'views/pages/team'
+
   routes:
     '/': 'home'
     '/classify': 'classifier'
-    '/about': 'about'
+    '/science': 'science'
+    '/team': 'team'
 
   default: 'home'
 

@@ -51,7 +51,6 @@ class PeerClassificationController extends Spine.Controller
       subject: Subject.current
       
     @video = _V_ 'worm-video', {}
-
     @refreshElements()
 
   renderStats: =>

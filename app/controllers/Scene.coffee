@@ -31,11 +31,15 @@ class Scene extends Spine.Controller
 
   active: =>
     super
-    @reset = new Reset
-    @reset.appendTo 'body'
-    @reset.on 'reset', @resetAnimation
-    $('body > footer').hide()
-    @delay @go, 100
+
+    if Spine.Route.path is '/'
+      @reset = new Reset
+      @reset.appendTo 'body'
+      @reset.on 'reset', @resetAnimation
+      $('body > footer').hide()
+
+      console.log Spine.Route.path
+      @delay @go, 100
 
   deactivate: =>
     super

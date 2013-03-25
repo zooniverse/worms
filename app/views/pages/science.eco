@@ -1,1 +1,11 @@
-<p>for science!</p>
+<div class="left"></div>
+<div class="right">
+  <h1>Our small distant cousins</h1>
+  <p>We watch movies of the nematode worm C. elegans to understand how the brain works and how genes affect behaviour. The idea is that if a gene is involved in a visible behaviour, then mutations that break that gene might lead to detectable behavioural changes. The type of change gives us a hint about what the affected gene might be doing. Although it is small and has far fewer cells than we do, C. elegans has almost as many genes and because we share a common ancestor even with worms, many of them are closely related to human genes. This presents us with the opportunity to study the function of genes that are important for human brain function in an animal that is easier to handle, great for microscopy and genetics, and has a generation time of only a few days.</p>
+
+  <h2>The Importance of Egg Laying</h1>
+  <p>Egg laying in C. elegans requires the proper functioning of a neural circuit to activate the muscles that open the vulva to expel eggs. This circuit is modulated by a neurotransmitter called serotonin; the same molecule that affects mood in humans. Antidepressants like prozac work by stimulating serotonergic signaling in humans. They also work in worms and they stimulate egg laying! If we observe a mutant that lays more or fewer eggs than normal, this is a hint that something has gone wrong in the egg laying neural circuit or muscles and this can have far reaching implications, maybe even teaching us something about genes involved in depression in humans. The challenge is that there are thousands of genes without a known function and screening for worms with egg laying defects is time consuming. That's why we need your help!</p>
+
+  <h2>Worm Tracking</h2>
+  <p>We have built tracking microscopes to record video of crawling worms. A USB microscope is mounted on a motorised stage connected to a computer. When the worm moves, the computer analyses the changing image and commands the stage to move to re-centre the worm in the field of view. Because the trackers work without supervision, we can run eight of them in parallel to collect a lot of movies. If you'd like to learn more about worm tracking (or even build a tracker yourself!), we have a parts list and instructions on our <a href="http://www.mrc-lmb.cam.ac.uk/wormtracker/">tracking website</a></p>
+</div>

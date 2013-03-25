@@ -1,1 +1,40 @@
-<p>team!</p>
+<div class="left"></div>
+<div class="right">
+  <h1>The Team</h1>
+  <h2>Organisations</h2>
+  <h3>MRC Laboratory of Molecular Biology</h3>
+  <p>The MRC Laboratory of Molecular Biology (LMB) is a world-class research laboratory, dedicated to understanding important biological processes at the molecular level – with the goal of using this knowledge to tackle major problems in human health and disease. The LMB is one of the birthplaces of modern molecular biology. Many techniques were pioneered at the laboratory, including DNA sequencing, methods for determining the three-dimensional structure of proteins and the development of monoclonal antibodies.</p>
+
+  <p>Over the years, the work of LMB scientists has attracted nine Nobel prizes, shared between 13 LMB scientists, dozens of Royal Society awards and numerous other scientific honours.</p>
+
+  <h2>People</h2>
+  <section>
+    <h3>Andr&#233; Brown</h3>
+    <figure><img src="images/team/andre.jpg"></figure>
+    <p>Andr&#233; is a research fellow at Clare College in Cambridge and a visiting scientist at the MRC Lab of Molecular Biology. Originally from Newfoundland, he is a physicist by training. After finishing his PhD, he switched from pulling molecules to watching worms. He never ceases to be amazed, period.</p>
+  </section>
+
+  <section>
+    <h3>Laura Grundy</h3>
+    <figure><img src="images/team/laura.jpg"></figure>
+    <p>Laura graduated from Anglia Ruskin University with a BSc in molecular biology and spent two years as a pharmaceutical analyst before joining the MRC Lab of Molecular Biology as a Research Assistant. She spent two years gathering data for the worm tracking project and is now a part time student, part time worm tracker in the lab. She is also very glad that she won't be counting all the eggs alone!</p>
+  </section>
+
+  <section>
+    <h3>Ev Yemini</h3>
+    <figure><img src="images/team/ev.jpg"></figure>
+    <p>After graduating from Columbia University with a pre-medical BA concentrating in mathematics and computer science, Eviatar Yemini joined the world of high-finance and high-tech. Unfulfilled and desiring a career in neuroscience, he completed his PhD at Cambridge, investigating the contribution of genetics to behavior and, now, continues his investigations as a postoctoral HHMI Research Associate at Columbia University. An avid fan of the arts, Ev has found time to perform in several theatrical performances at Cambridge and contribute to an art exhibit for the London Science Museum.</p>
+  </section>
+
+  <section>
+    <h3>Tadas Jucikas</h3>
+    <figure><img src="images/team/tadas.jpg"></figure>
+    <p>Tadas is a PhD student at the MRC Lab of Molecular Biology with a background in computer science and bioinformatics. He has been working on worm tracking for several years and currently manages the home-built analysis pipeline for the worm tracking project.</p>
+  </section>
+
+  <section>
+    <h3>Bill Schafer</h3>
+    <figure><img src="images/team/bill.jpg"></figure>
+    <p>Bill is a group leader at the MRC Lab of Molecular Biology and heads the cellular and molecular mechanisms of behaviour group in the Cell Biology Division. He is interested in understanding how nervous systems process information and generate behaviour at the most basic level: that of molecules and cells.</p>
+  </section>
+</div>
