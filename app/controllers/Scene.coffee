@@ -27,20 +27,17 @@ class Scene extends Spine.Controller
 
   constructor: (element) ->
     super
-    Spine.Route.bind 'change', @active
     @html require 'views/scene'
 
   active: =>
     super
+    @reset = new Reset
+    @reset.appendTo 'body'
+    @reset.on 'reset', @resetAnimation
+    $('body > footer').hide()
 
-    if Spine.Route.path is '/'
-      @reset = new Reset
-      @reset.appendTo 'body'
-      @reset.on 'reset', @resetAnimation
-      $('body > footer').hide()
-
-      console.log Spine.Route.path
-      @delay @go, 100
+    console.log Spine.Route.path
+    @delay @go, 100
 
   deactivate: =>
     super
