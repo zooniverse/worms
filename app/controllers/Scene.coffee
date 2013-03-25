@@ -27,6 +27,7 @@ class Scene extends Spine.Controller
 
   constructor: (element) ->
     super
+    Spine.Route.bind 'change', @active
     @html require 'views/scene'
 
   active: =>

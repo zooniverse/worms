@@ -10,7 +10,7 @@ NavBar = require 'controllers/NavBarController'
 SubPage = require 'controllers/SubPage'
 
 Home = require 'controllers/HomeController'
-Classifier = require 'controllers/PeerClassificaitonController'
+Classifier = require 'controllers/classifier'
 Scene = require 'controllers/Scene'
 
 new Api project: 'worms'
