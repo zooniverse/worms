@@ -13,7 +13,8 @@ Home = require 'controllers/HomeController'
 Classifier = require 'controllers/classifier'
 Scene = require 'controllers/Scene'
 
-new Api project: 'worms'
+new Api project: 'worms', host: Config.apiHost
+
 _V_.options.flash.swf = 'video/video-js.swf'
 
 app = {}
