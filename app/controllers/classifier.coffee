@@ -55,6 +55,7 @@ class Classifier extends Spine.Controller
       subject: Subject.current
       
     @video = _V_ 'worm-video', {}
+    $('.vjs-controls').show()
     @refreshElements()
 
   renderStats: =>
@@ -142,6 +143,8 @@ class Classifier extends Spine.Controller
     @refreshElements()
 
   onFinish: =>
+    @video.destroy()
+
     annotations = @game.getGameStatus()
 
     @classification.annotate annotations
