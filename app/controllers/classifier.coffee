@@ -58,7 +58,7 @@ class Classifier extends Spine.Controller
     @refreshElements()
 
   renderStats: =>
-    if Subject.current.metadata.mutation and @mutations[Subject.current.metadata.mutation]?
+    if Subject.current?.metadata.mutation and @mutations[Subject.current.metadata.mutation]?
       mutation = @mutations[Subject.current.metadata.mutation]
     else
       mutation = null
