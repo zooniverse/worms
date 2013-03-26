@@ -9,7 +9,7 @@ subject =
     filename: 'acr-6__ok3117__on_food_R_2010_02_23__13_12___3___14_seg-0'
     mutation: 'acr'
     timings: [
-      name: 'test-name'
+      name: 'zoo-user'
       times: ['3500', '5500', '10500']
     ]
   project_id: '5137bcc3390c05021b000001'

@@ -3,6 +3,7 @@ Config = require 'lib/config'
 
 Api = require 'zooniverse/lib/api'
 Subject = require 'zooniverse/models/subject'
+User = require 'zooniverse/models/user'
 Footer = require 'zooniverse/controllers/footer'
 TopBar = require 'zooniverse/controllers/top-bar'
 
@@ -48,6 +49,9 @@ app.topBar.el.prependTo 'body'
 
 Subject.queueLength = 1
 Subject.next()
+
+User.fetch()
+
 Spine.Route.setup()
 
 module.exports = app
