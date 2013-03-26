@@ -63,9 +63,10 @@ class Classifier extends Spine.Controller
     else
       mutation = null
 
+    game = @game || {}
     @right.html require('views/stats')
       player1: User.current
-      game: @game
+      game: game
       mutation: mutation
 
     @refreshElements()

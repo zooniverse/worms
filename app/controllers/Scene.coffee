@@ -31,10 +31,10 @@ class Scene extends Spine.Controller
 
   active: =>
     super
-    @reset = new Reset
-    @reset.appendTo 'body'
-    @reset.on 'reset', @resetAnimation
-    $('body > footer').hide()
+    # @reset = new Reset
+    # @reset.appendTo 'body'
+    # @reset.on 'reset', @resetAnimation
+    # $('body > footer').hide()
 
     @delay @go, 100
 

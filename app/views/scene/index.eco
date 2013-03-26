@@ -16,7 +16,7 @@
       <a id="classify-button" class="big-button" href="#/classify">Start classifying</a>
     </div>
   </section>
-
+<!-- 
   <section>
     <div class="left">
       <div class="details">
@@ -31,7 +31,7 @@
       <h1>One little worm can help scientists understand big genetic mysteries</h1>
       <p>Scientists with the Medical Research Council are discovering how genes express themselves in nematode worms. These discoveries can help us understand our own genes, too.</p>
     </div>
-  </section>
+  </section> -->
 <!-- 
   <section>
     <img class="img genes" src="images/scene/genes.png">
