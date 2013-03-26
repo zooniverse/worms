@@ -32,7 +32,7 @@
       <p>Scientists with the Medical Research Council are discovering how genes express themselves in nematode worms. These discoveries can help us understand our own genes, too.</p>
     </div>
   </section>
-
+<!-- 
   <section>
     <img class="img genes" src="images/scene/genes.png">
 
@@ -40,6 +40,6 @@
       <h1>A blob of Genes!</h1>
       <p>We need these. Genes are good. I like genes.</p>
     </div>
-  </section>
+  </section> -->
 
 </div>
