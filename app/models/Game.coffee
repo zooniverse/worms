@@ -4,7 +4,7 @@ Classification = require 'zooniverse/models/classification'
 Subject = require 'zooniverse/models/subject'
 User = require 'zooniverse/models/user'
 
-class Game extends Spine.Events
+class Game extends Spine.Controller
 
 	constructor: ->
 		@status ||= 'waiting'
@@ -18,25 +18,27 @@ class Game extends Spine.Events
 			if @currentSubject?
 				previousGame = _(@currentSubject.metadata.timings).shuffle()[0]
 				if previousGame?
-					@teamMateTimes = previousGame.times
-					@otherPlayer   = previousGame.name
+					for time in previousGame.times
+						@teamMateTimes.push {used: false, time: time}
+					@otherPlayer = previousGame.name
 				else
 					@score = 200
 			else
 				console.log 'no subjects'
 
-	compareTimes: (time1, time2) =>
-		if Math.abs(time1 - time2)  < 1000
+	compareTimes: (time1, closestValidTime) =>
+		if Math.abs(time1 - closestValidTime.time)  < 1000
+			closestValidTime.used = true
 			points = 20
 			@score += points 
-			Spine.trigger('score', {points: points, totalScore: @score, message: 'great!', playerTime: time1, otherPlayerTime: time2}) 
-			console.log "scoring high"
-
-		else if Math.abs(time1 - time2)  < 2000
+			console.log 'trigger score'
+			@trigger 'score', {points: points, totalScore: @score, message: 'great!', playerTime: time1, otherPlayerTime: closestValidTime.time}
+		else if Math.abs(time1 - closestValidTime.time) < 2000
+			closestValidTime.used = true
 			points = 10
 			@score += points 
-			@trigger('score', {points: points, totalScore: @score, message: 'good'})
-			console.log "scoring low"
+			console.log 'trigger score'
+			@trigger 'score', {points: points, totalScore: @score, message: 'good'}
 
 	setStartTime: =>
 		@startTime = moment()
@@ -44,9 +46,16 @@ class Game extends Spine.Events
 	markTime: =>
 		time = moment()
 		diff = (time.diff(@startTime))
-		@times.push diff 
-		@compareTimes(diff, timeO) for timeO in @teamMateTimes
-		time.diff(@startTime, 'seconds', true)
+		@times.push diff
+
+		closestValidTime = _.chain(@teamMateTimes)
+			.sortBy((timeObj) -> Math.abs(timeObj.time - diff))
+			.reject((timeObj) -> timeObj.used)
+			.first()
+			.value()
+
+	 	if closestValidTime then @compareTimes diff, closestValidTime
+	 	time.diff @startTime, 'seconds', true
 
 	getGameStatus: => [{timings: @times} , {score: @score}]
 

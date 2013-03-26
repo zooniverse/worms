@@ -1,7 +1,7 @@
-mutations = [
+mutations =
   acr:
-    name: ''
-    description: ''
+    name: 'Acetylcholine Receptor'
+    description: 'Worms in this group have mutations that affect one of their acetylcholine receptors. These are molecules on the surface of cells that bind to the neurotransmitter acetylcholine.'
   asic:
     name: ''
     description: ''
@@ -83,6 +83,5 @@ mutations = [
   unc:
     name: ''
     description: ''
-]
 
 module.exports = mutations
