@@ -34,7 +34,7 @@ class Scene extends Spine.Controller
     # @reset = new Reset
     # @reset.appendTo 'body'
     # @reset.on 'reset', @resetAnimation
-    # $('body > footer').hide()
+    $('body > footer').hide()
 
     @delay @go, 100
 

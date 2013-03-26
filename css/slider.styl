@@ -1,0 +1,119 @@
+
+$reset-width = 150px
+#reset
+  background: none
+  border: 0
+  bottom: 50px
+  color: #fff
+  cursor: pointer
+  font-size: 16px
+  font-weight: 700
+  left: calc(50% \- ($reset-width / 2))
+  left: -webkit-calc(50% \- ($reset-width / 2))
+  position: absolute
+  text-shadow: 0 1px 0 #0089c8
+  width: $reset-width
+  z-index: 1
+
+$slider-height = 500px
+
+.stack > .slider
+  height: $slider-height
+  left: 0
+  overflow: hidden
+  top: 100px
+  width: 100%
+
+  .container
+    @extends #site-container
+    position: relative
+
+  .section-container
+    @extends #clearfix
+    @extends #site-container
+    height: $slider-height
+    overflow: hidden
+    position: relative
+    transition: all 700ms cubic-bezier(0.550, 0.085, 0.830, 0.280)
+    width: 100%
+
+  h1 
+    font-size: 30px 
+    font-weight: 700
+
+  h3 
+    font-size: 22px
+    font-weight: 700
+  p
+    font-size: 14px
+
+  section
+    float: left
+    height: $slider-height
+    position: relative
+    width: 100%
+
+    .container
+      display: none
+
+    .left, .right
+      position: absolute
+
+    .left
+      width: 400px
+
+      .details
+        left: 50px
+        position: absolute
+        text-align: right
+        top: 120px
+        width: 90px
+
+
+    .right
+      left: 420px
+      top: 91px
+      width: 540px
+
+      p
+        font-size: 16px
+        font-weight: 700
+        line-height: 1.5em
+        margin-bottom: 40px
+
+    img
+      left: 150px
+      position: absolute
+      top: 0
+
+      &.genes
+        left: 155px
+        top: 105px
+
+      &.person
+        left: 220px
+        top: 20px
+
+      &.worm
+        left: 165px
+
+  .sponsors
+    bottom: 50px
+    left: 42%
+    position: absolute
+
+    figure
+      margin: 0
+      padding: 0
+      position: relative
+
+      figcaption
+        @extends p
+        padding: 0 0 0 130px
+
+      img
+        left: 0
+        position: absolute
+        top: 2px
+
+

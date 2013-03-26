@@ -13,6 +13,7 @@ SubPage = require 'controllers/SubPage'
 Home = require 'controllers/HomeController'
 Classifier = require 'controllers/classifier'
 Scene = require 'controllers/Scene'
+Slider = require 'controllers/slider'
 
 new Api project: 'worms', host: Config.apiHost
 
@@ -26,7 +27,7 @@ app.navBar.el.appendTo app.container
 
 app.stack = new Spine.Stack
   controllers:
-    'home': Scene
+    'home': Slider
     'classifier': Classifier
     'science': class extends SubPage then content: require 'views/pages/science'
     'team': class extends SubPage then content: require 'views/pages/team'

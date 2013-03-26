@@ -66,19 +66,19 @@ body
   position: relative
   
   > div
+    @extends #site-container
     display: none
   > div.active
     @extends #clearfix
     display: block
-    padding: 70px 0
+    padding: 50px 0 70px 0
 
 #app
   position: relative
   z-index: 1
-  > header, > .stack
-    @extends #site-container
 
 #app > header
+  @extends #site-container
   color: white
   font-size: 12px
   font-weight: 700
