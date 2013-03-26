@@ -36,7 +36,6 @@ class Scene extends Spine.Controller
     @reset.on 'reset', @resetAnimation
     $('body > footer').hide()
 
-    console.log Spine.Route.path
     @delay @go, 100
 
   deactivate: =>
@@ -54,7 +53,7 @@ class Scene extends Spine.Controller
       klass = new Slides[i]({el: $(el)})
       @positions.push [i, [$(el).outerHeight() * i, $(el).outerHeight() * i + $(el).outerHeight()], klass]
 
-    $('body').height (@positions.length + 1) * @sections.height()
+    if Spine.Route.path is '/' then $('body').height (@positions.length + 1) * @sections.height()
     @currentRegion = @positions[0][1]
     @positions[@currentStep][2].enter()
 

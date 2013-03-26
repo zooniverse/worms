@@ -37,7 +37,6 @@ class Classifier extends Spine.Controller
 
     User.on 'change', @renderStats
     Subject.on 'select', =>
-      Subject.current.metadata = fakeSubject.metadata
       @classification = new Classification subject: Subject.current
       @game = new Game
       @game.bind 'score', @score
@@ -66,18 +65,17 @@ class Classifier extends Spine.Controller
 
     @right.html require('views/stats')
       player1: User.current
-      player2: @game.otherPlayer
-      gameStatus: @game.status
-      score: @game.score
+      game: @game
       mutation: mutation
 
     @refreshElements()
 
   score: (data) =>
-    console.log 'rendering score'
-    @scoreBox.html "#{data.totalScore}"
-    @p2Times.append("<p class='time'> <span>Match at :</span> #{data.otherPlayerTime / 1000} s </p>  ")
-    @message("You matched with #{@game.otherPlayer} earn #{data.points}!")
+    @scoreBox.html "Score: #{data.totalScore}"
+
+    if data.otherPlayerTime
+      @p2Times.append("<p class='time'> <span>Match at :</span> #{data.otherPlayerTime / 1000} s </p>  ")
+      @message("You matched with #{@game.otherPlayer} and earned #{data.points}!")
 
   markEvent: (e) =>
     if e.which is 32
@@ -89,9 +87,7 @@ class Classifier extends Spine.Controller
         @p1Times.prepend("<p class='time'> <span>Egg at :</span> #{time} s</p>  ")
 
   message: (text) =>
-    message = $("<p>#{text}</p>")
-    @messageBox.append message
-    message.fadeOut 3000
+    @messageBox.html text
 
   start: =>
     @game.setStartTime moment()
@@ -102,30 +98,31 @@ class Classifier extends Spine.Controller
 
   # Events
   onStartCountDown: =>
-    @game.start()
+    if @game.status is 'waiting'
+      @game.start()
 
-    @renderStats()
-    setTimeout =>
-      @countdown.show()
-      @countdown.html("3")
-    , 1000
+      @renderStats()
+      setTimeout =>
+        @countdown.show()
+        @countdown.html("3")
+      , 1000
 
-    setTimeout =>
-      @countdown.html("2")
-    , 2000
+      setTimeout =>
+        @countdown.html("2")
+      , 2000
 
-    setTimeout =>
-      @countdown.html("1")
-    , 3000
+      setTimeout =>
+        @countdown.html("1")
+      , 3000
 
-    setTimeout =>
-      @countdown.html("GO")
-    , 4000
+      setTimeout =>
+        @countdown.html("GO")
+      , 4000
 
-    setTimeout =>
-      @countdown.remove()
-      @start()
-    , 5000
+      setTimeout =>
+        @countdown.remove()
+        @start()
+      , 5000
 
   onVideoEnd: =>
     @game.end()

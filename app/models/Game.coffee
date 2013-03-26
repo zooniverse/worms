@@ -19,7 +19,7 @@ class Game extends Spine.Controller
 				previousGame = _(@currentSubject.metadata.timings).shuffle()[0]
 				if previousGame?
 					for time in previousGame.times
-						@teamMateTimes.push {used: false, time: time}
+						@teamMateTimes.push {used: false, time: parseInt(time)}
 					@otherPlayer = previousGame.name
 				else
 					@score = 200
@@ -30,15 +30,13 @@ class Game extends Spine.Controller
 		if Math.abs(time1 - closestValidTime.time)  < 1000
 			closestValidTime.used = true
 			points = 20
-			@score += points 
-			console.log 'trigger score'
-			@trigger 'score', {points: points, totalScore: @score, message: 'great!', playerTime: time1, otherPlayerTime: closestValidTime.time}
+			@score += points
+			@trigger 'score', {points: points, totalScore: @score, playerTime: time1, otherPlayerTime: closestValidTime.time}
 		else if Math.abs(time1 - closestValidTime.time) < 2000
 			closestValidTime.used = true
 			points = 10
-			@score += points 
-			console.log 'trigger score'
-			@trigger 'score', {points: points, totalScore: @score, message: 'good'}
+			@score += points
+			@trigger 'score', {points: points, totalScore: @score}
 
 	setStartTime: =>
 		@startTime = moment()
