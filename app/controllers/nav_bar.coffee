@@ -15,6 +15,6 @@ class NavBarController extends Spine.Controller
       $(".#{route}").addClass 'active'
 
   render: =>
-    @html require 'views/navBar'
+    @html require 'views/nav_bar'
 
 module.exports = NavBarController

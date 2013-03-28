@@ -1,9 +1,9 @@
 <div class="countdown"></div>
 <div class="videoContainer">
-	<% if @subject?: %>
+  <% if @subject?: %>
     <div class="overlay"></div>
-		<video controls id="worm-video" width="575" height="432">
+    <video controls id="worm-video" width="575" height="432">
       <source src="<%= @subject.location.mp4 %>" type="video/mp4" />
     </video>
-	<% end %>
+  <% end %>
 </div>

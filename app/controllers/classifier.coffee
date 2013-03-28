@@ -4,9 +4,7 @@ Subject = require 'zooniverse/models/subject'
 User = require 'zooniverse/models/user'
 loginDialog = require 'zooniverse/controllers/login-dialog'
 
-Game = require 'models/Game'
-
-fakeSubject = require 'lib/fake_subject'
+Game = require 'lib/game'
 
 class Classifier extends Spine.Controller
   className: 'classifier'
@@ -30,6 +28,7 @@ class Classifier extends Spine.Controller
     'click .sign-in': 'onClickSignIn'
 
   mutations: require 'lib/mutations'
+  template: require 'views/classifier'
 
   constructor: ->
     super
@@ -43,14 +42,14 @@ class Classifier extends Spine.Controller
       @render()
 
   render: =>
-    @html require 'views/peerClassifier'
+    @html @template()
     @delay ->
       @renderVideo() unless $('video').length > 0
       @renderStats()
     , 200
 
   renderVideo: =>
-    @left.html require('views/video')
+    @left.html require('views/classifier/video')
       subject: Subject.current
       
     @video = _V_ 'worm-video', {}
@@ -64,7 +63,7 @@ class Classifier extends Spine.Controller
       mutation = null
 
     game = @game || {}
-    @right.html require('views/stats')
+    @right.html require('views/classifier/stats')
       player1: User.current
       game: game
       mutation: mutation

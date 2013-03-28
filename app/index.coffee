@@ -15,7 +15,6 @@ TopBar = require 'zooniverse/controllers/top-bar'
 NavBar = require 'controllers/nav_bar'
 SubPage = require 'controllers/sub_page'
 
-Home = require 'controllers/home'
 Classifier = require 'controllers/classifier'
 Slider = require 'controllers/slider'
 
