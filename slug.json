@@ -1,7 +1,5 @@
 {
   "dependencies": [
-    "es5-shimify", 
-    "json2ify", 
     "spine",
     "spine/lib/local",
     "spine/lib/ajax",
@@ -20,9 +18,7 @@
     "node_modules/zooniverse/vendor/base64.js",
     "./lib/jquery.js",
     "./lib/jquery.animate.js",
-    "./lib/jquery.scroll.js",
     "./lib/video.js",
     "./lib/moment.js"
-  ],
-  "minify": false 
+  ]
 }

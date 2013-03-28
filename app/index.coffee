@@ -1,4 +1,9 @@
-require 'lib/setup'
+require 'spine'
+require 'spine/lib/local'
+require 'spine/lib/ajax'
+require 'spine/lib/manager'
+require 'spine/lib/route'
+
 Config = require 'lib/config'
 
 Api = require 'zooniverse/lib/api'
@@ -7,12 +12,11 @@ User = require 'zooniverse/models/user'
 Footer = require 'zooniverse/controllers/footer'
 TopBar = require 'zooniverse/controllers/top-bar'
 
-NavBar = require 'controllers/NavBarController'
-SubPage = require 'controllers/SubPage'
+NavBar = require 'controllers/nav_bar'
+SubPage = require 'controllers/sub_page'
 
-Home = require 'controllers/HomeController'
+Home = require 'controllers/home'
 Classifier = require 'controllers/classifier'
-Scene = require 'controllers/Scene'
 Slider = require 'controllers/slider'
 
 new Api project: 'worms', host: Config.apiHost
