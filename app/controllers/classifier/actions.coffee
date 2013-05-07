@@ -1,4 +1,3 @@
-Subject = require 'zooniverse/models/subject'
 User = require 'zooniverse/models/user'
 
 Game = require 'lib/game'
@@ -21,10 +20,7 @@ class Actions extends Spine.Controller
     User.on 'change', (e, user) =>
       @render() if user
 
-    Subject.on 'select', =>
-      @render()
-
-    Game.on 'end', @render
+    Game.on 'new end', @render
 
   render: =>
     @html @template

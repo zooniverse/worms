@@ -32,6 +32,8 @@ class Game extends EventEmitter
       else
         console.log 'no subjects'
 
+    @trigger 'new'
+
   compareTimes: (time1, closestValidTime) =>
     if Math.abs(time1 - closestValidTime.time)  < 1000
       closestValidTime.used = true

@@ -26,7 +26,7 @@ class Stats extends Spine.Controller
 
     User.on 'change', (e, user) =>
       @render() if user
-      
+
     Game.bind 'score', =>
       @score()
 
@@ -52,29 +52,6 @@ class Stats extends Spine.Controller
 
   onClickSignIn: =>
     require('zooniverse/controllers/login-dialog').show()
-
-      # setTimeout =>
-      #   @countdown.show()
-      #   @countdown.html("3")
-      # , 1000
-
-      # setTimeout =>
-      #   @countdown.html("2")
-      # , 2000
-
-      # setTimeout =>
-      #   @countdown.html("1")
-      # , 3000
-
-      # setTimeout =>
-      #   @countdown.html("GO")
-      # , 4000
-
-      # setTimeout =>
-      #   @countdown.remove()
-      #   @start()
-      # , 5000
-
 
 
 module.exports = Stats
