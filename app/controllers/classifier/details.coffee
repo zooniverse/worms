@@ -1,5 +1,4 @@
 Subject = require 'zooniverse/models/subject'
-User = require 'zooniverse/models/user'
 
 class Details extends Spine.Controller
   className: 'subject-info'
@@ -10,7 +9,7 @@ class Details extends Spine.Controller
 
   constructor: ->
     super
-    
+
     @html @template()
 
     Subject.on 'select', =>

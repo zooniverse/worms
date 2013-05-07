@@ -1,18 +1,20 @@
 {
   "dependencies": [
+    "underscore",
+
     "spine",
-    "spine/lib/local",
-    "spine/lib/ajax",
     "spine/lib/route",
     "spine/lib/manager",
-    "underscore",
+
     "zooniverse/controllers/footer",
     "zooniverse/controllers/top-bar",
     "zooniverse/lib/api",
     "zooniverse/lib/event-emitter",
     "zooniverse/models/classification",
     "zooniverse/models/subject",
-    "zooniverse/models/user"
+    "zooniverse/models/user",
+
+    "zootorial"
   ],
 
   "libs": [

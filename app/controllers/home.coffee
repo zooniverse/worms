@@ -23,6 +23,7 @@ class Home extends BaseController
 
   activate: =>
     super
+    @slider.trigger 'updateSizes'
     @slider.trigger 'play', true
 
   deactivate: =>

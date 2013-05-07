@@ -1,6 +1,4 @@
 require 'spine'
-require 'spine/lib/local'
-require 'spine/lib/ajax'
 require 'spine/lib/manager'
 require 'spine/lib/route'
 
@@ -52,7 +50,6 @@ app.topBar = new TopBar
 app.topBar.el.prependTo 'body'
 
 Subject.queueLength = 1
-Subject.next()
 
 User.fetch()
 
