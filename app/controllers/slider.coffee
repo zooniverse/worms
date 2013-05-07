@@ -1,22 +1,32 @@
-$.fn.pixels = (property) ->
-  parseInt(@css(property).slice(0, -2))
-
 class Slider extends Spine.Controller
   className: 'slider'
+
+  elements:
+    '#slider': 'slider'
 
   constructor: ->
     super
     @html require 'views/slider'
 
     @delay =>
-      $('#slider').carouFredSel
+      @slider.carouFredSel
         height: 500
         width: '100%'
         items: 1
         prev: '#back'
         next: '#forward'
         auto:
+          play: true
           timeoutDuration: 5000
+
+
+  activate: =>
+    super
+    @slider.trigger 'play', true
+
+  deactivate: =>
+    super
+    @slider.trigger 'stop'
 
 
 module.exports = Slider
