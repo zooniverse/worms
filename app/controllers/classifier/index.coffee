@@ -1,9 +1,9 @@
 Classification = require 'zooniverse/models/classification'
-Favorite = require 'zooniverse/models/favorite'
 Subject = require 'zooniverse/models/subject'
-User = require 'zooniverse/models/user'
 
 Game = require 'lib/game'
+
+BaseController = require 'controllers/base-controller'
 
 Actions = require 'controllers/classifier/actions'
 Announcer = require 'controllers/classifier/announcer'
@@ -11,7 +11,7 @@ Details = require 'controllers/classifier/details'
 Stats = require 'controllers/classifier/stats'
 Video = require 'controllers/classifier/video'
 
-class Classifier extends Spine.Controller
+class Classifier extends BaseController
   className: 'classifier'
 
   elements:

@@ -1,4 +1,6 @@
-class Slider extends Spine.Controller
+BaseController = require 'controllers/base-controller'
+
+class Home extends BaseController
   className: 'slider'
 
   elements:
@@ -19,7 +21,6 @@ class Slider extends Spine.Controller
           play: true
           timeoutDuration: 5000
 
-
   activate: =>
     super
     @slider.trigger 'play', true
@@ -29,4 +30,4 @@ class Slider extends Spine.Controller
     @slider.trigger 'stop'
 
 
-module.exports = Slider
+module.exports = Home

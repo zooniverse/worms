@@ -1,7 +1,1 @@
-<div class="bubble">
-  <% if @game?.status is 'waiting' or !@game?.status?: %>
-    <span class="message start">Click to start a game</span>
-  <% else: %>
-    <span class="message">Press space if you see the worm lay an egg</span>
-  <% end %>
-</div>
+<div class="bubble"><span class="message"></span></div>
