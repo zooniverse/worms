@@ -1,55 +1,19 @@
-<section class="subject-info">
-  <img src="images/worm.png"></img>
-  <div class="details">
-    <% if @mutation?: %>
-      <h2><%- @mutation.name %></h2>
-      <p><%- @mutation.description %></p>
-    <% else: %>
-      <h2>Unspecified worm type</h2>
-      <p>This worm's genetic abnormality is not specified.</p>
-    <% end %>
-  </div>
-</section>
-
-<section>
-  <div class="bubble">
-    <% if @game.status is 'waiting' or !@game.status?: %>
-      <span class="message start">Click to start a game</span>
-    <%else: %>
-      <span class="message">Press space if you see the worm lay an egg</span>
-    <% end %>
-  </div>
-</section>
-
-<section class="players">
-  <div class="player1 player">
-    <% if @player1: %>
-      <p class="name">Player: <%= @player1.name %></p>
-      <p class="score">Score: <%= @game.score %></p> 
-    <% else: %>
-      <p class="sign-in">Sign in to play</p>
-    <% end %>
-    <ul class="times"></ul>
-  </div>
-
-  <div class="player2 player">
-    <% if @game.player2: %>
-      <p class="name">Player: <%= @game.otherPlayer %></p>
-      <div class="times"></div>
-    <% else if @player1: %>
-      <p class="name">First spotter!</p>
-      <p class="time">You are the first person to see this worm! You get a 200 point spotter award</p>
-    <% end %>
-  </div>
-</section>
-
-<section class="actions">
-  <% if @player1: %>
-    <button class="favorite">Favourite</button>
-    <button class="discuss">Discuss</button>
+<div class="player1 player">
+  <% if @user: %>
+    <p class="name">Player: <%= @user.name %></p>
+    <p class="score">Score: <%= @game?.score %></p> 
   <% else: %>
-    <button class="favourite disabled">Favourite</button>
-    <button class="discuss disabled">Discuss</button>
+    <p class="sign-in">Sign in to play</p>
   <% end %>
-  <button class="finished" style="float: right">Finished</button>
-</section>
+  <ul class="times"></ul>
+</div>
+
+<div class="player2 player">
+  <% if @game?.player2: %>
+    <p class="name">Player: <%= @game.otherPlayer %></p>
+    <div class="times"></div>
+  <% else if @user: %>
+    <p class="name">First spotter!</p>
+    <p class="time">You are the first person to see this worm! You get a 200 point spotter award</p>
+  <% end %>
+</div>

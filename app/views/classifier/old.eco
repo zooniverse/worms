@@ -1,0 +1,33 @@
+
+<section class="players">
+  <div class="player1 player">
+    <% if @player1: %>
+      <p class="name">Player: <%= @player1.name %></p>
+      <p class="score">Score: <%= @game.score %></p> 
+    <% else: %>
+      <p class="sign-in">Sign in to play</p>
+    <% end %>
+    <ul class="times"></ul>
+  </div>
+
+  <div class="player2 player">
+    <% if @game.player2: %>
+      <p class="name">Player: <%= @game.otherPlayer %></p>
+      <div class="times"></div>
+    <% else if @player1: %>
+      <p class="name">First spotter!</p>
+      <p class="time">You are the first person to see this worm! You get a 200 point spotter award</p>
+    <% end %>
+  </div>
+</section>
+
+<section class="actions">
+  <% if @player1: %>
+    <button class="favorite">Favourite</button>
+    <button class="discuss">Discuss</button>
+  <% else: %>
+    <button class="favourite disabled">Favourite</button>
+    <button class="discuss disabled">Discuss</button>
+  <% end %>
+  <button class="finished" style="float: right">Finished</button>
+</section>

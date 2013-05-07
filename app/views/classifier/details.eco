@@ -1,0 +1,10 @@
+<img src="images/worm.png"></img>
+<div class="details">
+  <% if @mutation?: %>
+    <h2><%- @mutation.name %></h2>
+    <p><%- @mutation.description %></p>
+  <% else: %>
+    <h2>Unspecified worm type</h2>
+    <p>This worm's genetic abnormality is not specified.</p>
+  <% end %>
+</div>

@@ -1,0 +1,16 @@
+<% if @game?.status is 'finished': %>
+
+  <% if @user: %>
+    <button class="favorite">Favourite</button>
+    <button class="discuss">Discuss</button>
+  <% else: %>
+    <button class="favourite disabled">Favourite</button>
+    <button class="discuss disabled">Discuss</button>
+  <% end %>
+  <button class="finished" style="float: right">Finished</button>
+
+<% else: %>
+
+  <button class="finished disabled" style="float: right">Finished</button>
+
+<% end %>

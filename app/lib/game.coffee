@@ -1,13 +1,19 @@
 _ = require 'underscore/underscore'
 
+EventEmitter = require 'zooniverse/lib/event-emitter'
+
 Classification = require 'zooniverse/models/classification'
 Subject = require 'zooniverse/models/subject'
 User = require 'zooniverse/models/user'
 
-class Game extends Spine.Controller
+class Game extends EventEmitter
+
+  @current: null
+
+  status: 'waiting'
 
   constructor: ->
-    @status ||= 'waiting'
+    @constructor.current = @
 
     unless @currentSubject?
       @times = []
@@ -57,10 +63,13 @@ class Game extends Spine.Controller
 
   getGameStatus: => [{timings: @times} , {score: @score}]
 
-  start: ->
+  start: =>
     @status = 'playing'
+    @setStartTime()
+    @trigger 'start'
 
-  end: ->
+  end: =>
     @status = 'finished'
+    @trigger 'end'
 
 module.exports = Game
