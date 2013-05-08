@@ -17,7 +17,7 @@ Video = require 'controllers/classifier/video'
 {Step} = require 'zootorial'
 
 TutorialSteps = require 'lib/tutorial/steps'
-tutorialSubject = require('lib/tutorial/subject')()
+createTutorialSubject = require('lib/tutorial/subject')
 
 class Classifier extends BaseController
   className: 'classifier'
@@ -64,21 +64,22 @@ class Classifier extends BaseController
 
   onUserChange: (e, user) =>
     if user?.project.tutorial_done
-      @tutorial.end()
-      Subject.next()
+      if Subject.current.metadata.tutorial
+        @tutorial.end()
+        Subject.next()
+
     else
+      tutorialSubject = createTutorialSubject()
       tutorialSubject.select()
 
   onSubjectSelect: (e, subject) =>
     @classification = new Classification {subject}
     new Game
 
-    if subject.metadata.tutorial then @tutorial.start()
-
   activate: =>
     super
-    @delay =>
-      @tutorial.attach()
+
+    if Subject.current?.metadata.tutorial then @tutorial.start()
 
   deactivate: =>
     super
