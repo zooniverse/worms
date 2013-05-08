@@ -2,11 +2,10 @@ Subject = require 'zooniverse/models/subject'
 
 createTutorialSubject = ->
   new Subject
+    id: '5154c8b8ea30527e1d003a93'
     zooniverse_id: 'TUTORIAL_SUBJECT'
 
-    location: mp4: './offline/subjects/nlp-14__tm1880_X_on_food_L_2010_03_18__13_12___3___10_seg-11.mp4'
-
-    coords: [0, 0]
+    location: mp4: './tutorial/subject/5154c8b8ea30527e1d003a93.mp4'
 
     metadata:
       tutorial: true

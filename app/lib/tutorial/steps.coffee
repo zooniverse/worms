@@ -24,5 +24,41 @@ module.exports =
     details: 'Click this banner box to begin!'
     attachment: 'left bottom .bubble top left'
     focus: '.bubble'
+    next: 'click .bubble': 'playing'
+
+  playing: new Step
+    number: 4
+    header: 'Video Playing'
+    details: 'The video is now playing. You can see the worm wiggling around a bit.'
+    attachment: 'right top video bottom right'
+    focus: '.classifier > .left'
+    onEnter: (tutorial) ->
+      next = ->
+        tutorial.load 'firstEggLaying'
+      setTimeout next, 12000
+    next: 'mouseup .logo': null
+
+  firstEggLaying: new Step
+    number: 5
+    header: 'Egg Layed'
+    details: 'This is what an egg-laying event looks like. Look for these in the videos!'
+    attachment: 'right top video bottom right'
+    focus: '.classifier > .left'
+    onEnter: (tutorial) ->
+      tutorial.video.video.pause()
+    onExit: (tutorial) ->
+      tutorial.video.video.play()
+    next: 'finish'
+
+  finish: new Step
+    number: 7
+    header: 'Done!'
+    details: 'That\'s it! Click "Finished" when the video is over to watch more worms!'
+    next: 'click button[name="finish"]': null
+
+
+
+
+
 
 

@@ -21,14 +21,12 @@ class Stats extends Spine.Controller
     
     @html @template()
 
-    Subject.on 'select', =>
-      @render()
+    Game.on 'new', @render
 
     User.on 'change', (e, user) =>
       @render() if user
 
-    Game.bind 'score', =>
-      @score()
+    Game.bind 'score', @score
 
   render: =>
     @html @template

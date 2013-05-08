@@ -33,11 +33,6 @@ class Classifier extends BaseController
     @html @template()
     $(document).keypress @markEvent
 
-    @tutorial = new Tutorial
-      firstStep: 'welcome'
-      steps: TutorialSteps
-      parent: $('body')
-
     # Build pieces
     @details = new Details
     @details.el.appendTo @right
@@ -54,22 +49,29 @@ class Classifier extends BaseController
     @actions = new Actions
     @actions.el.appendTo @right
 
-    User.on 'change', @onUserChange
+    @tutorial = new Tutorial
+      firstStep: 'welcome'
+      steps: TutorialSteps
+      parent: $('body')
 
-    Subject.on 'select', =>
+    @tutorial.video = @video
+
+    User.on 'change', @onUserChange
+    Subject.on 'select', @onSubjectSelect
 
     Spine.on 'finished-classification', @finish
     Game.on 'end', @onGameEnd
 
   onUserChange: (e, user) =>
-
     if user?.project.tutorial_done
       @tutorial.end()
       Subject.next()
     else
+      console.log 'tutorial isnt done'
       tutorialSubject.select()
 
   onSubjectSelect: (e, subject) =>
+    console.log 'subjectselect', subject
     @classification = new Classification {subject}
     new Game
 
@@ -79,7 +81,6 @@ class Classifier extends BaseController
     super
     @delay =>
       @tutorial.attach()
-      @tutorial.start()
 
   deactivate: =>
     super
