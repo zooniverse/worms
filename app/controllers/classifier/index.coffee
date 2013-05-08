@@ -67,11 +67,9 @@ class Classifier extends BaseController
       @tutorial.end()
       Subject.next()
     else
-      console.log 'tutorial isnt done'
       tutorialSubject.select()
 
   onSubjectSelect: (e, subject) =>
-    console.log 'subjectselect', subject
     @classification = new Classification {subject}
     new Game
 

@@ -35,8 +35,8 @@ module.exports =
     onEnter: (tutorial) ->
       next = ->
         tutorial.load 'firstEggLaying'
-      setTimeout next, 12000
-    next: 'mouseup .logo': null
+      setTimeout next, 12200
+    next: 'mouseup .no-exist': null # an impossible event
 
   firstEggLaying: new Step
     number: 5
