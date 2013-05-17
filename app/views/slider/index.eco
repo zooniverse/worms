@@ -44,7 +44,6 @@
       <div class="right">
         <h1>Your job is to find the eggs!</h1>
         <p>By watching a short video and spotting the worms laying eggs we can understand better how our genes work.</p>
-        <a id="classify-button" class="big-button" href="#/classify">Get hunting!</a>
       </div>
     </div>
   </div>
@@ -52,6 +51,8 @@
 
 <button id="back"></button>
 <button id="forward"></button>
+
+<a id="classify-button" class="big-button" href="#/classify">Get Hunting!</a>
 
 <div class="sponsors-container">
   <div class="sponsors">
