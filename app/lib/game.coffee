@@ -11,40 +11,46 @@ class Game extends EventEmitter
   @current: null
 
   status: 'waiting'
+  times: []
+  teamMateTimes: []
+  score: 0
 
   constructor: ->
     @constructor.current = @
 
     unless @currentSubject?
-      @times = []
-      @teamMateTimes = []
-      @score =  0
       @currentSubject = Subject.current
 
       if @currentSubject?
         previousGame = _(@currentSubject.metadata.timings).shuffle()[0]
+
         if previousGame?
           for time in previousGame.times
-            @teamMateTimes.push {used: false, time: parseInt(time)}
+            @teamMateTimes.push {used: false, time: parseInt time}
           @otherPlayer = previousGame.name
+
         else
           @score = 200
+
       else
         console.log 'no subjects'
 
     @trigger 'new'
 
   compareTimes: (time1, closestValidTime) =>
+    points = false
+
     if Math.abs(time1 - closestValidTime.time)  < 1000
-      closestValidTime.used = true
       points = 20
-      @score += points
-      @trigger 'score', {points: points, totalScore: @score, playerTime: time1, otherPlayerTime: closestValidTime.time}
     else if Math.abs(time1 - closestValidTime.time) < 2000
-      closestValidTime.used = true
       points = 10
+
+    if points
+      closestValidTime.used = true
       @score += points
-      @trigger 'score', {points: points, totalScore: @score}
+      @trigger 'score', points
+      @trigger 'status'
+
 
   setStartTime: =>
     @startTime = moment()

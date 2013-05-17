@@ -9,7 +9,7 @@
 </div>
 
 <div class="player2 player">
-  <% if @game?.player2: %>
+  <% if @game?.otherPlayer: %>
     <p class="name">Player: <%= @game.otherPlayer %></p>
     <div class="times"></div>
   <% else if @user: %>

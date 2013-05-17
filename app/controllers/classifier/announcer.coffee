@@ -21,8 +21,8 @@ class Announcer extends Spine.Controller
     Subject.on 'select', =>
       @announce 'Click to start a game'
 
-    Game.bind 'score', (data) =>
-      @annouce "You matched with #{Game.current.otherPlayer} and earned #{data.points}!"
+    Game.on 'score', (e, game, points) =>
+      @announce "You matched #{ Game.current.otherPlayer } and earned #{ points } points!"
 
     Spine.on 'startCountdown', =>
       @announce 'Press space if you see the worm lay an egg'

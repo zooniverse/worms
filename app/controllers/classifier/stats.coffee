@@ -25,18 +25,18 @@ class Stats extends Spine.Controller
     User.on 'change', (e, user) =>
       @render() if user
 
-    Game.bind 'score', @score
+    Game.on 'status', @updateScoreboard
 
   render: =>
     @html @template
       game: Game.current
       user: User.current
 
-  score: (data) =>
-    @scoreBox.html "Score: #{ data.totalScore }"
+  updateScoreboard: (e, game) =>
+    @scoreBox.html "Score: #{ game.score }"
 
-    if data.otherPlayerTime
-      @p2Times.append "<p class='time'> <span>Match at :</span> #{ data.otherPlayerTime / 1000 } s </p>"
+    if game.otherPlayerTime
+      @p2Times.append "<p class='time'> <span>Match at :</span> #{ game.otherPlayerTime / 1000 } s </p>"
 
   markEvent: (e) =>
     unless e.which is 32 then return

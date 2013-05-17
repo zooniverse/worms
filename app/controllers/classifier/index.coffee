@@ -61,14 +61,16 @@ class Classifier extends BaseController
     Game.on 'end', @onGameEnd
 
   onUserChange: (e, user) =>
-    if user?.project.tutorial_done
-      if Subject.current.metadata.tutorial
-        @tutorial.end()
-        Subject.next()
+    fakeSubject = new Subject (require 'lib/fake_subject')
+    fakeSubject.select()
+    # if user?.project.tutorial_done
+    #   if Subject.current.metadata.tutorial
+    #     @tutorial.end()
+    #     Subject.next()
 
-    else
-      tutorialSubject = createTutorialSubject()
-      tutorialSubject.select()
+    # else
+    #   tutorialSubject = createTutorialSubject()
+    #   tutorialSubject.select()
 
   onSubjectSelect: (e, subject) =>
     @classification = new Classification {subject}
@@ -101,7 +103,7 @@ class Classifier extends BaseController
   # Events
   onGameEnd: =>
     if Game.current.otherPlayer?
-      message = "You marked #{Game.current.times.length} eggs and #{Game.current.otherPlayer} marked #{Game.current.teamMateTimes.length} eggs."
+      message = "You marked #{Game.current.times.length} #{ (Game.current.times.length is 1) ? 'egg' : 'eggs' } and #{Game.current.otherPlayer} marked #{Game.current.teamMateTimes.length} eggs."
     else
       if Game.current.times.length is 1
         message = "You marked 1 egg!"
