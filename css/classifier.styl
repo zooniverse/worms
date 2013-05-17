@@ -17,6 +17,9 @@
       border: 2px solid black
       z-index: 0
 
+      #worm-video
+        position: relative
+
       .overlay
         background: rgba(#000, 0.5)
         display: none
@@ -33,8 +36,11 @@
         display: none
 
       .vjs-controls
+        bottom: 8px
         display: none
+        left: 8px
         padding: 10px 0 0 0
+        position: absolute
 
       .vjs-time-divider, .vjs-duration, .vjs-current-time
         display: block

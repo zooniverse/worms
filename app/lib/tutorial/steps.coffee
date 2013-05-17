@@ -31,7 +31,7 @@ module.exports =
     header: 'Video Playing'
     details: 'The video is now playing. You can see the worm wiggling around a bit.'
     attachment: 'right top video bottom right'
-    focus: '.classifier > .left'
+    focus: '.videoContainer'
     onEnter: (tutorial) ->
       next = ->
         tutorial.load 'firstEggLaying'
@@ -43,12 +43,19 @@ module.exports =
     header: 'Egg Layed'
     details: 'This is what an egg-laying event looks like. Look for these in the videos!'
     attachment: 'right top video bottom right'
-    focus: '.classifier > .left'
+    focus: '.videoContainer'
     onEnter: (tutorial) ->
       tutorial.video.video.pause()
     onExit: (tutorial) ->
       tutorial.video.video.play()
     next: 'finish'
+
+  eggLayingExplanation: new Step
+    number: 6
+    header: 'Multiples'
+    details: 'Sometimes there are multiple eggs. Press space once for each egg that you see!'
+    attachment: 'right top video bottom right'
+    focus: '.videoContainer'
 
   finish: new Step
     number: 7
