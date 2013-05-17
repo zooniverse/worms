@@ -103,7 +103,9 @@ class Classifier extends BaseController
   # Events
   onGameEnd: =>
     if Game.current.otherPlayer?
-      message = "You marked #{Game.current.times.length} #{ (Game.current.times.length is 1) ? 'egg' : 'eggs' } and #{Game.current.otherPlayer} marked #{Game.current.teamMateTimes.length} eggs."
+      yourEggs = "#{ Game.current.times.length } #{ if Game.current.times.length is 1 then 'egg' else 'eggs' }"
+      theirEggs = "#{ Game.current.teamMateTimes.length } #{ if Game.current.teamMateTimes.length is 1 then 'egg' else 'eggs' }"
+      message = "You marked #{ yourEggs } and #{Game.current.otherPlayer} marked #{ theirEggs }."
     else
       if Game.current.times.length is 1
         message = "You marked 1 egg!"
