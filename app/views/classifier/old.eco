@@ -1,5 +1,5 @@
 
-<section class="players">
+<div class="players">
   <div class="player1 player">
     <% if @player1: %>
       <p class="name">Player: <%= @player1.name %></p>
@@ -19,9 +19,9 @@
       <p class="time">You are the first person to see this worm! You get a 200 point spotter award</p>
     <% end %>
   </div>
-</section>
+</div>
 
-<section class="actions">
+<div class="actions">
   <% if @player1: %>
     <button class="favorite">Favourite</button>
     <button class="discuss">Discuss</button>
@@ -30,4 +30,4 @@
     <button class="discuss disabled">Discuss</button>
   <% end %>
   <button class="finished" style="float: right">Finished</button>
-</section>
+</div>

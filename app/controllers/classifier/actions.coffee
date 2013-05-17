@@ -3,8 +3,7 @@ User = require 'zooniverse/models/user'
 Game = require 'lib/game'
 
 class Actions extends Spine.Controller
-  className: 'actions'
-  tag: 'section'
+  className: 'section actions'
   template: require 'views/classifier/actions'
 
   events:

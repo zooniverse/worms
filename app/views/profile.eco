@@ -1,0 +1,17 @@
+
+<div class="left"></div>
+<div class="right">
+
+  <% if @user: %>
+
+    <h1><%- @user.name %></h1>
+    <h3>Score: <%- @user.project?.score %></h3>
+    <h3>Worms Classified: <%- @user.project?.classification_count %></h3>
+
+  <% else: %>
+
+    <p>Login to view profile</p>
+
+  <% end %>
+
+</div>

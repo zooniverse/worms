@@ -1,8 +1,7 @@
 Subject = require 'zooniverse/models/subject'
 
 class Details extends Spine.Controller
-  className: 'subject-info'
-  tag: 'section'
+  className: 'section subject-info'
   template: require 'views/classifier/details'
 
   mutations: require 'lib/mutations'

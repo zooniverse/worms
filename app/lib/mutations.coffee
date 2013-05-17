@@ -1,4 +1,4 @@
-mutations =
+module.exports =
   acr:
     name: 'Acetylcholine Receptor'
     description: 'Worms in this group have mutations affecting molecules on the surface of cells that bind to the neurotransmitter acetylcholine.'
@@ -83,5 +83,3 @@ mutations =
   unc:
     name: 'UNCoordinated'
     description: 'Worms in this class have mutations that change how they crawl. There are many kinds of uncoordinated worms including kinkers, coilers, shrinkers, and shakers. The defects can be subtle or severe.'
-
-module.exports = mutations

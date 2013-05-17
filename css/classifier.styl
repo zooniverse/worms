@@ -64,7 +64,7 @@
     vertical-align: top
     width: 360px
 
-    > section
+    > div.section
       border-top: 1px solid #0283AF
       padding: 18px 0
 
@@ -98,7 +98,7 @@
 
     .players
       @extends #clearfix
-      padding: 0
+      padding: 0 !important // sigh
 
       .player
         box-sizing: border-box
@@ -146,7 +146,7 @@
           text-shadow: 0 1px 0 rgba(#fff, 0.7)
 
     .actions
-      padding: 14px 0 0 0
+      padding: 14px 0 0 0 !important // sigh
 
       button
         @extends #small-button

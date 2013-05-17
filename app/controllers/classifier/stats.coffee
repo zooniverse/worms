@@ -4,8 +4,7 @@ User = require 'zooniverse/models/user'
 Game = require 'lib/game'
 
 class Stats extends Spine.Controller
-  className: 'players'
-  tag: 'section'
+  className: 'section players'
   template: require 'views/classifier/stats'
 
   elements:

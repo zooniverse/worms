@@ -4,8 +4,7 @@ User = require 'zooniverse/models/user'
 Game = require 'lib/game'
 
 class Announcer extends Spine.Controller
-  className: 'announcer'
-  tag: 'section'
+  className: 'section announcer'
   template: require 'views/classifier/announcer'
 
   elements:

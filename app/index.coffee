@@ -1,3 +1,8 @@
+if typeof console is 'undefined'
+  @console =
+    log: (message) ->
+      # Do Nothing
+
 require 'spine'
 require 'spine/lib/manager'
 require 'spine/lib/route'
@@ -13,7 +18,6 @@ TopBar = require 'zooniverse/controllers/top-bar'
 NavBar = require 'controllers/nav_bar'
 SubPage = require 'controllers/sub_page'
 
-Classifier = require 'controllers/classifier'
 Home = require 'controllers/home'
 
 new Api project: 'worms', host: Config.apiHost
@@ -29,22 +33,24 @@ app.navBar.el.appendTo app.container
 app.stack = new Spine.Stack
   controllers:
     'home': Home
-    'classifier': Classifier
+    'classifier': require 'controllers/classifier'
     'science': class extends SubPage then content: require 'views/pages/science'
     'team': class extends SubPage then content: require 'views/pages/team'
+    'profile': require 'controllers/profile'
 
   routes:
     '/': 'home'
     '/classify': 'classifier'
     '/science': 'science'
     '/team': 'team'
+    '/profile': 'profile'
 
   default: 'home'
 
 app.stack.el.appendTo app.container
 
 app.footer = new Footer
-app.footer.el.appendTo 'body > footer'
+app.footer.el.appendTo 'body > .footer'
 
 app.topBar = new TopBar
 app.topBar.el.prependTo 'body'

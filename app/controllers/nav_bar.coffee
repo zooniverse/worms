@@ -1,5 +1,7 @@
+User = require 'zooniverse/models/user'
+
 class NavBarController extends Spine.Controller
-  tag: 'header'
+  className: 'header'
 
   elements:
     'li': 'menuItems'
@@ -14,7 +16,11 @@ class NavBarController extends Spine.Controller
       @menuItems.removeClass 'active'
       $(".#{route}").addClass 'active'
 
+    User.on 'change', (e, user) =>
+      if user then @render()
+
   render: =>
-    @html require 'views/nav_bar'
+    @html require('views/nav_bar')
+      user: User.current
 
 module.exports = NavBarController

@@ -12,9 +12,7 @@ Details = require 'controllers/classifier/details'
 Stats = require 'controllers/classifier/stats'
 Video = require 'controllers/classifier/video'
 
-{Tutorial} = require 'zootorial'
-{Dialog} = require 'zootorial'
-{Step} = require 'zootorial'
+{Tutorial, Dialog, Step} = require 'zootorial'
 
 TutorialSteps = require 'lib/tutorial/steps'
 createTutorialSubject = require('lib/tutorial/subject')
