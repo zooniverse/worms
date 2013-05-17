@@ -37,7 +37,6 @@ class Announcer extends Spine.Controller
 
   # Events
   onClick: (e) =>
-    # if Game.current.status is 'waiting' then Game.current.start()
     if Game.current.status is 'waiting' then Spine.trigger 'startCountdown'
 
 

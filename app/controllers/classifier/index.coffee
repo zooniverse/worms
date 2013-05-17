@@ -12,10 +12,10 @@ Details = require 'controllers/classifier/details'
 Stats = require 'controllers/classifier/stats'
 Video = require 'controllers/classifier/video'
 
-{Tutorial, Dialog, Step} = require 'zootorial'
+{Tutorial} = require 'zootorial'
 
 TutorialSteps = require 'lib/tutorial/steps'
-createTutorialSubject = require('lib/tutorial/subject')
+createTutorialSubject = require 'lib/tutorial/subject'
 
 class Classifier extends BaseController
   className: 'classifier'

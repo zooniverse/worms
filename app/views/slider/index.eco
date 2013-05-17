@@ -52,13 +52,15 @@
 <button id="back"></button>
 <button id="forward"></button>
 
-<a id="classify-button" class="big-button" href="#/classify">Get Hunting!</a>
-
 <div class="sponsors-container">
+
+  <a id="classify-button" class="big-button" href="#/classify">Get Hunting!</a>
+
   <div class="sponsors">
     <figure>
       <a href="http://www.mrc.ac.uk/mrf"><img src="images/mrc-logo.png"></a>
       <figcaption>This project is part of the Medical Research Council Centenary year programme of activities and is generously supported by the <a href="http://www.mrc.ac.uk/mrf">Medical Research Foundation</a> </figcaption>
     </figure>
   </div>
+  
 </div>

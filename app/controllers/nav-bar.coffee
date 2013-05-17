@@ -7,15 +7,16 @@ class NavBarController extends Spine.Controller
   elements:
     'li': 'menuItems'
 
+  route: 'home'
+
   constructor: ->
-    super 
+    super
+
     @render()
-    
+
     Spine.Route.bind 'change', (route) =>
-      route = route.path[1..-1]
-      unless route then route = 'home'
-      @menuItems.removeClass 'active'
-      $(".#{route}").addClass 'active'
+      @route = route.path[1..-1] || @constructor::route
+      @activateRoute()
 
     User.on 'change', (e, user) =>
       if user then @render()
@@ -23,5 +24,12 @@ class NavBarController extends Spine.Controller
   render: =>
     @html @template
       user: User.current
+
+    @activateRoute()
+
+  activateRoute: =>
+    @menuItems.removeClass 'active'
+    $(".#{ @route }").addClass 'active'
+
 
 module.exports = NavBarController

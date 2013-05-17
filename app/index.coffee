@@ -31,6 +31,7 @@ app.stack = new Spine.Stack
     'classifier': require 'controllers/classifier'
     'science': class extends SubPage then content: require 'views/pages/science'
     'team': class extends SubPage then content: require 'views/pages/team'
+    'partners': class extends SubPage then content: require 'views/pages/partners'
     'profile': require 'controllers/profile'
 
   routes:
@@ -38,6 +39,7 @@ app.stack = new Spine.Stack
     '/classify': 'classifier'
     '/science': 'science'
     '/team': 'team'
+    '/partners': 'partners'
     '/profile': 'profile'
 
   default: 'home'
