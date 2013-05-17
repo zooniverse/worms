@@ -13,33 +13,33 @@
   <p>Since it was first established in 1920, the MRC has been able to accept charitable bequests, endowments and donations from the public to contribute towards the costs of the research that it undertakes. The MRC registered these charitable funds with the Charity Commission in the late 1960's and its charity - the Medical Research Foundation - has been successfully supporting medical research for over 80 years.</p>
 
   <h2>People</h2>
-  <section>
+  <div class="section">
     <h3>Andr&#233; Brown</h3>
     <figure><img src="images/team/andre.jpg"></figure>
     <p>Andr&#233; is a research fellow at Clare College in Cambridge and a visiting scientist at the MRC Lab of Molecular Biology. Originally from Newfoundland, he is a physicist by training. After finishing his PhD, he switched from pulling molecules to watching worms. He never ceases to be amazed, period.</p>
-  </section>
+  </div>
 
-  <section>
+  <div class="section">
     <h3>Laura Grundy</h3>
     <figure><img src="images/team/laura.jpg"></figure>
     <p>Laura graduated from Anglia Ruskin University with a BSc in molecular biology and spent two years as a pharmaceutical analyst before joining the MRC Lab of Molecular Biology as a Research Assistant. She spent two years gathering data for the worm tracking project and is now a part time student, part time worm tracker in the lab. She is also very glad that she won't be counting all the eggs alone!</p>
-  </section>
+  </div>
 
-  <section>
+  <div class="section">
     <h3>Ev Yemini</h3>
     <figure><img src="images/team/ev.jpg"></figure>
     <p>After graduating from Columbia University with a pre-medical BA concentrating in mathematics and computer science, Eviatar Yemini joined the world of high-finance and high-tech. Unfulfilled and desiring a career in neuroscience, he completed his PhD at Cambridge, investigating the contribution of genetics to behavior and, now, continues his investigations as a postoctoral HHMI Research Associate at Columbia University. An avid fan of the arts, Ev has found time to perform in several theatrical performances at Cambridge and contribute to an art exhibit for the London Science Museum.</p>
-  </section>
+  </div>
 
-  <section>
+  <div class="section">
     <h3>Tadas Jucikas</h3>
     <figure><img src="images/team/tadas.jpg"></figure>
     <p>Tadas is a PhD student at the MRC Lab of Molecular Biology with a background in computer science and bioinformatics. He has been working on worm tracking for several years and currently manages the home-built analysis pipeline for the worm tracking project.</p>
-  </section>
+  </div>
 
-  <section>
+  <div class="section">
     <h3>Bill Schafer</h3>
     <figure><img src="images/team/bill.jpg"></figure>
     <p>Bill is a group leader at the MRC Lab of Molecular Biology and heads the cellular and molecular mechanisms of behaviour group in the Cell Biology Division. He is interested in understanding how nervous systems process information and generate behaviour at the most basic level: that of molecules and cells.</p>
-  </section>
+  </div>
 </div>
