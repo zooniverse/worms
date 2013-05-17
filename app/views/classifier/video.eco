@@ -1,5 +1,6 @@
 <div class="countdown"></div>
 <div class="videoContainer">
+  <div class="video-border"></div>
   <% if @subject?: %>
     <div class="overlay"></div>
     <video controls id="worm-video" width="575" height="432">

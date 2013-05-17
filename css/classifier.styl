@@ -3,19 +3,28 @@
   .left 
     width: 575px
     height: 447px
-    padding: 0px 40px 20px 20px
+    padding: 0px 40px 0 0
     display: inline-block
     vertical-align: top_bar
     position: relative
 
+
+
     .videoContainer
-      position: absolute
-      top: 0px
-      left: 0px
+      position: relative
       width: 575px
       height: 432px
       border: 2px solid black
       z-index: 0
+
+      .video-border
+        border: 8px solid #000
+        box-shadow: inset 0 0 10px 1px rgba(#000, 0.7)
+        box-sizing: border-box
+        height: 100%
+        position: absolute
+        width: 100%
+        z-index: 1
 
       #worm-video
         position: relative
@@ -36,9 +45,9 @@
         display: none
 
       .vjs-controls
-        bottom: 8px
+        bottom: 11px
         display: none
-        left: 8px
+        left: 14px
         padding: 10px 0 0 0
         position: absolute
 
