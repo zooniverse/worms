@@ -2,7 +2,7 @@ BaseController = require 'controllers/base-controller'
 
 class SubPage extends BaseController
   className: 'sub-page'
-  template: require 'views/sub_page'
+  template: require 'views/sub-page'
 
   constructor: ->
     super

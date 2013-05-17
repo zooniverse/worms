@@ -2,6 +2,7 @@ User = require 'zooniverse/models/user'
 
 class NavBarController extends Spine.Controller
   className: 'header'
+  template: require 'views/nav-bar'
 
   elements:
     'li': 'menuItems'
@@ -20,7 +21,7 @@ class NavBarController extends Spine.Controller
       if user then @render()
 
   render: =>
-    @html require('views/nav_bar')
+    @html @template
       user: User.current
 
 module.exports = NavBarController

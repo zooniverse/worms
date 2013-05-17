@@ -19,12 +19,11 @@ createTutorialSubject = require('lib/tutorial/subject')
 
 class Classifier extends BaseController
   className: 'classifier'
+  template: require 'views/classifier'
 
   elements:
     '.left': 'left'
     '.right': 'right'
-
-  template: require 'views/classifier'
 
   constructor: ->
     super

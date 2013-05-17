@@ -2,13 +2,14 @@ BaseController = require 'controllers/base-controller'
 
 class Home extends BaseController
   className: 'slider'
+  template: require 'views/slider'
 
   elements:
     '#slider': 'slider'
 
   constructor: ->
     super
-    @html require 'views/slider'
+    @html @template()
 
     @delay =>
       @slider.carouFredSel
@@ -29,6 +30,5 @@ class Home extends BaseController
   deactivate: =>
     super
     @slider.trigger 'stop'
-
 
 module.exports = Home
