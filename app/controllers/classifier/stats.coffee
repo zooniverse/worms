@@ -21,10 +21,6 @@ class Stats extends Spine.Controller
     @html @template()
 
     Game.on 'new', @render
-
-    User.on 'change', (e, user) =>
-      @render() if user
-
     Game.on 'status', @updateScoreboard
 
   render: =>

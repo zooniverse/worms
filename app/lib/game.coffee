@@ -18,22 +18,16 @@ class Game extends EventEmitter
   constructor: ->
     @constructor.current = @
 
-    unless @currentSubject?
-      @currentSubject = Subject.current
+    @currentSubject = Subject.current
+    previousGame = _(@currentSubject.metadata.timings).shuffle()[0]
 
-      if @currentSubject?
-        previousGame = _(@currentSubject.metadata.timings).shuffle()[0]
+    if previousGame?
+      for time in previousGame.times
+        @teamMateTimes.push {used: false, time: parseInt time}
+      @otherPlayer = previousGame.name
 
-        if previousGame?
-          for time in previousGame.times
-            @teamMateTimes.push {used: false, time: parseInt time}
-          @otherPlayer = previousGame.name
-
-        else
-          @score = 200
-
-      else
-        console.log 'no subjects'
+    else
+      @score = 200
 
     @trigger 'new'
 

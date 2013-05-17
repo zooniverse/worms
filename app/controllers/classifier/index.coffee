@@ -62,6 +62,9 @@ class Classifier extends BaseController
 
   onUserChange: (e, user) =>
     fakeSubject = new Subject (require 'lib/fake_subject')
+
+    @stats.render()
+
     fakeSubject.select()
     # if user?.project.tutorial_done
     #   if Subject.current.metadata.tutorial
@@ -73,6 +76,8 @@ class Classifier extends BaseController
     #   tutorialSubject.select()
 
   onSubjectSelect: (e, subject) =>
+    @video.render()
+
     @classification = new Classification {subject}
     new Game
 

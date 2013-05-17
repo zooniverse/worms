@@ -14,8 +14,6 @@ class Video extends Spine.Controller
   constructor: ->
     super
 
-    Subject.on 'select', @render
-
     Spine.on 'startCountdown', @startCountdown
     Spine.on 'finished-classification', @finish
       
