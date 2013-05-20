@@ -41,8 +41,8 @@ module.exports =
   firstEggLaying: new Step
     number: 5
     header: 'Egg Layed'
-    details: '''<p>This is what an egg-laying event looks like. Look for these in the videos!</p>
-      <p>If there are multiple eggs, please mark an event for each egg!</p>
+    details: '''This is what an egg-laying event looks like. Look for these in the videos!
+      If there are multiple eggs, please mark an event for each egg!
     '''
     attachment: 'right top video bottom right'
     focus: '.videoContainer'
