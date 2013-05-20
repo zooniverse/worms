@@ -60,19 +60,16 @@ class Classifier extends BaseController
     Game.on 'end', @onGameEnd
 
   onUserChange: (e, user) =>
-    fakeSubject = new Subject (require 'lib/fake_subject')
-
     @stats.render()
 
-    fakeSubject.select()
-    # if user?.project.tutorial_done
-    #   if Subject.current.metadata.tutorial
-    #     @tutorial.end()
-    #     Subject.next()
+    if user?.project.tutorial_done
+      if Subject.current.metadata.tutorial
+        @tutorial.end()
+        Subject.next()
 
-    # else
-    #   tutorialSubject = createTutorialSubject()
-    #   tutorialSubject.select()
+    else
+      tutorialSubject = createTutorialSubject()
+      tutorialSubject.select()
 
   onSubjectSelect: (e, subject) =>
     @video.render()

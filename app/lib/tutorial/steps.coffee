@@ -35,13 +35,15 @@ module.exports =
     onEnter: (tutorial) ->
       next = ->
         tutorial.load 'firstEggLaying'
-      setTimeout next, 12200
+      setTimeout next, 13200
     next: 'mouseup .no-exist': null # an impossible event
 
   firstEggLaying: new Step
     number: 5
     header: 'Egg Layed'
-    details: 'This is what an egg-laying event looks like. Look for these in the videos!'
+    details: '''<p>This is what an egg-laying event looks like. Look for these in the videos!</p>
+      <p>If there are multiple eggs, please mark an event for each egg!</p>
+    '''
     attachment: 'right top video bottom right'
     focus: '.videoContainer'
     onEnter: (tutorial) ->
@@ -50,21 +52,10 @@ module.exports =
       tutorial.video.video.play()
     next: 'finish'
 
-  eggLayingExplanation: new Step
-    number: 6
-    header: 'Multiples'
-    details: 'Sometimes there are multiple eggs. Press space once for each egg that you see!'
-    attachment: 'right top video bottom right'
-    focus: '.videoContainer'
-
   finish: new Step
-    number: 7
+    number: 8
     header: 'Done!'
     details: 'That\'s it! Click "Finished" when the video is over to watch more worms!'
-    next: 'click button[name="finish"]': null
-
-
-
 
 
 
