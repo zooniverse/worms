@@ -50,10 +50,18 @@ module.exports =
       tutorial.video.video.pause()
     onExit: (tutorial) ->
       tutorial.video.video.play()
+    next: 'eggExplanation'
+
+  eggExplanation: new Step
+    number: 6
+    header: 'Multiple Eggs'
+    details: '''
+      Sometiems there are multiple eggs. If you see more than one egg, press space for each egg.
+    '''
     next: 'finish'
 
   finish: new Step
-    number: 8
+    number: 7
     header: 'Done!'
     details: 'That\'s it! Click "Finished" when the video is over to watch more worms!'
 
