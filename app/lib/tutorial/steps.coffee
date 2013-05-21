@@ -56,7 +56,7 @@ module.exports =
     number: 6
     header: 'Multiple Eggs'
     details: '''
-      Sometiems there are multiple eggs. If you see more than one egg, press space for each egg.
+      Sometimes there are multiple eggs. If you see more than one egg, press space for each egg.
     '''
     next: 'finish'
 
