@@ -1,3 +1,21 @@
+@keyframes tutorial-circle
+  0%
+    height: 50px
+    left: 216px
+    top: 186px
+    width: 50px
+  50%
+    height: 75px
+    left: 203px
+    top: 173px
+    width: 75px
+  100%
+    height: 50px
+    left: 216px
+    top: 186px
+    width: 50px
+
+
 .stack > .classifier
 
   .left 
@@ -14,6 +32,17 @@
       height: 432px
       border: 2px solid black
       z-index: 0
+
+      .tutorial-circle
+        animation: 1.5s tutorial-circle linear infinite
+        border: 2px solid #f00
+        border-radius: 50%
+        box-shadow: inset 0 0 5px 0 rgba(#000, 0.4), 0 0 5px 0 rgba(#000, 0.4)
+        height: 50px
+        left: 216px
+        position: absolute
+        top: 186px
+        width: 50px
 
       .video-border
         border: 9px solid #000

@@ -30,7 +30,7 @@ module.exports =
     number: 4
     header: 'Video Playing'
     details: 'The video is now playing. You can see the worm wiggling around a bit.'
-    attachment: 'right top video bottom right'
+    attachment: 'left top video right top'
     focus: '.videoContainer'
     onEnter: (tutorial) ->
       next = ->
@@ -44,11 +44,20 @@ module.exports =
     details: '''This is what an egg-laying event looks like. Look for these in the videos!
       If there are multiple eggs, please mark an event for each egg!
     '''
-    attachment: 'right top video bottom right'
+    attachment: 'left top video right top'
     focus: '.videoContainer'
     onEnter: (tutorial) ->
+      fragment = document.createDocumentFragment()
+      circleDiv = document.createElement 'div'
+      circleDiv.classList.add 'tutorial-circle'
+
+      fragment.appendChild circleDiv
+      document.querySelector('.videoContainer').appendChild fragment
+
       tutorial.video.video.pause()
     onExit: (tutorial) ->
+      circleDiv = document.querySelector '.tutorial-circle'
+      circleDiv.parentNode.removeChild circleDiv
       tutorial.video.video.play()
     next: 'eggExplanation'
 
