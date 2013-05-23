@@ -6,15 +6,16 @@ module.exports =
 
   welcome: new Step
     number: 1
-    header: 'Welcome to Worm Watch Lab!'
-    details: 'Hello and welcome to the Worm Watch Lab. Here, you will help scientists determine when a worm lays an egg.'
+    header: 'Welcome to the Worm Watch Lab tutorial!'
+    details: '''Your job is to watch a short video and watch out for when a worm lays an egg. In this tutorial
+      we\'re going to show you an example of this happening.'''
     block: '.bubble'
     next: 'overview'
   
   overview: new Step
     number: 2
     header: 'The Task'
-    details: 'All you have to do is press the space bar when you see a worm lay an egg. That\'s it!'
+    details: 'All you have to do is tap the space bar on your computer when you see a worm lay an egg. That\'s it!'
     block: '.bubble'
     next: 'begin'
 
@@ -22,7 +23,7 @@ module.exports =
     number: 3
     header: 'Let\'s begin...'
     details: 'Click this banner box to begin!'
-    attachment: 'left bottom .bubble top left'
+    attachment: 'left 1.1 .bubble top left'
     focus: '.bubble'
     next: 'click .bubble': 'playing'
 
@@ -41,8 +42,8 @@ module.exports =
   firstEggLaying: new Step
     number: 5
     header: 'Egg Layed'
-    details: '''This is what an egg-laying event looks like. Look for these in the videos!
-      If there are multiple eggs, please mark an event for each egg!
+    details: '''This is what an egg-laying event looks like. Look for these in the videos.
+      If there are multiple eggs, please mark an event (using the space bar) for each egg.
     '''
     attachment: 'left top .video-container right top'
     focus: '.video-container'
