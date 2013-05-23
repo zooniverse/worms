@@ -1,5 +1,5 @@
 <div class="countdown"></div>
-<div class="videoContainer">
+<div class="video-container">
   <div class="video-border"></div>
   <% if @subject?: %>
     <div class="overlay"></div>
