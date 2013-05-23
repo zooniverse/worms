@@ -22,7 +22,7 @@ module.exports =
   begin: new Step
     number: 3
     header: 'Let\'s begin...'
-    details: 'Click this banner box to begin!'
+    details: 'Click the banner box below to begin!'
     attachment: 'left 1.1 .bubble top left'
     focus: '.bubble'
     next: 'click .bubble': 'playing'
