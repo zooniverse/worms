@@ -25,19 +25,19 @@ class Actions extends Spine.Controller
       game: Game.current
 
   onFavorite: (e) =>
-    return if e.currentTarget.classList.contains 'disabled'
+    return if $(e.currentTarget).hasClass 'disabled'
 
     $(e.currentTarget).addClass 'disabled'
     @favorite = new Favorite({subjects: [Subject.current]})
     @favorite.send()
 
   onDiscuss: (e) =>
-    return if e.currentTarget.classList.contains 'disabled'
+    return if $(e.currentTarget).hasClass 'disabled'
 
     window.location = Subject.current.talkHref()
 
   onFinish: (e) =>
-    return if e.currentTarget.classList.contains 'disabled'
+    return if $(e.currentTarget).hasClass 'disabled'
       
     Spine.trigger 'finished-classification'
 
