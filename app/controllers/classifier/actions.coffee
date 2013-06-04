@@ -16,9 +16,7 @@ class Actions extends Spine.Controller
     
     @html @template()
 
-    User.on 'change', (e, user) =>
-      @render() if user
-
+    User.on 'change', @render
     Game.on 'new end', @render
 
   render: =>

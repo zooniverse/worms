@@ -18,8 +18,7 @@ class NavBarController extends Spine.Controller
       @route = route.path[1..-1] || @constructor::route
       @activateRoute()
 
-    User.on 'change', (e, user) =>
-      if user then @render()
+    User.on 'change', @render
 
   render: =>
     @html @template

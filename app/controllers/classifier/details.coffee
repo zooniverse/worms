@@ -11,8 +11,7 @@ class Details extends Spine.Controller
 
     @html @template()
 
-    Subject.on 'select', =>
-      @render()
+    Subject.on 'select', @render
 
   render: =>
     if Subject.current?.metadata.mutation and @mutations[Subject.current.metadata.mutation]?

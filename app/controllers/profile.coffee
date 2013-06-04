@@ -9,9 +9,9 @@ class Profile extends BaseController
   constructor: ->
     super
 
-    User.on 'change', @render
-
     @render()
+
+    User.on 'change', @render
 
   render: =>
     @html @template
