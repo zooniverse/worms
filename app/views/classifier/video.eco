@@ -3,7 +3,7 @@
   <div class="video-border"></div>
   <% if @subject?: %>
     <div class="overlay"></div>
-    <video controls id="worm-video" width="575" height="432">
+    <video controls id="worm-video" width="575" height="432" poster="<%- @subject.location.standard %>">
       <source src="<%= @subject.location.mp4 %>" type="video/mp4" />
     </video>
   <% end %>
