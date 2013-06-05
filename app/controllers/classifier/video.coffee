@@ -23,6 +23,8 @@ class Video extends Spine.Controller
     @html @template
       subject: Subject.current
 
+    @video.destroy() if @video
+
     @video = _V_ 'worm-video', {}
     @video.removeEvent 'ended', @video.onEnded
     $('.vjs-controls').show()
