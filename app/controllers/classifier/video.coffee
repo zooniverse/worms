@@ -41,6 +41,7 @@ class Video extends Spine.Controller
     @video.destroy()
 
   startCountdown: =>
+    Game.current.warmUp()
     setTimeout =>
       @countdown.show()
       @countdown.html("3")

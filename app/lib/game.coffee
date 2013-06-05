@@ -73,9 +73,13 @@ class Game extends EventEmitter
     timings: @times
     score: @score
 
+  warmUp: =>
+    @status = 'starting'
+    @trigger 'warmup'
+
   start: =>
     @startTime = moment()
-    
+
     @status = 'playing'
     @trigger 'start'
 
