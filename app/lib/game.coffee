@@ -63,7 +63,9 @@ class Game extends EventEmitter
     if closestValidTime then @compareTimes diff, closestValidTime
     time.diff @startTime, 'seconds', true
 
-  getGameStatus: => [{timings: @times} , {score: @score}]
+  getGameStatus: =>
+    timings: @times
+    score: @score
 
   start: =>
     @status = 'playing'

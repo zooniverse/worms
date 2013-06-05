@@ -91,9 +91,7 @@ class Classifier extends BaseController
     Game.current.setStartTime moment()
 
   finish: =>
-    annotations = Game.current.getGameStatus()
-
-    @classification.annotate annotations
+    @classification.annotate Game.current.getGameStatus()
     @classification.send()
 
     Subject.next()
