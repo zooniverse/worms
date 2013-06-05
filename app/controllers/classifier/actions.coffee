@@ -35,7 +35,7 @@ class Actions extends Spine.Controller
   onDiscuss: (e) =>
     return if $(e.currentTarget).hasClass 'disabled'
 
-    window.location = Subject.current.talkHref()
+    window.open Subject.current.talkHref()
 
   onFinish: (e) =>
     return if $(e.currentTarget).hasClass 'disabled'
