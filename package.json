@@ -7,8 +7,8 @@
     "underscore": "latest",
     "nib": "latest",
     "clean-css": "latest",
-    "zooniverse": "git+ssh://git@github.com:zooniverse/Zooniverse.git#no-deps",
-    "zootorial": "0.3.4"
+    "zootorial": "0.3.4",
+    "zooniverse": "git://github.com/zooniverse/Zooniverse.git#no-deps"
   },
   "scripts": {
     "start": "hem server"
