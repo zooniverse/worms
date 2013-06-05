@@ -1,3 +1,4 @@
+Subject = require 'zooniverse/models/subject'
 User = require 'zooniverse/models/user'
 
 Game = require 'lib/game'
@@ -40,6 +41,5 @@ class Actions extends Spine.Controller
     return if $(e.currentTarget).hasClass 'disabled'
       
     Spine.trigger 'finished-classification'
-
 
 module.exports = Actions
