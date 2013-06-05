@@ -14,6 +14,7 @@ class Stats extends Spine.Controller
 
   events:
     'click .sign-in': 'onClickSignIn'
+    'click .player1 .times button': 'removeTime'
 
   constructor: ->
     super
@@ -22,7 +23,7 @@ class Stats extends Spine.Controller
 
     Game.on 'new', @render
     Game.on 'status', @updateScoreboard
-    Game.on 'mark', @markTime
+    Game.on 'mark remove-mark', @render
 
   render: =>
     @html @template
@@ -35,11 +36,10 @@ class Stats extends Spine.Controller
     if game.otherPlayerTime
       @p2Times.append "<p class='time'> <span>Match at :</span> #{ game.otherPlayerTime / 1000 } s </p>"
 
-  markTime: (e, game, time) =>
-    @p1Times.prepend "<p class='time'> <span>Egg at :</span> #{ time } s</p>"
+  removeTime: (e) =>
+    Game.current.removeTime $(e.currentTarget).parent().index()
 
   onClickSignIn: =>
     require('zooniverse/controllers/login-dialog').show()
-
 
 module.exports = Stats

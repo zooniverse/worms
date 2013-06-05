@@ -73,13 +73,15 @@
 
       .vjs-controls
         bottom: 13px
-        display: none
         left: 16px
         padding: 10px 0 0 0
         position: absolute
 
+        .vjs-control
+          display: none
+
       .vjs-time-divider, .vjs-duration, .vjs-current-time
-        display: block
+        display: block !important
         float: left
         font-size: 16px
         font-weight: 700
@@ -189,13 +191,21 @@
     .times
       @extends #semantic-list
 
-      .time
-        font-size: 12px
-        margin: 0
+      li
+        border-radius: 3px
+        position: relative
 
-        span
-          color: #000
-          text-shadow: 0 1px 0 rgba(#fff, 0.7)
+        button
+          background: rgba(#000, 0.2)
+          border-radius: 2px
+          display: none
+          position: absolute
+          right: 0
+          top: 0
+
+      span
+        color: #000
+        text-shadow: 0 1px 0 rgba(#fff, 0.5)
 
     .actions
       padding: 14px 0 0 0 !important // sigh
@@ -208,7 +218,7 @@
           cursor: not-allowed
           opacity: 0.5
 
-  .bubble 
+  .bubble
     background: #ecf3f8
     border-radius: 0px
     box-shadow: 0 3px 6px 0 rgba(#000, 0.15), inset 0 2px 0 0 #fff

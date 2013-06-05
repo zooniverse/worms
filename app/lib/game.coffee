@@ -18,20 +18,20 @@ class Game extends EventEmitter
 
   @current: null
 
-  status: 'waiting'
-  times: []
-  teamMateTimes: []
-  score: 0
-
   constructor: ->
     @constructor.current = @
+
+    @status = 'waiting'
+    @times = []
+    @teamMateTimes = []
+    @score = 0
 
     @currentSubject = Subject.current
     previousGame = _(@currentSubject.metadata.timings).shuffle()[0]
 
     if previousGame?
       for time in previousGame.times
-        @teamMateTimes.push {used: false, time: parseInt time}
+        @teamMateTimes.push { used: false, time: parseInt time }
       @otherPlayer = previousGame.name
 
     else
@@ -56,7 +56,8 @@ class Game extends EventEmitter
   markTime: =>
     time = moment()
     diff = (time.diff(@startTime))
-    @times.push diff
+
+    @times.unshift diff
 
     closestValidTime = _.chain(@teamMateTimes)
       .sortBy((timeObj) -> Math.abs(timeObj.time - diff))
@@ -65,9 +66,13 @@ class Game extends EventEmitter
       .value()
 
     if closestValidTime then @compareTimes diff, closestValidTime
-    time = time.diff @startTime, 'seconds', true
 
-    @trigger 'mark', time
+    @trigger 'mark'
+
+  removeTime: (i) =>
+    @times.splice i, 1
+
+    @trigger 'remove-mark'
 
   getGameStatus: =>
     timings: @times

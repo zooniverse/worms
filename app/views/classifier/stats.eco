@@ -5,7 +5,15 @@
   <% else: %>
     <p class="sign-in">Sign in to play</p>
   <% end %>
-  <ul class="times"></ul>
+  <ul class="times">
+    <% if @game?.times.length: %>
+
+      <% for time, i in @game.times: %>
+        <li><span>Egg at:</span> <%- moment(time).format 's.SS' %>s <button class="remove"></button></li>
+      <% end %>
+
+    <% end %>
+  </ul>
 </div>
 
 <div class="player2 player">
