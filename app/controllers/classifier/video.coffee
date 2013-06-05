@@ -15,8 +15,6 @@ class Video extends Spine.Controller
     super
 
     Spine.on 'startCountdown', @startCountdown
-    Spine.on 'finished-classification', @finish
-      
     Game.on 'start', @play
 
   render: =>
@@ -36,9 +34,6 @@ class Video extends Spine.Controller
 
       @overlay.fadeIn()
       Game.current.end()
-
-  finish: =>
-    @video.destroy()
 
   startCountdown: =>
     Game.current.warmUp()
@@ -63,6 +58,5 @@ class Video extends Spine.Controller
       @countdown.remove()
       Game.current.start()
     , 5000
-
 
 module.exports = Video
