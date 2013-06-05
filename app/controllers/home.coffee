@@ -24,9 +24,10 @@ class Home extends BaseController
 
   activate: =>
     super
-    @delay =>
+    setTimeout =>
       @slider.trigger 'updateSizes'
       @slider.trigger 'play', true
+    , 100
 
   deactivate: =>
     super

@@ -25,6 +25,7 @@ class Game extends EventEmitter
     @times = []
     @teamMateTimes = []
     @score = 0
+    @clock = 0
 
     @currentSubject = Subject.current
     previousGame = _(@currentSubject.metadata.timings).shuffle()[0]
@@ -54,18 +55,16 @@ class Game extends EventEmitter
       @trigger 'status'
 
   markTime: =>
-    time = moment()
-    diff = (time.diff(@startTime))
-
-    @times.unshift diff
+    markedTime = @video.currentTime()
+    @times.unshift markedTime
 
     closestValidTime = _.chain(@teamMateTimes)
-      .sortBy((timeObj) -> Math.abs(timeObj.time - diff))
+      .sortBy((timeObj) -> Math.abs(timeObj.time - markedTime))
       .reject((timeObj) -> timeObj.used)
       .first()
       .value()
 
-    if closestValidTime then @compareTimes diff, closestValidTime
+    if closestValidTime then @compareTimes markedTime, closestValidTime
 
     @trigger 'mark'
 
@@ -78,13 +77,11 @@ class Game extends EventEmitter
     timings: @times
     score: @score
 
-  warmUp: =>
+  warmUp: (@video) =>
     @status = 'starting'
     @trigger 'warmup'
 
   start: =>
-    @startTime = moment()
-
     @status = 'playing'
     @trigger 'start'
 
