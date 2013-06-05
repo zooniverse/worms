@@ -61,7 +61,9 @@ class Game extends EventEmitter
       .value()
 
     if closestValidTime then @compareTimes diff, closestValidTime
-    time.diff @startTime, 'seconds', true
+    time = time.diff @startTime, 'seconds', true
+
+    @trigger 'mark', time
 
   getGameStatus: =>
     timings: @times

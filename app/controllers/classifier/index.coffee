@@ -85,7 +85,13 @@ class Classifier extends BaseController
     @tutorial?.end()
 
   markEvent: (e) =>
-    @stats.markEvent e
+    unless e.which is 32 then return
+    e.preventDefault()
+
+    switch Game.current.status
+      when 'waiting' then Spine.trigger 'startCountdown'
+      when 'playing' then Game.current.markTime()
+      when 'finished' then Spine.trigger 'finished-classification'
 
   start: =>
     Game.current.setStartTime moment()

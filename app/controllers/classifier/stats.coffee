@@ -22,6 +22,7 @@ class Stats extends Spine.Controller
 
     Game.on 'new', @render
     Game.on 'status', @updateScoreboard
+    Game.on 'mark', @markTime
 
   render: =>
     @html @template
@@ -34,14 +35,8 @@ class Stats extends Spine.Controller
     if game.otherPlayerTime
       @p2Times.append "<p class='time'> <span>Match at :</span> #{ game.otherPlayerTime / 1000 } s </p>"
 
-  markEvent: (e) =>
-    unless e.which is 32 then return
-
-    e.preventDefault()
-
-    if Game.current.status is 'playing'
-      time = Game.current.markTime()
-      @p1Times.prepend "<p class='time'> <span>Egg at :</span> #{ time } s</p>"
+  markTime: (e, game, time) =>
+    @p1Times.prepend "<p class='time'> <span>Egg at :</span> #{ time } s</p>"
 
   onClickSignIn: =>
     require('zooniverse/controllers/login-dialog').show()
