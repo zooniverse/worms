@@ -28,7 +28,7 @@ class Classifier extends BaseController
   constructor: ->
     super
     @html @template()
-    $(document).keypress @markEvent
+    $(document).keydown @onKeyDown
 
     # Build pieces
     @details = new Details
@@ -84,14 +84,16 @@ class Classifier extends BaseController
     super
     @tutorial?.end()
 
-  markEvent: (e) =>
-    unless e.which is 32 then return
-    e.preventDefault()
-
-    switch Game.current.status
-      when 'waiting' then Spine.trigger 'startCountdown'
-      when 'playing' then Game.current.markTime()
-      when 'finished' then Spine.trigger 'finished-classification'
+  onKeyDown: (e) =>
+    switch e.which
+      when 27 # Esc
+        @tutorial.end()
+      when 32 # Space
+        e.preventDefault()
+        switch Game.current.status
+          when 'waiting' then Spine.trigger 'startCountdown'
+          when 'playing' then Game.current.markTime()
+          when 'finished' then Spine.trigger 'finished-classification'
 
   start: =>
     Game.current.setStartTime moment()

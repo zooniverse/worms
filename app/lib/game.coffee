@@ -56,6 +56,7 @@ class Game extends EventEmitter
 
   markTime: =>
     markedTime = @video.currentTime()
+    
     @times.unshift markedTime
 
     closestValidTime = _.chain(@teamMateTimes)
