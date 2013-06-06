@@ -21,6 +21,7 @@ class Game extends EventEmitter
   constructor: ->
     @constructor.current = @
 
+    @buffer = false
     @status = 'waiting'
     @times = []
     @teamMateTimes = []
@@ -87,7 +88,13 @@ class Game extends EventEmitter
     @trigger 'start'
 
   end: =>
+    setTimeout =>
+      @buffer = true
+    , 1000
+
     @status = 'finished'
     @trigger 'end'
+
+  pastBuffer: => @buffer
 
 module.exports = Game

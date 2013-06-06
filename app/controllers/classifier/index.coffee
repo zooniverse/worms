@@ -90,7 +90,6 @@ class Classifier extends BaseController
 
     Subject.next()
 
-  # Events  
   onGameEnd: =>
     if Game.current.otherPlayer?
       yourEggs = "#{ Game.current.times.length } #{ if Game.current.times.length is 1 then 'egg' else 'eggs' }"
@@ -102,6 +101,8 @@ class Classifier extends BaseController
       else
         message = "You marked #{ Game.current.times.length } eggs!"
 
+    @announcer.announce message
+
   onKeyDown: (e) =>
     switch e.which
       when 27 # Esc
@@ -111,8 +112,8 @@ class Classifier extends BaseController
         switch Game.current.status
           when 'waiting' then Spine.trigger 'startCountdown'
           when 'playing' then Game.current.markTime()
-          when 'finished' then Spine.trigger 'finished-classification'
+          when 'finished'
+            if Game.current.pastBuffer() then Spine.trigger 'finished-classification'
 
-    @announcer.announce message
 
 module.exports = Classifier
