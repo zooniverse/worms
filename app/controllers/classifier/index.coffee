@@ -84,6 +84,24 @@ class Classifier extends BaseController
     super
     @tutorial?.end()
 
+  finish: =>
+    @classification.annotate Game.current.getGameStatus()
+    @classification.send()
+
+    Subject.next()
+
+  # Events  
+  onGameEnd: =>
+    if Game.current.otherPlayer?
+      yourEggs = "#{ Game.current.times.length } #{ if Game.current.times.length is 1 then 'egg' else 'eggs' }"
+      theirEggs = "#{ Game.current.teamMateTimes.length } #{ if Game.current.teamMateTimes.length is 1 then 'egg' else 'eggs' }"
+      message = "You marked #{ yourEggs } and #{ Game.current.otherPlayer } marked #{ theirEggs }."
+    else
+      if Game.current.times.length is 1
+        message = "You marked 1 egg!"
+      else
+        message = "You marked #{ Game.current.times.length } eggs!"
+
   onKeyDown: (e) =>
     switch e.which
       when 27 # Esc
@@ -95,29 +113,6 @@ class Classifier extends BaseController
           when 'playing' then Game.current.markTime()
           when 'finished' then Spine.trigger 'finished-classification'
 
-  start: =>
-    Game.current.setStartTime moment()
-
-  finish: =>
-    @classification.annotate Game.current.getGameStatus()
-    @classification.send()
-
-    Subject.next()
-
-
-  # Events
-  onGameEnd: =>
-    if Game.current.otherPlayer?
-      yourEggs = "#{ Game.current.times.length } #{ if Game.current.times.length is 1 then 'egg' else 'eggs' }"
-      theirEggs = "#{ Game.current.teamMateTimes.length } #{ if Game.current.teamMateTimes.length is 1 then 'egg' else 'eggs' }"
-      message = "You marked #{ yourEggs } and #{Game.current.otherPlayer} marked #{ theirEggs }."
-    else
-      if Game.current.times.length is 1
-        message = "You marked 1 egg!"
-      else
-        message = "You marked #{Game.current.times.length} eggs!"
-
     @announcer.announce message
-
 
 module.exports = Classifier
