@@ -21,7 +21,7 @@ class Video extends Spine.Controller
     @html @template
       subject: Subject.current
 
-    @video.destroy() if @video
+    if @video?.isReady then @video.destroy()
 
     @video = _V_ 'worm-video', {}
     @video.removeEvent 'ended', @video.onEnded
