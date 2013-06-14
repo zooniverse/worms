@@ -1,4 +1,6 @@
-class BaseController extends Spine.Controller
+{Controller} = require 'spine'
+
+class BaseController extends Controller
 
   constructor: ->
     super

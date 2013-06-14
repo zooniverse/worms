@@ -1,11 +1,11 @@
+require './lib/setup'
+
 if typeof console is 'undefined'
   @console =
     log: (message) ->
       # Do Nothing
 
-require 'spine'
-require 'spine/lib/manager'
-require 'spine/lib/route'
+Spine = require 'spine'
 
 Api = require 'zooniverse/lib/api'
 Subject = require 'zooniverse/models/subject'
@@ -20,19 +20,19 @@ _V_.options.flash.swf = 'video/video-js.swf'
 app = {}
 app.container = '#app'
 
-app.navBar = new (require 'controllers/nav-bar')
+app.navBar = new (require './controllers/nav-bar')
 app.navBar.el.appendTo app.container
 
-SubPage = require 'controllers/sub-page'
+SubPage = require './controllers/sub-page'
 
 app.stack = new Spine.Stack
   controllers:
-    'home': require 'controllers/home'
-    'classifier': require 'controllers/classifier'
-    'science': class extends SubPage then content: require 'views/pages/science'
-    'team': class extends SubPage then content: require 'views/pages/team'
-    'partners': class extends SubPage then content: require 'views/pages/partners'
-    'profile': require 'controllers/profile'
+    'home': require './controllers/home'
+    'classifier': require './controllers/classifier'
+    'science': class extends SubPage then content: require './views/pages/science'
+    'team': class extends SubPage then content: require './views/pages/team'
+    'partners': class extends SubPage then content: require './views/pages/partners'
+    'profile': require './controllers/profile'
 
   routes:
     '/': 'home'
@@ -57,5 +57,3 @@ Subject.queueLength = 1
 User.fetch()
 
 Spine.Route.setup()
-
-module.exports = app

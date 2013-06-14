@@ -1,29 +1,9 @@
 {
-  "dependencies": [
-    "underscore",
-
-    "spine",
-    "spine/lib/route",
-    "spine/lib/manager",
-
-    "zooniverse/controllers/footer",
-    "zooniverse/controllers/top-bar",
-    "zooniverse/lib/api",
-    "zooniverse/lib/event-emitter",
-    "zooniverse/models/classification",
-    "zooniverse/models/subject",
-    "zooniverse/models/user",
-
-    "zootorial"
-  ],
-
   "libs": [
     "node_modules/zooniverse/vendor/base64.js",
-    "./lib/jquery.js",
     "./lib/jquery.animate.js",
     "./lib/jquery.carousel.js",
     "./lib/spin.js",
-    "./lib/video.js",
     "./lib/moment.js"
   ]
 }

@@ -1,0 +1,5 @@
+{
+  "bucket": "www.wormwatchlab.org",
+  "local": "build",
+  "ignore": [".DS_Store"]
+}

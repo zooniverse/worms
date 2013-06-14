@@ -1,8 +1,8 @@
-BaseController = require 'controllers/base-controller'
+BaseController = require './base-controller'
 
 class Home extends BaseController
   className: 'slider'
-  template: require 'views/slider'
+  template: require '../views/slider'
 
   elements:
     '#slider': 'slider'

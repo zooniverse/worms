@@ -1,11 +1,13 @@
+Spine = require 'spine'
+
 Subject = require 'zooniverse/models/subject'
 User = require 'zooniverse/models/user'
 
-Game = require 'lib/game'
+Game = require '../../lib/game'
 
 class Stats extends Spine.Controller
   className: 'section players'
-  template: require 'views/classifier/stats'
+  template: require '../../views/classifier/stats'
 
   elements:
     '.score': 'scoreBox'

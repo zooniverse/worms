@@ -1,25 +1,27 @@
+Spine = require 'spine'
+
 Classification = require 'zooniverse/models/classification'
 Subject = require 'zooniverse/models/subject'
 User = require 'zooniverse/models/user'
 
-Game = require 'lib/game'
+Game = require '../../lib/game'
 
-BaseController = require 'controllers/base-controller'
+BaseController = require '../base-controller'
 
-Actions = require 'controllers/classifier/actions'
-Announcer = require 'controllers/classifier/announcer'
-Details = require 'controllers/classifier/details'
-Stats = require 'controllers/classifier/stats'
-Video = require 'controllers/classifier/video'
+Actions = require './actions'
+Announcer = require './announcer'
+Details = require './details'
+Stats = require './stats'
+Video = require './video'
 
 {Tutorial} = require 'zootorial'
 
-TutorialSteps = require 'lib/tutorial/steps'
-TutorialSubject = require 'lib/tutorial/subject'
+TutorialSteps = require '../../lib/tutorial/steps'
+TutorialSubject = require '../../lib/tutorial/subject'
 
 class Classifier extends BaseController
   className: 'classifier'
-  template: require 'views/classifier'
+  template: require '../../views/classifier'
 
   elements:
     '.left': 'left'
@@ -114,6 +116,5 @@ class Classifier extends BaseController
           when 'playing' then Game.current.markTime()
           when 'finished'
             if Game.current.pastBuffer() then Spine.trigger 'finished-classification'
-
 
 module.exports = Classifier

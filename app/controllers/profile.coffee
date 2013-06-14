@@ -1,10 +1,10 @@
 User = require 'zooniverse/models/user'
 
-BaseController = require 'controllers/base-controller'
+BaseController = require './base-controller'
 
 class Profile extends BaseController
   className: 'sub-page profile'
-  template: require 'views/profile'
+  template: require '../views/profile'
 
   constructor: ->
     super

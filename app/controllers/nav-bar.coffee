@@ -1,8 +1,10 @@
+Spine = require 'spine'
+
 User = require 'zooniverse/models/user'
 
 class NavBarController extends Spine.Controller
   className: 'header'
-  template: require 'views/nav-bar'
+  template: require '../views/nav-bar'
 
   elements:
     'li': 'menuItems'
@@ -29,6 +31,5 @@ class NavBarController extends Spine.Controller
   activateRoute: =>
     @menuItems.removeClass 'active'
     $(".#{ @route }").addClass 'active'
-
 
 module.exports = NavBarController

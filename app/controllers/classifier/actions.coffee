@@ -1,11 +1,13 @@
+Spine = require 'spine'
+
 Subject = require 'zooniverse/models/subject'
 User = require 'zooniverse/models/user'
 
-Game = require 'lib/game'
+Game = require '../../lib/game'
 
 class Actions extends Spine.Controller
   className: 'section actions'
-  template: require 'views/classifier/actions'
+  template: require '../../views/classifier/actions'
 
   events:
     'click .favorite': 'onFavorite'

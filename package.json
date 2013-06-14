@@ -2,15 +2,15 @@
   "name": "worms",
   "version": "0.0.1",
   "dependencies": {
-    "hem": "~0.1.8",
-    "spine": "~1.0.7",
     "underscore": "latest",
-    "nib": "latest",
-    "clean-css": "latest",
     "zootorial": "0.3.4",
-    "zooniverse": "git://github.com/zooniverse/Zooniverse.git#no-deps"
+    "zooniverse": "git://github.com/zooniverse/Zooniverse.git#no-deps",
+    "haw": "0.0.7",
+    "publisssh": "git://github.com/brian-c/publisssh.git",
+    "spine": "~1.1.0"
   },
   "scripts": {
-    "start": "hem server"
+    "start": "haw serve",
+    "deploy": "haw build && publisssh && trash ./build"
   }
 }

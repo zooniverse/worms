@@ -1,11 +1,13 @@
+Spine = require 'spine'
+
 Subject = require 'zooniverse/models/subject'
 User = require 'zooniverse/models/user'
 
-Game = require 'lib/game'
+Game = require '../../lib/game'
 
 class Video extends Spine.Controller
   className: 'section video'
-  template: require 'views/classifier/video'
+  template: require '../../views/classifier/video'
 
   elements:
     '.countdown': 'countdown'
@@ -21,15 +23,15 @@ class Video extends Spine.Controller
     @html @template
       subject: Subject.current
 
-    if @video?.isReady then @video.destroy()
+    if @video?.ready() then @video.dispose()
 
-    @video = _V_ 'worm-video', {}
-    @video.removeEvent 'ended', @video.onEnded
+    @video = videojs 'worm-video', {}
+    @video.off 'ended', @video.onEnded
     $('.vjs-controls').show()
 
   play: =>
     @video.play()
-    @video.addEvent 'ended', =>
+    @video.on 'ended', =>
       @video.pause()
 
       @overlay.fadeIn()
