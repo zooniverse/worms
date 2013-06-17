@@ -42,7 +42,11 @@ module.exports =
   firstEggLaying: new Step
     number: 5
     header: 'Egg Layed'
-    details: '''This is what an egg-laying event looks like. Look for these in the videos.
+    details: '''This is what an egg-laying event looks like. It appears as a small bulge from
+      the middle of a worm.<br><br>
+
+      The eggs will only ever appear from the middle of a worm near the red dot.<br><br>
+      
       If there are multiple eggs, please mark an event (using the "Z" key) for each egg.
     '''
     attachment: 'left top .video-container right top'
