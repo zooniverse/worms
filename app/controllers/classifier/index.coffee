@@ -113,10 +113,8 @@ class Classifier extends BaseController
         @tutorial.end()
       when 90 # Z
         switch Game.current.status
-          when 'waiting'
-            Spine.trigger 'startCountdown'
-          when 'playing'
-            Game.current.markTime()
+          when 'waiting' then Spine.trigger 'startCountdown'
+          when 'playing' then Game.current.markTime()
           when 'finished'
             if Game.current.pastBuffer() then Spine.trigger 'finished-classification'
 

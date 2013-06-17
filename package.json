@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "dependencies": {
     "underscore": "latest",
-    "zootorial": "0.3.4",
+    "zootorial": "git://github.com/brian-c/zootorial.git#new-features",
     "zooniverse": "git://github.com/zooniverse/Zooniverse.git#no-deps",
     "haw": "0.0.7",
     "publisssh": "git://github.com/brian-c/publisssh.git",
