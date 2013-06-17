@@ -46,23 +46,16 @@ module.exports =
       the middle of a worm.<br><br>
 
       The eggs will only ever appear from the middle of a worm near the red dot.<br><br>
-      
+
       If there are multiple eggs, please mark an event (using the "Z" key) for each egg.
     '''
     attachment: 'left top .video-container right top'
     focus: '.video-container'
     onEnter: (tutorial) ->
-      fragment = document.createDocumentFragment()
-      circleDiv = document.createElement 'div'
-      circleDiv.classList.add 'tutorial-circle'
-
-      fragment.appendChild circleDiv
-      document.querySelector('.video-container').appendChild fragment
-
+      $('.video-container').append('<div class="tutorial-circle"></div>')
       tutorial.video.video.pause()
     onExit: (tutorial) ->
-      circleDiv = document.querySelector '.tutorial-circle'
-      circleDiv.parentNode.removeChild circleDiv
+      $('.tutorial-circle').remove()
       tutorial.video.video.play()
     next: 'eggExplanation'
 

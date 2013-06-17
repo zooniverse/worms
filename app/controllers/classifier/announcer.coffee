@@ -38,6 +38,10 @@ class Announcer extends Spine.Controller
 
   # Events
   onClick: (e) =>
-    if Game.current.status is 'waiting' then Spine.trigger 'startCountdown'
+    switch Game.current.status
+      when 'waiting' then Spine.trigger 'startCountdown'
+      when 'playing' then Game.current.markTime()
+      when 'finished'
+        if Game.current.pastBuffer() then Spine.trigger 'finished-classification'
 
 module.exports = Announcer
