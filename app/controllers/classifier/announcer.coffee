@@ -27,7 +27,7 @@ class Announcer extends Spine.Controller
       @announce "You matched #{ Game.current.otherPlayer } and earned #{ points } points!"
 
     Spine.on 'startCountdown', =>
-      @announce 'Press space if you see the worm lay an egg'
+      @announce 'Press "Z" if you see the worm lay an egg'
 
   render: =>
     @html @template

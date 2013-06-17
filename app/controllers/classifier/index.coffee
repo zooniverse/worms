@@ -106,15 +106,27 @@ class Classifier extends BaseController
     @announcer.announce message
 
   onKeyDown: (e) =>
+    if not @isActive() or @dialogsActive() then return
+
     switch e.which
       when 27 # Esc
         @tutorial.end()
-      when 32 # Space
-        e.preventDefault()
+      when 90 # Z
         switch Game.current.status
-          when 'waiting' then Spine.trigger 'startCountdown'
-          when 'playing' then Game.current.markTime()
+          when 'waiting'
+            Spine.trigger 'startCountdown'
+          when 'playing'
+            Game.current.markTime()
           when 'finished'
             if Game.current.pastBuffer() then Spine.trigger 'finished-classification'
+
+  dialogsActive: =>
+    loginDialogEl = require('zooniverse/controllers/login-dialog').el
+    signUpDialogEl = require('zooniverse/controllers/signup-dialog').el
+
+    if loginDialogEl.hasClass('showing') or signUpDialogEl.hasClass('showing')
+      return true
+
+    return false
 
 module.exports = Classifier

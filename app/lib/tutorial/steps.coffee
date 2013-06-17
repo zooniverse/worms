@@ -15,7 +15,7 @@ module.exports =
   overview: new Step
     number: 2
     header: 'The Task'
-    details: 'All you have to do is tap the space bar on your computer when you see a worm lay an egg. That\'s it!'
+    details: 'All you have to do is tap the "Z" key on your computer when you see a worm lay an egg. That\'s it!'
     block: '.bubble'
     next: 'begin'
 
@@ -43,7 +43,7 @@ module.exports =
     number: 5
     header: 'Egg Layed'
     details: '''This is what an egg-laying event looks like. Look for these in the videos.
-      If there are multiple eggs, please mark an event (using the space bar) for each egg.
+      If there are multiple eggs, please mark an event (using the "Z" key) for each egg.
     '''
     attachment: 'left top .video-container right top'
     focus: '.video-container'
@@ -66,7 +66,7 @@ module.exports =
     number: 6
     header: 'Multiple Eggs'
     details: '''
-      Sometimes there are multiple eggs. If you see more than one egg, press space for each egg.
+      Sometimes there are multiple eggs. If you see more than one egg, press the "Z" key for each egg.
     '''
     next: 'finish'
 
