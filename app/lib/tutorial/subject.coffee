@@ -8,6 +8,7 @@ createTutorialSubject = ->
 
     location:
       mp4: './tutorial/subject/519a3eb2447b5e2c3d000018.mp4'
+      standard: './tutorial/subject/519a3eb2447b5e2c3d000018.jpg'
 
     tutorial: true
 
