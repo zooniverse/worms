@@ -8,10 +8,12 @@
     <button class="discuss disabled" name="discuss">Discuss</button>
   <% end %>
   
-  <button class="finished" name="finish" style="float: right">Finished</button>
+  <button class="finished float-right" name="finish">Finished</button>
+  <button class="help float-right">Help</button>
 
 <% else: %>
 
-  <button class="finished disabled" name="finish" style="float: right">Finished</button>
+  <button class="finished disabled float-right" name="finish">Finished</button>
+  <button class="help float-right">Help</button>
 
 <% end %>

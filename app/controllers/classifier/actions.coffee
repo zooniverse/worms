@@ -1,5 +1,6 @@
 Spine = require 'spine'
 
+Dialog = require 'zooniverse/controllers/dialog'
 Subject = require 'zooniverse/models/subject'
 User = require 'zooniverse/models/user'
 
@@ -12,11 +13,15 @@ class Actions extends Spine.Controller
   events:
     'click .favorite': 'onFavorite'
     'click .discuss': 'onDiscuss'
+    'click .help': 'onHelp'
     'click .finished': 'onFinish'
 
   constructor: ->
     super
     
+    @helpDialog = new Dialog
+      content: require '../../views/classifier/help'
+
     @html @template()
 
     User.on 'change', @render
@@ -38,6 +43,9 @@ class Actions extends Spine.Controller
     return if $(e.currentTarget).hasClass 'disabled'
 
     window.open Subject.current.talkHref()
+
+  onHelp: (e) =>
+    @helpDialog.show()
 
   onFinish: (e) =>
     return if $(e.currentTarget).hasClass 'disabled'
