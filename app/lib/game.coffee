@@ -97,4 +97,6 @@ class Game extends EventEmitter
 
   pastBuffer: => @buffer
 
+  isStarting: => @status is 'starting'
+
 module.exports = Game

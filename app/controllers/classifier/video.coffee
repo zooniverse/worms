@@ -13,6 +13,9 @@ class Video extends Spine.Controller
     '.countdown': 'countdown'
     '.overlay': 'overlay'
 
+  events:
+    'click .countdown': 'onClickCountdown'
+
   constructor: ->
     super
 
@@ -39,28 +42,32 @@ class Video extends Spine.Controller
       @video.pause()
       Game.current.end()
 
+  onClickCountdown: =>
+    Spine.trigger 'startCountdown'
+
   startCountdown: =>
-    Game.current.warmUp @video
-    setTimeout =>
-      @countdown.show()
-      @countdown.html("3")
-    , 1000
+    unless Game.current.isStarting()
+      Game.current.warmUp @video
+      setTimeout =>
+        @countdown.show()
+        @countdown.html("3")
+      , 1000
 
-    setTimeout =>
-      @countdown.html("2")
-    , 2000
+      setTimeout =>
+        @countdown.html("2")
+      , 2000
 
-    setTimeout =>
-      @countdown.html("1")
-    , 3000
+      setTimeout =>
+        @countdown.html("1")
+      , 3000
 
-    setTimeout =>
-      @countdown.html("GO")
-    , 4000
+      setTimeout =>
+        @countdown.html("GO")
+      , 4000
 
-    setTimeout =>
-      @countdown.remove()
-      Game.current.start()
-    , 5000
+      setTimeout =>
+        @countdown.remove()
+        Game.current.start()
+      , 5000
 
 module.exports = Video

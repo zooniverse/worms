@@ -113,9 +113,9 @@ body.vjs-full-window {
 .vjs-tt-cue { display: block; }
 
 /* Fading sytles, used to fade control bar. */
-.vjs-fade-in {
+/*.vjs-fade-in {
   display: block !important;
-  visibility: visible; /* Needed to make sure things hide in older browsers too. */
+  visibility: visible;
   opacity: 1;
 }
 .vjs-fade-out {
@@ -123,7 +123,7 @@ body.vjs-full-window {
   visibility: hidden;
   opacity: 1;
 }
-
+*/
 /* Hide disabled or unsupported controls */
 .vjs-default-skin .vjs-hidden { display: none; }
 
@@ -194,7 +194,7 @@ so you can upgrade to newer versions easier. You can remove all these styles by 
 -------------------------------------------------------------------------------- */
 /* The default control bar. Created by controls.js */
 .vjs-default-skin .vjs-control-bar {
-  display: none; /* Start hidden */
+  display: block;
   position: absolute;
   /* Distance from the bottom of the box/video. Keep 0. Use height to add more bottom margin. */
   bottom: 0;
