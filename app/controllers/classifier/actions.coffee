@@ -20,6 +20,7 @@ class Actions extends Spine.Controller
     super
     
     @helpDialog = new Dialog
+      className: 'zooniverse-dialog help-dialog'
       content: require '../../views/classifier/help'
 
     @html @template()
