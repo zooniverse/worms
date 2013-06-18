@@ -31,10 +31,12 @@ class Video extends Spine.Controller
 
   play: =>
     @video.play()
+
+    @video.on 'play', =>
+      Game.current.status = 'playing' # hack
+
     @video.on 'ended', =>
       @video.pause()
-
-      @overlay.fadeIn()
       Game.current.end()
 
   startCountdown: =>

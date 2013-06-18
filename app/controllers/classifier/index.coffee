@@ -111,12 +111,14 @@ class Classifier extends BaseController
     switch e.which
       when 27 # Esc
         @tutorial.end()
-      when 90 # Z
+      when 88
         switch Game.current.status
-          when 'waiting' then Spine.trigger 'startCountdown'
-          when 'playing' then Game.current.markTime()
+          when'waiting' then Spine.trigger 'startCountdown'
           when 'finished'
             if Game.current.pastBuffer() then Spine.trigger 'finished-classification'
+      when 90 # Z
+        switch Game.current.status
+          when 'playing' then Game.current.markTime()
 
   dialogsActive: =>
     loginDialogEl = require('zooniverse/controllers/login-dialog').el

@@ -18,7 +18,7 @@
 
 .stack > .classifier
 
-  .left 
+  > .left 
     width: 575px
     height: 447px
     padding: 0px 40px 0 0
@@ -44,17 +44,55 @@
         top: 186px
         width: 50px
 
-      .video-border
-        border: 9px solid #000
-        box-shadow: inset 0 0 10px 1px rgba(#000, 0.7)
-        box-sizing: border-box
-        height: 100%
+      > .video-border
         position: absolute
-        width: 100%
         z-index: 1
+
+        &.top, &.right, &.bottom, &.left
+          border: 6px solid #000
+          box-shadow: inset 0 0 10px 1px rgba(#000, 0.7)
+          box-sizing: border-box
+
+        &.top, &.bottom
+          height: 0
+          width: 100%
+
+        &.left, &.right
+          height: 100%
+          width: 0
+
+        &.top
+          top: 0
+
+        &.bottom
+          bottom: 0
+
+        &.left
+          left: 0
+
+        &.right
+          right: 0
+
 
       #worm-video
         position: relative
+
+        > .vjs-big-play-button
+          display: none
+
+        > .vjs-control-bar
+          bottom: 6px
+          box-sizing: border-box
+          font-size: 14px
+          line-height: 2.5em
+          padding: 0 18px
+
+          > .vjs-fullscreen-control, >.vjs-mute-control, 
+          > .vjs-volume-control, > .vjs-play-control
+            display: none
+
+          > .vjs-time-controls, > .vjs-time-divider
+            line-height: 2.2em
 
       .overlay
         background: rgba(#000, 0.5)
@@ -67,25 +105,6 @@
       video, object
         width: 575px
         height: 432px
-
-      .vjs-control
-        display: none
-
-      .vjs-control-bar
-        bottom: 13px
-        left: 16px
-        padding: 10px 0 0 0
-        position: absolute
-
-        .vjs-control-text
-          display: none
-
-      .vjs-time-divider, .vjs-duration, .vjs-current-time
-        display: block !important
-        float: left
-        font-size: 16px
-        font-weight: 700
-        margin: 0 5px 0 0
 
       .vjs-poster
         height: 100%

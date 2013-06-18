@@ -1,9 +1,14 @@
 <div class="countdown"></div>
 <div class="video-container">
-  <div class="video-border"></div>
+  
+  <div class="video-border top"></div>
+  <div class="video-border right"></div>
+  <div class="video-border bottom"></div>
+  <div class="video-border left"></div>
+
   <% if @subject?: %>
     <div class="overlay"></div>
-    <video controls id="worm-video" width="575" height="432" poster="<%- @subject.location.standard %>">
+    <video class="video-js vjs-default-skin" controls id="worm-video" width="575" height="432" poster="<%- @subject.location.standard %>">
       <source src="<%= @subject.location.mp4 %>" type="video/mp4" />
     </video>
   <% end %>
