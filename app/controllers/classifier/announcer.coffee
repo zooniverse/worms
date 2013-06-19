@@ -21,7 +21,7 @@ class Announcer extends Spine.Controller
     @html @template()
 
     Subject.on 'select', =>
-      @announce 'Click to start a game'
+      @announce 'Click to start'
 
     Game.on 'score', (e, game, points) =>
       @announce "You matched #{ Game.current.otherPlayer } and earned #{ points } points!"
