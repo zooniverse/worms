@@ -37,8 +37,8 @@ class Actions extends Spine.Controller
     return if $(e.currentTarget).hasClass 'disabled'
 
     $(e.currentTarget).addClass 'disabled'
-    @favorite = new Favorite({subjects: [Subject.current]})
-    @favorite.send()
+
+    Spine.trigger 'make-favorite'
 
   onDiscuss: (e) =>
     return if $(e.currentTarget).hasClass 'disabled'

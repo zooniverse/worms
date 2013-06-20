@@ -58,6 +58,7 @@ class Classifier extends BaseController
     User.on 'change', @onUserChange
     Subject.on 'select', @onSubjectSelect
 
+    Spine.on 'make-favorite', @makeFavorite
     Spine.on 'finished-classification', @finish
     Game.on 'end', @onGameEnd
 
@@ -85,6 +86,9 @@ class Classifier extends BaseController
   deactivate: =>
     super
     @tutorial?.end()
+
+  makeFavorite: =>
+    @classification.favorite = true if @classification?
 
   finish: =>
     @classification.annotate Game.current.getGameStatus()
