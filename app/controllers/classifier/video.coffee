@@ -24,10 +24,13 @@ class Video extends Spine.Controller
     if @video?.ready() then @video.dispose()
 
     @video = videojs 'worm-video', {}
+
     @video.off 'ended', @video.onEnded
     $('.vjs-controls').show()
 
   play: =>
+    Game.current.video = @video
+    
     @video.play()
 
     @video.on 'play', =>
