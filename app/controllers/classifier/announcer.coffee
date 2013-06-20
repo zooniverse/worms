@@ -26,7 +26,7 @@ class Announcer extends Spine.Controller
     Game.on 'score', (e, game, points) =>
       @announce "You matched #{ Game.current.otherPlayer } and earned #{ points } points!"
 
-    Spine.on 'startCountdown', =>
+    Game.on 'start', =>
       @announce 'Press "Z" if you see the worm lay an egg'
 
   render: =>
@@ -39,7 +39,7 @@ class Announcer extends Spine.Controller
   # Events
   onClick: (e) =>
     switch Game.current.status
-      when 'waiting' then Spine.trigger 'startCountdown'
+      when 'waiting' then Game.current.start()
       when 'playing' then Game.current.markTime()
       when 'finished'
         if Game.current.pastBuffer() then Spine.trigger 'finished-classification'

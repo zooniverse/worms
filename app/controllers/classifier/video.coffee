@@ -10,16 +10,11 @@ class Video extends Spine.Controller
   template: require '../../views/classifier/video'
 
   elements:
-    '.countdown': 'countdown'
     '.overlay': 'overlay'
-
-  events:
-    'click .countdown': 'onClickCountdown'
 
   constructor: ->
     super
 
-    Spine.on 'startCountdown', @startCountdown
     Game.on 'start', @play
 
   render: =>
@@ -41,33 +36,5 @@ class Video extends Spine.Controller
     @video.on 'ended', =>
       @video.pause()
       Game.current.end()
-
-  onClickCountdown: =>
-    Spine.trigger 'startCountdown'
-
-  startCountdown: =>
-    unless Game.current.isStarting()
-      Game.current.warmUp @video
-      setTimeout =>
-        @countdown.show()
-        @countdown.html("3")
-      , 1000
-
-      setTimeout =>
-        @countdown.html("2")
-      , 2000
-
-      setTimeout =>
-        @countdown.html("1")
-      , 3000
-
-      setTimeout =>
-        @countdown.html("GO")
-      , 4000
-
-      setTimeout =>
-        @countdown.remove()
-        Game.current.start()
-      , 5000
 
 module.exports = Video
