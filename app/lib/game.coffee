@@ -39,7 +39,6 @@ class Game extends EventEmitter
     else
       @score = FIRST_SCORE
 
-    console.log @
     @trigger 'new'
 
   compareTimes: (yourTime, otherPlayTime) =>
