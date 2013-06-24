@@ -109,10 +109,6 @@ class Game extends EventEmitter
     timings: @times
     score: @score
 
-  warmUp: (@video) =>
-    @status = 'starting'
-    @trigger 'warmup'
-
   start: =>
     @status = 'playing'
     @trigger 'start'
@@ -126,7 +122,5 @@ class Game extends EventEmitter
     @trigger 'end'
 
   pastBuffer: => @buffer
-
-  isStarting: => @status is 'starting'
 
 module.exports = Game
