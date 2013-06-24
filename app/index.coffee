@@ -57,3 +57,7 @@ Subject.queueLength = 1
 User.fetch()
 
 Spine.Route.setup()
+
+new (require 'zooniverse/lib/google-analytics')
+  account: 'UA-1224199-44'
+  domain: 'wormwatchlab.org'
