@@ -65,10 +65,22 @@ module.exports =
     details: '''
       Sometimes there are multiple eggs. If you see more than one egg, press the "Z" key for each egg.
     '''
+    next: 'video'
+
+  video: new Step
+    number: 7
+    header: 'Video Controls'
+    details: '''
+      Click the video to start/stop it at any time. Control the time of the video by
+      clicking on the progress bar.<br><br>
+
+      You can remove a mark by clicking the little "x" next to the marked time on
+      the right.<br><br>
+    '''
     next: 'finish'
 
   finish: new Step
-    number: 7
+    number: 8
     header: 'Done!'
     details: 'That\'s it! Click "Finished" when the video is over to watch more worms!'
 
