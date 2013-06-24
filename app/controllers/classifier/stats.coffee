@@ -24,19 +24,12 @@ class Stats extends Spine.Controller
     @html @template()
 
     Game.on 'new', @render
-    Game.on 'status', @updateScoreboard
-    Game.on 'mark remove-mark', @render
+    Game.on 'status mark remove-mark', @render
 
   render: =>
     @html @template
       game: Game.current
       user: User.current
-
-  updateScoreboard: (e, game) =>
-    @scoreBox.html "Score: #{ game.score }"
-
-    if game.otherPlayerTime
-      @p2Times.append "<p class='time'> <span>Match at :</span> #{ game.otherPlayerTime / 1000 } s </p>"
 
   removeTime: (e) =>
     Game.current.removeTime $(e.currentTarget).parent().index()

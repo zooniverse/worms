@@ -26,6 +26,9 @@ class Announcer extends Spine.Controller
     Game.on 'score', (e, game, points) =>
       @announce "You matched #{ Game.current.otherPlayer } and earned #{ points } points!"
 
+    Game.on 'remove-mark', (e, game, removedTime) =>
+      @announce "You removed a mark at #{ removedTime.toFixed 2 }s"
+
     Game.on 'start', =>
       @announce 'Press "Z" if you see the worm lay an egg'
 

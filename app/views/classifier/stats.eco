@@ -19,7 +19,15 @@
 <div class="player2 player">
   <% if @game?.otherPlayer: %>
     <p class="name">Player: <%= @game.otherPlayer %></p>
-    <div class="times"></div>
+    <ul class="times">
+      <% if @game?.teamMateTimes.length: %>
+
+        <% for timeObj, i in @game.teamMateTimes when timeObj.used: %>
+          <li><span>Egg at:</span> <%- timeObj.time.toFixed 2 %>s </li>
+        <% end %>
+
+      <% end %>
+    </ul>
   <% else if @user: %>
     <p class="name">First spotter!</p>
     <p class="time">You are the first person to see this worm! You get a 200 point spotter award</p>

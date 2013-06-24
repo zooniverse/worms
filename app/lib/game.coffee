@@ -7,10 +7,10 @@ Subject = require 'zooniverse/models/subject'
 User = require 'zooniverse/models/user'
 
 EXACT_SCORE = 20
-EXACT_DISTANCE = 1000
+EXACT_DISTANCE = 1 # in seconds
 
 CLOSE_SCORE = 10
-CLOSE_DISTANCE = 2000
+CLOSE_DISTANCE = 2 # in seconds
 
 FIRST_SCORE = 200
 
@@ -39,21 +39,18 @@ class Game extends EventEmitter
     else
       @score = FIRST_SCORE
 
+    console.log @
     @trigger 'new'
 
-  compareTimes: (time1, closestValidTime) =>
+  compareTimes: (yourTime, otherPlayTime) =>
     points = false
 
-    if Math.abs(time1 - closestValidTime.time)  < EXACT_DISTANCE
+    if Math.abs(yourTime - otherPlayTime.time) < EXACT_DISTANCE
       points = EXACT_SCORE
-    else if Math.abs(time1 - closestValidTime.time) < CLOSE_DISTANCE
+    else if Math.abs(yourTime - otherPlayTime.time) < CLOSE_DISTANCE
       points = CLOSE_SCORE
 
-    if points
-      closestValidTime.used = true
-      @score += points
-      @trigger 'score', points
-      @trigger 'status'
+    return points
 
   markTime: =>
     markedTime = @video.currentTime()
@@ -66,14 +63,47 @@ class Game extends EventEmitter
       .first()
       .value()
 
-    if closestValidTime then @compareTimes markedTime, closestValidTime
+    if closestValidTime
+      points = @compareTimes markedTime, closestValidTime
+
+      if points
+        closestValidTime.used = true
+        @score += points
+        @trigger 'score', points
+        @trigger 'status'
 
     @trigger 'mark'
 
   removeTime: (i) =>
-    @times.splice i, 1
+    removedTime = @times.splice i, 1
+    @refreshScore()
+    @trigger 'remove-mark', removedTime
 
-    @trigger 'remove-mark'
+  refreshScore: =>
+    unless @otherPlayer then return
+
+    score = 0
+
+    timeObj.used = false for timeObj in @teamMateTimes
+
+    for time in @times
+
+      closestValidTime = _.chain(@teamMateTimes)
+        .sortBy((timeObj) -> Math.abs(timeObj.time - time))
+        .reject((timeObj) -> timeObj.used)
+        .first()
+        .value()
+
+      if closestValidTime
+
+        points = @compareTimes time, closestValidTime
+
+        if points
+          closestValidTime.used = true
+          score += points
+
+    @score = score
+    @trigger 'status'
 
   getGameStatus: =>
     timings: @times
