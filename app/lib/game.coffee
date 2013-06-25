@@ -28,13 +28,14 @@ class Game extends EventEmitter
     @score = 0
     @clock = 0
 
-    @currentSubject = Subject.current
-    previousGame = _(@currentSubject.metadata.timings).shuffle()[0]
+    previousGame = _(Subject.current.metadata.timings).shuffle()[0]
 
-    if previousGame?
-      for time in previousGame.times
-        @teamMateTimes.push { used: false, time: parseInt time }
-      @otherPlayer = previousGame.name
+    if Subject.current.classification_count
+      
+      if previousGame?
+        for time in previousGame.times
+          @teamMateTimes.push { used: false, time: parseInt time }
+        @otherPlayer = previousGame.name
 
     else
       @score = FIRST_SCORE
