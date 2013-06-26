@@ -13,7 +13,7 @@ User = require 'zooniverse/models/user'
 Footer = require 'zooniverse/controllers/footer'
 TopBar = require 'zooniverse/controllers/top-bar'
 
-new Api project: 'worms', host: 'https://dev.zooniverse.org'
+new Api project: 'worms'
 
 _V_.options.flash.swf = 'video/video-js.swf'
 
