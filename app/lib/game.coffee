@@ -28,9 +28,8 @@ class Game extends EventEmitter
     @score = 0
     @clock = 0
 
-    previousGame = _(Subject.current.metadata.timings).shuffle()[0]
-
     if Subject.current.classification_count
+      previousGame = _(Subject.current.metadata.timings).shuffle()[0]
       
       if previousGame?
         for time in previousGame.times
