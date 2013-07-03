@@ -16,6 +16,7 @@ class Profile extends BaseController
   render: =>
     @html @template
       user: User.current
+      format: @formatNumber
 
   active: =>
     super
@@ -27,5 +28,9 @@ class Profile extends BaseController
       @el.css 'opacity', '1'
       @loading.stop()
       @render()
+
+  formatNumber: (n) ->
+    return n unless n
+    n.toString().replace /(\d)(?=(\d{3})+(?!\d))/g, '$1,'
 
 module.exports = Profile
