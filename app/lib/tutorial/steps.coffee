@@ -57,13 +57,16 @@ module.exports =
     onExit: (tutorial) ->
       $('.tutorial-circle').remove()
       tutorial.video.video.play()
-    next: 'eggExplanation'
+    next: 'eggsPlanation'
 
-  eggExplanation: new Step
+  eggsPlanation: new Step
     number: 6
-    header: 'Multiple Eggs'
+    header: 'Egg Marking'
     details: '''
-      Sometimes there are multiple eggs. If you see more than one egg, press the "Z" key for each egg.
+      Sometimes there are multiple eggs. If you see more than one egg, press the "Z" key for each egg.<br><br>
+
+      You will occasionally see videos where some eggs have been laid before the video starts.
+      You don't have to mark these!
     '''
     next: 'video'
 
@@ -83,7 +86,3 @@ module.exports =
     number: 8
     header: 'Done!'
     details: 'That\'s it! Click "Finished" when the video is over to watch more worms!'
-
-
-
-
