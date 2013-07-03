@@ -12,6 +12,9 @@ class Video extends Spine.Controller
   elements:
     '.overlay': 'overlay'
 
+  events:
+    'click .overlay': 'onClickOverlay'
+
   constructor: ->
     super
 
@@ -29,6 +32,8 @@ class Video extends Spine.Controller
     $('.vjs-controls').show()
 
   play: =>
+    @overlay.hide()
+
     Game.current.video = @video
     
     @video.play()
@@ -39,5 +44,8 @@ class Video extends Spine.Controller
     @video.on 'ended', =>
       @video.pause()
       Game.current.end()
+
+  onClickOverlay: =>
+    Game.current.start()
 
 module.exports = Video
