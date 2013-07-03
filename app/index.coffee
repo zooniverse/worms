@@ -52,7 +52,7 @@ app.footer.el.appendTo 'body > .footer'
 app.topBar = new TopBar
 app.topBar.el.prependTo 'body'
 
-Subject.queueLength = 1
+Subject.queueLength = 2
 
 User.fetch()
 
