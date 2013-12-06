@@ -1,5 +1,5 @@
 BaseController = require './base-controller'
-$.carousel = require '../lib/carousel'
+require '../lib/carousel'
 
 class Home extends BaseController
   className: 'slider'
@@ -13,7 +13,7 @@ class Home extends BaseController
     @html @template()
 
     @delay =>
-      @slider.carousel
+      @slider.carouFredSel
         height: 500
         width: '100%'
         items: 1
