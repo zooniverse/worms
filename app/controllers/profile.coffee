@@ -1,6 +1,7 @@
 User = require 'zooniverse/models/user'
 
 BaseController = require './base-controller'
+Spinner = require '../lib/spin'
 
 class Profile extends BaseController
   className: 'sub-page profile'

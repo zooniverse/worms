@@ -1,9 +1,6 @@
-{Tutorial} = require 'zootorial'
-{Step} = require 'zootorial'
+{ Tutorial, Step } = require 'zootorial'
 
 module.exports =
-  length: 3
-
   welcome: new Step
     number: 1
     header: 'Welcome to the Worm Watch Lab tutorial!'

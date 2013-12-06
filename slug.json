@@ -1,9 +1,0 @@
-{
-  "libs": [
-    "node_modules/zooniverse/vendor/base64.js",
-    "./lib/jquery.animate.js",
-    "./lib/jquery.carousel.js",
-    "./lib/spin.js",
-    "./lib/moment.js"
-  ]
-}

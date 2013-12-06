@@ -2,15 +2,15 @@
   "name": "worms",
   "version": "0.0.1",
   "dependencies": {
-    "underscore": "latest",
-    "zootorial": "git://github.com/brian-c/zootorial.git#new-features",
-    "zooniverse": "git://github.com/zooniverse/Zooniverse.git#no-deps",
-    "haw": "0.0.7",
-    "publisssh": "git://github.com/brian-c/publisssh.git",
-    "spine": "~1.1.0"
+    "spine": "~1.1.0",
+    "zooniverse": "~0.3.3",
+    "haw": "~0.2.15",
+    "publisssh": "~0.2.2",
+    "underscore": "~1.5.2",
+    "zootorial": "~0.3.6"
   },
   "scripts": {
     "start": "haw serve",
-    "deploy": "haw build && publisssh && trash ./build"
+    "deploy": "haw build && publisssh ./build www.wormwatchlab.org && trash ./build"
   }
 }

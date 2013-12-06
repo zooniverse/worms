@@ -14,7 +14,7 @@ Details = require './details'
 Stats = require './stats'
 Video = require './video'
 
-{Tutorial} = require 'zootorial'
+{ Tutorial } = require 'zootorial'
 
 TutorialSteps = require '../../lib/tutorial/steps'
 TutorialSubject = require '../../lib/tutorial/subject'
