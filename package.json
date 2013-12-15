@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "dependencies": {
     "spine": "~1.1.0",
-    "zooniverse": "~0.3.3",
+    "zooniverse": "~0.3.8",
     "haw": "~0.2.15",
     "publisssh": "~0.2.2",
     "underscore": "~1.5.2",
