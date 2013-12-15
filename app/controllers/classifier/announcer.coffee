@@ -28,7 +28,7 @@ class Announcer extends Spine.Controller
       @announce "You matched #{ Game.current.otherPlayer } and earned #{ points } points!"
 
     Game.on 'remove-mark', (e, game, removedTime) =>
-      @announce t 'span', 'classifyPage.messages.onRemoveMark', $removedTime: removedTime.toFixed 2
+      @announce t 'span', 'classifyPage.messages.onRemoveMark', $time: "#{ removedTime.toFixed 2 }"
 
     Game.on 'start', =>
       @announce t 'span', 'classifyPage.messages.onStart'

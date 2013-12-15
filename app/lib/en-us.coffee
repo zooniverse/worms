@@ -42,7 +42,7 @@ module.exports =
     messages:
       startPrompt: "Click to start"
       onStart: "Press \"Z\" if you see the worm lay an egg"
-      onRemoveMark: "You removed a mark at $removedTime"
+      onRemoveMark: "You removed a mark at $time"
 
     stats:
       player: "Player: $name"
