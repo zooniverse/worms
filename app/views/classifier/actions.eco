@@ -1,19 +1,19 @@
+<% t = require 't7e' %>
+
 <% if @game?.status is 'finished': %>
 
   <% if @user: %>
-    <button class="favorite" name="favourite">Favourite</button>
-    <button class="discuss" name="discuss">Discuss</button>
+    <%- t 'button.favorite', 'classifyPage.actions.favorite', name: 'favourite' %>
+    <%- t 'button.discuss', 'classifyPage.actions.discuss', name: 'discuss' %>
   <% else: %>
-    <button class="favourite disabled" name="favourite">Favourite</button>
-    <button class="discuss disabled" name="discuss">Discuss</button>
+    <%- t 'button.favorite disabled', 'classifyPage.actions.favorite', name: 'favourite' %>
+    <%- t 'button.discuss disabled', 'classifyPage.actions.discuss', name: 'discuss' %>
   <% end %>
   
-  <button class="finished float-right" name="finish">Finished</button>
-  <button class="help float-right">Help</button>
+  <%- t 'button.next float-right', 'classifyPage.actions.next', name: 'next' %>
+  <%- t 'button.help float-right', 'classifyPage.actions.help', name: 'help' %>
 
 <% else: %>
-
-  <button class="finished disabled float-right" name="finish">Finished</button>
-  <button class="help float-right">Help</button>
-
+  <%- t 'button.next disabled float-right', 'classifyPage.actions.next', name: 'next' %>
+  <%- t 'button.help float-right', 'classifyPage.actions.help', name: 'help' %>
 <% end %>

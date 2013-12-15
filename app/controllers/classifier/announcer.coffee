@@ -1,4 +1,5 @@
 Spine = require 'spine'
+t = require 't7e'
 
 Subject = require 'zooniverse/models/subject'
 User = require 'zooniverse/models/user'
@@ -21,23 +22,23 @@ class Announcer extends Spine.Controller
     @html @template()
 
     Subject.on 'select', =>
-      @announce 'Click to start'
+      @announce t 'span', 'classifyPage.messages.startPrompt'
 
     Game.on 'score', (e, game, points) =>
       @announce "You matched #{ Game.current.otherPlayer } and earned #{ points } points!"
 
     Game.on 'remove-mark', (e, game, removedTime) =>
-      @announce "You removed a mark at #{ removedTime.toFixed 2 }s"
+      @announce t 'span', 'classifyPage.messages.onRemoveMark', $removedTime: removedTime.toFixed 2
 
     Game.on 'start', =>
-      @announce 'Press "Z" if you see the worm lay an egg'
+      @announce t 'span', 'classifyPage.messages.onStart'
 
   render: =>
     @html @template
       game: Game.current
 
   announce: (message) =>
-    @message.text message
+    @message.html message
 
   # Events
   onClick: (e) =>

@@ -15,6 +15,7 @@ Stats = require './stats'
 Video = require './video'
 
 { Tutorial } = require 'zootorial'
+translate = require 't7e'
 
 TutorialSteps = require '../../lib/tutorial/steps'
 TutorialSubject = require '../../lib/tutorial/subject'
@@ -54,6 +55,9 @@ class Classifier extends BaseController
       parent: $('body')
 
     @tutorial.video = @video
+
+    @tutorial.el.on 'start-tutorial enter-tutorial-step', =>
+      translate.refresh @tutorial.el.get 0
 
     User.on 'change', @onUserChange
     Subject.on 'select', @onSubjectSelect

@@ -1,3 +1,4 @@
+<% t = require 't7e' %>
 
 <div class="left">
   <img class="img worm" src="images/scene/worm.png">
@@ -9,12 +10,12 @@
     <h1><%- @user.name %></h1>
 
     <% if @user.project?: %>
-      <h3>Worms Observed: <%- @user.project.classification_count %></h3>
-      <h3>Score: <%- if @user.project.score is 0 then "0 :(" else @format @user.project.score %></h3>
+      <%- t 'h3', 'profilePage.wormsObserved', $count: @user.project.classification_count %>
+      <%- t 'h3', 'profilePage.score', $score: if @user.project.score is 0 then "0 :(" else @format @user.project.score %>
     <% end %>
     
   <% else: %>
-    <p>Login to view profile</p>
+    <%- t 'p', 'profilePage.notLoggedIn' %>
   <% end %>
 
 </div>

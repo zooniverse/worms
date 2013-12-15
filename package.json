@@ -7,7 +7,8 @@
     "haw": "~0.2.15",
     "publisssh": "~0.2.2",
     "underscore": "~1.5.2",
-    "zootorial": "~0.3.6"
+    "zootorial": "~0.3.6",
+    "t7e": "~0.2.3"
   },
   "scripts": {
     "start": "haw serve",

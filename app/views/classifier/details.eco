@@ -1,10 +1,12 @@
+<% t = require 't7e' %>
+
 <img src="images/worm.png"></img>
 <div class="details">
   <% if @mutation?: %>
-    <h2><%- @mutation.name %></h2>
-    <p><%- @mutation.description %></p>
+    <%- t 'h2', "mutations.#{ @mutation }.name" %>
+    <%- t 'p', "mutations.#{ @mutation }.description" %>
   <% else: %>
-    <h2>Unspecified worm type</h2>
-    <p>This worm's genetic abnormality is not specified.</p>
+    <%- t 'h2', "mutations.notAvailable.name" %>
+    <%- t 'p', "mutations.notAvailable.description" %>
   <% end %>
 </div>

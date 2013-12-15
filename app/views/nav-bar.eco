@@ -1,12 +1,14 @@
+<% t = require 't7e' %>
+
 <a href="#/"><img class="logo" src="images/worm-watch-lab.png"></a>
 
 <ul>
-  <li class="home"><a href="#/">Home</a></li>
-  <li class="classify"><a href="#/classify">Classify</a></li>
-  <li class="science"><a href="#/science">Science</a></li>
-  <li class="team"><a href="#/team">Team</a></li>
-  <li class="partners"><a href="#/partners">Partners</a></li>
-  <li class="discuss"><a href="http://talk.wormwatchlab.org">Discuss</a></li>
-  <li class="blog"><a href="http://blog.wormwatchlab.org/">Blog</a></li>
-  <li class="profile"><a href="#/profile">Profile</a></li>
+  <li class="home"><a href="#/"><%- t 'span', 'navigation.home' %></a></li>
+  <li class="classify"><a href="#/classify"><%- t 'span', 'navigation.classify' %></a></li>
+  <li class="science"><a href="#/science"><%- t 'span', 'navigation.science' %></a></li>
+  <li class="team"><a href="#/team"><%- t 'span', 'navigation.team' %></a></li>
+  <li class="partners"><a href="#/partners"><%- t 'span', 'navigation.partners' %></a></li>
+  <li class="discuss"><a href="http://talk.wormwatchlab.org"><%- t 'span', 'navigation.discuss' %></a></li>
+  <li class="blog"><a href="http://blog.wormwatchlab.org/"><%- t 'span', 'navigation.blog' %></a></li>
+  <li class="profile"><a href="#/profile"><%- t 'span', 'navigation.profile' %></a></li>
 </ul>

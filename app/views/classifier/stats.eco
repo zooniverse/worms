@@ -1,35 +1,33 @@
+<% t = require 't7e' %>
+
 <div class="player1 player">
   <% if @user: %>
-    <p class="name">Player: <%= @user.name %></p>
-    <p class="score">Score: <%= @game?.score %></p> 
+    <%- t 'p.name', 'classifyPage.stats.player', $name: @user.name %>
+    <%- t 'p.score', 'classifyPage.stats.score', $amount: @game?.score %>
   <% else: %>
-    <p class="sign-in">Sign in to play</p>
+    <%- t 'p.sign-in', 'classifyPage.stats.signInPrompt' %>
   <% end %>
   <ul class="times">
     <% if @game?.times.length: %>
-
       <% for time, i in @game.times: %>
-        <li><span>Egg at:</span> <%- time.toFixed 2 %>s <button class="remove">x</button></li>
+        <li><%- t 'span', 'classifyPage.stats.eggAt' %> <%- time.toFixed 2 %>s <button class="remove">x</button></li>
       <% end %>
-
     <% end %>
   </ul>
 </div>
 
 <div class="player2 player">
   <% if @game?.otherPlayer: %>
-    <p class="name">Player: <%= @game.otherPlayer %></p>
+    <%- 'p.name', 'classifyPage.stats.player', $name: @game.otherPlayer %>
     <ul class="times">
       <% if @game?.teamMateTimes.length: %>
-
         <% for timeObj, i in @game.teamMateTimes when timeObj.used: %>
-          <li><span>Egg at:</span> <%- timeObj.time.toFixed 2 %>s </li>
+          <li><%- t 'span', 'classifyPage.stats.eggAt' %> <%- timeObj.time.toFixed 2 %>s </li>
         <% end %>
-
       <% end %>
     </ul>
   <% else if @user: %>
-    <p class="name">First spotter!</p>
-    <p class="time">You are the first person to see this worm! You get a 200 point spotter award</p>
+    <%- t 'p.name', 'classifyPage.stats.firstSpotter' %>
+    <%- t 'p.time', 'classifyPage.stats.spotterAward' %>
   <% end %>
 </div>

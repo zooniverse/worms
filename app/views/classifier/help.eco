@@ -1,17 +1,15 @@
+<% t = require 't7e' %>
+
 <button type="button" name="close-dialog">&times;</button>
 
-<h2>Help</h2>
+<%- t 'h2', 'classifyPage.help.header' %>
 
-<p>The egg will almost always appear in the middle segment of a worm at it's side. There will typically be a red dot that follows closely where eggs appear.</p>
-
-<p>You can erase an accidental marking by clicking the "x" in the space where the time is shown.</p>
-
-<p>It is rare to see an egg. Most videos won't have anything to mark, so don't feel as if you are doing something wrong if you go a few videos not marking anything.</p>
-
-<p>You can click the video to play/pause it at any time.</p>
-
-<h3>Keyboard Shortcuts</h3>
-<ul>
-  <li>X - Start the video / Move to next video</li>
-  <li>Z - Mark an egg-laying event</li>
-</ul>
+<%- t 'h3', 'classifyPage.help.keyboardShortcuts.header' %>
+<% try keys = t.strings.classifyPage.help.keyboardShortcuts.keys %>
+<% if keys: %>
+  <ul>
+    <% for key, value of keys: %>
+      <%- t 'li', "classifyPage.help.keyboardShortcuts.keys.#{ key }" %>
+    <% end %>
+  </ul>
+<% end %>

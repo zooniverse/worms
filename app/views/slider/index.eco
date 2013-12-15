@@ -1,19 +1,21 @@
+<% t = require 't7e' %>
+
 <div id="slider" class="section-container">
 
   <div class="section">
     <div class="container">
       <div class="left">
         <div class="details">
-          <h2>Human</h2>
-          <p>over 100 billion nerve cells</p>
+          <%- t 'h2', 'homePage.slides.first.imageHeader' %>
+          <%- t 'p', 'homePage.slides.first.imageTagline' %>
         </div>
         <img class="img person" src="images/scene/person.png">
         <img class="img genes" src="images/genes.png">
       </div>
 
       <div class="right">
-        <h1>One little worm can help scientists understand big genetic mysteries</h1>
-        <p>Scientists are discovering how genes affect behaviour in nematode worms. These discoveries can help us understand our own genes, too.</p>
+        <%- t 'h1', 'homePage.slides.first.header' %>
+        <%- t 'p', 'homePage.slides.first.text' %>
       </div>
     </div>
   </div>
@@ -22,16 +24,16 @@
     <div class="container">
       <div class="left">
         <div class="details">
-          <h2>Worm</h2>
-          <p>over 300 nerve cells</p>
+          <%- t 'h2', 'homePage.slides.second.imageHeader' %>
+          <%- t 'p', 'homePage.slides.second.imageTagline' %>
         </div>
         <img class="img worm" src="images/scene/worm.png">
         <img class="img genes" src="images/genes.png">
       </div>
 
       <div class="right">
-        <h1>Medical Research Live</h1>
-        <p>This project is brought to you by the Medical Research Council as part of its centenary year.</p>
+        <%- t 'h1', 'homePage.slides.second.header' %>
+        <%- t 'p', 'homePage.slides.second.text' %>
       </div>
     </div>
   </div>
@@ -42,8 +44,8 @@
         <img class="img genes" src="images/genes.png">
       </div>
       <div class="right">
-        <h1>Your job is to find the eggs!</h1>
-        <p>By watching a short video and spotting the worms laying eggs we can understand better how our genes work.</p>
+        <%- t 'h1', 'homePage.slides.third.header' %>
+        <%- t 'p', 'homePage.slides.third.text' %>
       </div>
     </div>
   </div>
@@ -54,12 +56,14 @@
 
 <div class="sponsors-container">
 
-  <a id="classify-button" class="big-button" href="#/classify">Get Hunting!</a>
+  <a id="classify-button" class="big-button" href="#/classify">
+    <%- t 'span', 'homePage.callToAction' %>
+  </a>
 
   <div class="sponsors">
     <figure>
       <a href="http://www.mrc.ac.uk/mrf"><img src="images/mrc-logo.png"></a>
-      <figcaption>This project is part of the Medical Research Council Centenary year programme of activities and is generously supported by the <a href="http://www.mrc.ac.uk/mrf">Medical Research Foundation</a> </figcaption>
+      <%- t 'figcaption', 'homePage.sponsorCredit' %>
     </figure>
   </div>
   

@@ -7,7 +7,12 @@ if typeof console is 'undefined'
 
 Spine = require 'spine'
 
+translate = require 't7e'
+enUs = require './lib/en-us'
+translate.load enUs
+
 Api = require 'zooniverse/lib/api'
+LanguageManager = require 'zooniverse/lib/language-manager'
 Subject = require 'zooniverse/models/subject'
 User = require 'zooniverse/models/user'
 Footer = require 'zooniverse/controllers/footer'
@@ -19,6 +24,14 @@ _V_.options.flash.swf = 'video/video-js.swf'
 
 app = {}
 app.container = '#app'
+
+languageManager = new LanguageManager
+  translations:
+    en: label: 'English', strings: enUs
+
+languageManager.on 'change-language', (e, code, strings) ->
+  translate.load strings
+  translate.refresh()
 
 app.navBar = new (require './controllers/nav-bar')
 app.navBar.el.appendTo app.container

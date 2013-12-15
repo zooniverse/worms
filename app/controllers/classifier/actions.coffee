@@ -14,7 +14,7 @@ class Actions extends Spine.Controller
     'click .favorite': 'onFavorite'
     'click .discuss': 'onDiscuss'
     'click .help': 'onHelp'
-    'click .finished': 'onFinish'
+    'click .next': 'onRequestNext'
 
   constructor: ->
     super
@@ -48,7 +48,7 @@ class Actions extends Spine.Controller
   onHelp: (e) =>
     @helpDialog.show()
 
-  onFinish: (e) =>
+  onRequestNext: (e) =>
     return if $(e.currentTarget).hasClass 'disabled'
       
     Spine.trigger 'finished-classification'

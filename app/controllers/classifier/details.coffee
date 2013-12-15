@@ -1,12 +1,12 @@
 Spine = require 'spine'
-
+translate = require 't7e'
 Subject = require 'zooniverse/models/subject'
+
+DEFAULT_MUTATION = 'notAvailable'
 
 class Details extends Spine.Controller
   className: 'section subject-info'
   template: require '../../views/classifier/details'
-
-  mutations: require '../../lib/mutations'
 
   constructor: ->
     super
@@ -16,10 +16,8 @@ class Details extends Spine.Controller
     Subject.on 'select', @render
 
   render: =>
-    if Subject.current?.metadata.mutation and @mutations[Subject.current.metadata.mutation]?
-      mutation = @mutations[Subject.current.metadata.mutation]
-    else
-      mutation = null
+    if Subject.current.metadata.mutation of (translate.strings).mutations then mutation = Subject.current.metadata.mutation
+    mutation ?= DEFAULT_MUTATION
 
     @html @template
       mutation: mutation
