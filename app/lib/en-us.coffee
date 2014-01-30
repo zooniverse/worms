@@ -51,6 +51,7 @@ module.exports =
       eggAt: "Egg at:"
       firstSpotter: "First spotter!"
       spotterAward: "You are the first person to see this worm! You get a 200 point spotter award"
+      noTimings: "No other timings available yet!"
 
     help:
       header: "Help"

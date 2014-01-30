@@ -18,7 +18,7 @@
 
 <div class="player2 player">
   <% if @game?.otherPlayer: %>
-    <%- 'p.name', 'classifyPage.stats.player', $name: @game.otherPlayer %>
+    <%- t 'p.name', 'classifyPage.stats.player', $name: @game.otherPlayer %>
     <ul class="times">
       <% if @game?.teamMateTimes.length: %>
         <% for timeObj, i in @game.teamMateTimes when timeObj.used: %>
@@ -26,8 +26,10 @@
         <% end %>
       <% end %>
     </ul>
-  <% else if @user: %>
+  <% else if @game?.firstSpotter: %>
     <%- t 'p.name', 'classifyPage.stats.firstSpotter' %>
     <%- t 'p.time', 'classifyPage.stats.spotterAward' %>
+  <% else: %>
+    <%- t 'p.time', 'classifyPage.stats.noTimings' %>
   <% end %>
 </div>
