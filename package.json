@@ -3,15 +3,18 @@
   "version": "0.0.1",
   "dependencies": {
     "spine": "~1.1.0",
-    "zooniverse": "~0.3.15",
+    "zooniverse": "~0.4.2",
     "haw": "~0.2.15",
     "publisssh": "~0.2.2",
     "underscore": "~1.5.2",
     "zootorial": "~0.3.6",
-    "t7e": "~0.2.3"
+    "t7e": "~0.2.3",
+    "translator-seed": "~0.1.1"
   },
   "scripts": {
     "start": "haw serve",
-    "deploy": "haw build && publisssh ./build www.wormwatchlab.org && trash ./build"
+    "deploy-to-production": "haw build && publisssh ./build www.wormwatchlab.org && trash ./build",
+    "deploy-locale": "seed-translation --project worms --env production",
+    "deploy": "npm run deploy-to-production && npm run deploy-locale"
   }
 }
