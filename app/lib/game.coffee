@@ -15,19 +15,18 @@ CLOSE_DISTANCE = 2 # in seconds
 FIRST_SCORE = 200
 
 class Game extends EventEmitter
-
   @current: null
-
-  buffer: false
-  status: 'waiting'
-  times: []
-  teamMateTimes: []
-  score: 0
-  clock: 0
-  firstSpotter: false
 
   constructor: ->
     @constructor.current = @
+
+    @buffer = false
+    @status = 'waiting'
+    @times = []
+    @teamMateTimes = []
+    @score = 0
+    @clock = 0
+    @firstSpotter = false
 
     if Subject.current.classification_count > 0 and Subject.current.metadata.timings?
       previousGame = _(Subject.current.metadata.timings).shuffle()[0]
