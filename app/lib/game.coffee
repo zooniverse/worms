@@ -32,9 +32,10 @@ class Game extends EventEmitter
     if Subject.current.classification_count > 0 and Subject.current.metadata.timings?
       previousGame = _(Subject.current.metadata.timings).shuffle()[0]
       
-      for time in previousGame.times
-        @teamMateTimes.push { used: false, time: parseInt time }
-      @otherPlayer = previousGame.name
+      unless previousGame.name is 'Anonymous'
+        for time in previousGame.times
+          @teamMateTimes.push { used: false, time: parseInt time }
+        @otherPlayer = previousGame.name
 
     else if Subject.current.classification_count is 0
       @score = FIRST_SCORE
