@@ -14,7 +14,6 @@
   "scripts": {
     "start": "haw serve",
     "deploy-to-production": "haw build && publisssh ./build www.wormwatchlab.org && trash ./build",
-    "deploy-locale": "seed-translation --project worms --env production",
-    "deploy": "npm run deploy-to-production && npm run deploy-locale"
+    "deploy-locale": "seed-translation --project worms --env production"
   }
 }
