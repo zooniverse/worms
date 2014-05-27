@@ -1,4 +1,5 @@
 User = require 'zooniverse/models/user'
+ZooProfile = require 'zooniverse/controllers/profile'
 
 BaseController = require './base-controller'
 Spinner = require '../lib/spin'
@@ -7,9 +8,13 @@ class Profile extends BaseController
   className: 'sub-page profile'
   template: require '../views/profile'
 
+  elements:
+    '#zooniverse-default-profile': 'zooniverseDefailtProfile'
+
   constructor: ->
     super
 
+    @zooProfile ?= new ZooProfile
     @render()
 
     User.on 'change', @render
@@ -18,6 +23,9 @@ class Profile extends BaseController
     @html @template
       user: User.current
       format: @formatNumber
+
+    setTimeout =>
+      @zooniverseDefailtProfile.append @zooProfile.el
 
   active: =>
     super

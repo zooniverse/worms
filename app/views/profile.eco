@@ -13,6 +13,8 @@
       <%- t 'h3', 'profilePage.wormsObserved', $count: @user.project.classification_count %>
       <%- t 'h3', 'profilePage.score', $score: if @user.project.score is 0 then "0 :(" else @format @user.project.score %>
     <% end %>
+
+    <div id="zooniverse-default-profile"></div>
     
   <% else: %>
     <%- t 'p', 'profilePage.notLoggedIn' %>
