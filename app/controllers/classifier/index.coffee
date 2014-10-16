@@ -8,7 +8,8 @@ Game = require '../../lib/game'
 
 BaseController = require '../base-controller'
 
-Actions = require './actions'
+ActionsRight = require './actions-right'
+ActionsLeft = require './actions-left'
 Announcer = require './announcer'
 Details = require './details'
 Stats = require './stats'
@@ -19,6 +20,9 @@ translate = require 't7e'
 
 TutorialSteps = require '../../lib/tutorial/steps'
 TutorialSubject = require '../../lib/tutorial/subject'
+
+SlideTutorial = require 'slide-tutorial'
+slideTutorialSlides = require '../../lib/slide-tutorial-slides'
 
 class Classifier extends BaseController
   className: 'classifier'
@@ -46,8 +50,11 @@ class Classifier extends BaseController
     @video = new Video
     @video.el.appendTo @left
 
-    @actions = new Actions
-    @actions.el.appendTo @right
+    @actionsRight = new ActionsRight
+    @actionsRight.el.appendTo @right
+
+    @actionsLeft = new ActionsLeft
+    @actionsLeft.el.appendTo @left
 
     @tutorial = new Tutorial
       firstStep: 'welcome'
@@ -59,12 +66,19 @@ class Classifier extends BaseController
     @tutorial.el.on 'start-tutorial enter-tutorial-step', =>
       translate.refresh @tutorial.el.get 0
 
+    @siteIntro = new SlideTutorial
+      slides: slideTutorialSlides
+
     User.on 'change', @onUserChange
     Subject.on 'select', @onSubjectSelect
 
     Spine.on 'make-favorite', @makeFavorite
     Spine.on 'finished-classification', @finish
+    Spine.on 'click-tutorial', @onClickTutorial
+    Spine.on 'click-site-intro', @onClickSiteIntro
     Game.on 'end', @onGameEnd
+
+    @siteIntro.start()
 
   onUserChange: (e, user) =>
     @stats.render()
@@ -73,8 +87,8 @@ class Classifier extends BaseController
       @tutorial.end()
       Subject.next()
     else
-      tutorialSubject = TutorialSubject()
-      tutorialSubject.select()
+      Subject.next()
+
 
   onSubjectSelect: (e, subject) =>
     @video.render()
@@ -82,14 +96,14 @@ class Classifier extends BaseController
     @classification = new Classification { subject }
     new Game
 
-  activate: =>
-    super
+  # activate: =>
+  #   super
 
-    if Subject.current?.tutorial then @tutorial.start()
+  #   @siteIntro.start()
 
-  deactivate: =>
-    super
-    @tutorial?.end()
+  # deactivate: =>
+  #   super
+  #   @siteIntro?.end()
 
   makeFavorite: =>
     @classification.favorite = true if @classification?
@@ -136,5 +150,16 @@ class Classifier extends BaseController
       return true
 
     return false
+
+  onClickTutorial: (e) =>
+    if Subject.current?.tutorial
+      @tutorial.start()
+    else
+      tutorialSubject = TutorialSubject()
+      tutorialSubject.select()
+      @tutorial.start()
+
+  onClickSiteIntro: (e) =>
+    @siteIntro.start()
 
 module.exports = Classifier

@@ -18,13 +18,25 @@
 
 .stack > .classifier
 
-  > .left 
+  > .left
     width: 575px
     height: 447px
     padding: 0px 40px 0 0
     display: inline-block
     vertical-align: top_bar
     position: relative
+
+    .actions
+      padding: 14px 0 0 0 !important // sigh
+      text-align: center
+
+      button
+        @extends #small-button
+        transition: all 0.3s ease-in-out
+
+        &.disabled
+          cursor: not-allowed
+          opacity: 0.5
 
     .video-container
       position: relative
@@ -88,7 +100,7 @@
           line-height: 2.5em
           padding: 0 18px
 
-          > .vjs-fullscreen-control, >.vjs-mute-control, 
+          > .vjs-fullscreen-control, >.vjs-mute-control,
           > .vjs-volume-control, > .vjs-play-control
             display: none
 
@@ -137,7 +149,7 @@
       padding: 15px 0px 15px 0px
       width: 100%
 
-      img 
+      img
         box-shadow: 0 1px 0 0 rgba(#60d4ff, 1)
         display: inline-block
         height: 56px
@@ -171,7 +183,7 @@
         padding: 10px
         width: 50%
 
-        &:first-child 
+        &:first-child
           border-right: 1px solid #0283AF
           box-sizing: border-box
           position: relative
@@ -232,6 +244,7 @@
       button
         @extends #small-button
         transition: all 0.3s ease-in-out
+        margin: 0 2px
 
         &.disabled
           cursor: not-allowed

@@ -1,0 +1,42 @@
+.slide-tutorial
+  z-index: 100
+  color: #003143
+  // background: #ecf3f8
+  button
+    cursor: pointer
+  .slide-tutorial-container
+    background: #ecf3f8
+    border-radius: 5px
+    max-width: 560px
+    transition: width .7s
+    .slide-tutorial-slide-bottom
+      min-height: 160px
+    .slide-tutorial-dots
+      .slide-tutorial-dot
+        background: #01bbfe
+        cursor: pointer
+        margin: 4px
+        &.active
+          background: #0089c8
+    .slide-tutorial-close-button
+      background: transparent
+      font-size: 16px
+      color: #fff
+      border: none
+  .slide-tutorial-next-button
+    @extend .big-button
+    margin: 0 auto !important
+    width: 150px
+    font-size: 14px
+    -webkit-font-smoothing: antialiased
+  h1
+    font-size: 30px
+
+  @media screen and (max-width: 520px)
+    .slide-tutorial-container
+      margin-top: 25px
+      .slide-tutorial-slide-bottom
+        min-height: 100px
+        p
+          line-height: 1.2em
+          font-size: 14px

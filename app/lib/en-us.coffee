@@ -38,6 +38,9 @@ module.exports =
       discuss: 'Discuss'
       next: 'Next worm'
       help: 'Help'
+      tutorial: 'Tutorial'
+      siteIntro: 'Site Intro'
+      guide: 'Guide'
 
     messages:
       startPrompt: "Click to start"
@@ -67,8 +70,13 @@ module.exports =
           x: "X - Start the video / Move to next video"
           z: "Z - Mark an egg-laying event"
 
+  siteIntro:
+    1: 'test'
+    2: 'test'
+    3: 'test'
+
   profilePage:
-    wormsObserved: "Worms Observed: $count"    
+    wormsObserved: "Worms Observed: $count"
     score: "Score: $score"
     notLoggedIn: "Login to view profile"
 

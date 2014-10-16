@@ -6,9 +6,9 @@ User = require 'zooniverse/models/user'
 
 Game = require '../../lib/game'
 
-class Actions extends Spine.Controller
+class ActionsRight extends Spine.Controller
   className: 'section actions'
-  template: require '../../views/classifier/actions'
+  template: require '../../views/classifier/actions-right'
 
   events:
     'click .favorite': 'onFavorite'
@@ -18,7 +18,7 @@ class Actions extends Spine.Controller
 
   constructor: ->
     super
-    
+
     @helpDialog = new Dialog
       className: 'zooniverse-dialog help-dialog'
       content: require '../../views/classifier/help'
@@ -50,7 +50,7 @@ class Actions extends Spine.Controller
 
   onRequestNext: (e) =>
     return if $(e.currentTarget).hasClass 'disabled'
-      
+
     Spine.trigger 'finished-classification'
 
-module.exports = Actions
+module.exports = ActionsRight

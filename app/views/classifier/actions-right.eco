@@ -9,7 +9,7 @@
     <%- t 'button.favorite disabled', 'classifyPage.actions.favorite', name: 'favourite' %>
     <%- t 'button.discuss disabled', 'classifyPage.actions.discuss', name: 'discuss' %>
   <% end %>
-  
+
   <%- t 'button.next float-right', 'classifyPage.actions.next', name: 'next' %>
   <%- t 'button.help float-right', 'classifyPage.actions.help', name: 'help' %>
 
@@ -17,3 +17,5 @@
   <%- t 'button.next disabled float-right', 'classifyPage.actions.next', name: 'next' %>
   <%- t 'button.help float-right', 'classifyPage.actions.help', name: 'help' %>
 <% end %>
+
+
