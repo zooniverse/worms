@@ -76,9 +76,11 @@ class Classifier extends BaseController
     Spine.on 'finished-classification', @finish
     Spine.on 'click-tutorial', @onClickTutorial
     Spine.on 'click-site-intro', @onClickSiteIntro
+
     Game.on 'end', @onGameEnd
 
-    @siteIntro.start()
+  onClassify: ->
+    location.hash is '#/classify'
 
   onUserChange: (e, user) =>
     @stats.render()
@@ -88,7 +90,7 @@ class Classifier extends BaseController
       Subject.next()
     else
       Subject.next()
-
+    @startSiteIntro() if @onClassify()
 
   onSubjectSelect: (e, subject) =>
     @video.render()
@@ -96,14 +98,10 @@ class Classifier extends BaseController
     @classification = new Classification { subject }
     new Game
 
-  # activate: =>
-  #   super
+  activate: =>
+    super
 
-  #   @siteIntro.start()
-
-  # deactivate: =>
-  #   super
-  #   @siteIntro?.end()
+    @startSiteIntro()
 
   makeFavorite: =>
     @classification.favorite = true if @classification?
@@ -161,5 +159,14 @@ class Classifier extends BaseController
 
   onClickSiteIntro: (e) =>
     @siteIntro.start()
+
+  startSiteIntro: ->
+    user = User.current
+
+    @siteIntro.start() if @firstVisit(user)
+
+  firstVisit: (user) =>
+    return true unless user
+    !user?.project?.classification_count
 
 module.exports = Classifier
