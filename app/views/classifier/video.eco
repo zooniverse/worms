@@ -1,3 +1,5 @@
+<% t = require 't7e' %>
+
 <div class="video-container">
 
   <div class="video-border top"></div>
@@ -10,5 +12,8 @@
     <video class="video-js vjs-default-skin" controls id="worm-video" width="575" height="432" poster="<%- @subject.location.standard %>">
       <source src="<%= @subject.location.mp4 %>" type="video/mp4" />
     </video>
+    <div class="key-commands">
+      <%- t 'p.key-commands', 'classifyPage.help.keyboardShortcuts.keys.z' %><%- t 'p.key-commands', 'classifyPage.help.keyboardShortcuts.keys.x' %>
+    </div>
   <% end %>
 </div>

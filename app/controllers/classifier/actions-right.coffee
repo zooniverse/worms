@@ -16,6 +16,7 @@ class ActionsRight extends Spine.Controller
     'click .help': 'onHelp'
     'click .next': 'onRequestNext'
 
+
   constructor: ->
     super
 
@@ -46,7 +47,7 @@ class ActionsRight extends Spine.Controller
     window.open Subject.current.talkHref()
 
   onHelp: (e) =>
-    @helpDialog.show()
+    Spine.trigger 'click-tutorial'
 
   onRequestNext: (e) =>
     return if $(e.currentTarget).hasClass 'disabled'

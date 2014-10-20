@@ -1,5 +1,3 @@
 <% t = require 't7e' %>
 
-<%- t 'button.tutorial', 'classifyPage.actions.tutorial', name: 'tutorial' %>
-<%- t 'button.site-intro', 'classifyPage.actions.siteIntro', name: 'site-intro' %>
-<%- t 'button.guide', 'classifyPage.actions.guide', name: 'guide' %>
+<%# t 'button.site-intro', 'classifyPage.actions.siteIntro', name: 'site-intro' %>

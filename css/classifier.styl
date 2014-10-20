@@ -45,6 +45,24 @@
       border: 2px solid black
       z-index: 0
 
+      .key-commands
+        float: left
+        color: #014e6a
+        font-size: 12px
+
+        p
+          padding: 10px 20px 0 0
+          -webkit-font-smoothing: antialiased
+          font-weight: inherit
+
+        .key
+          border: solid 2px #014e6a
+          border-radius: 6px
+          padding: 3px 5px
+          margin-right: 5px
+          font-size: 10px
+          font-weight: bold
+
       .tutorial-circle
         animation: 1.5s tutorial-circle linear infinite
         border: 2px solid #f00
@@ -173,6 +191,7 @@
     .players
       @extends #clearfix
       padding: 0 !important // sigh
+      max-height: 205px
 
       .player
         box-sizing: border-box
@@ -244,7 +263,7 @@
       button
         @extends #small-button
         transition: all 0.3s ease-in-out
-        margin: 0 2px
+        margin: 0 2.5px
 
         &.disabled
           cursor: not-allowed

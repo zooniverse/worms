@@ -7,16 +7,12 @@ class ActionsLeft extends Spine.Controller
   template: require '../../views/classifier/actions-left'
 
   events:
-    'click .tutorial': 'onClickTutorial'
     'click .site-intro': 'onClickSiteIntro'
 
   constructor: ->
     super
 
     @html @template()
-
-  onClickTutorial: (e) =>
-    Spine.trigger 'click-tutorial'
 
   onClickSiteIntro: (e) =>
     Spine.trigger 'click-site-intro'

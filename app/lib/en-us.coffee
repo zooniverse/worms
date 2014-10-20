@@ -34,8 +34,8 @@ module.exports =
       eggs: 'eggs'
 
     actions:
-      favorite: 'Favorite'
-      discuss: 'Discuss'
+      favorite: '&#9733; Favorite'
+      discuss: 'Talk'
       next: 'Next worm'
       help: 'Help'
       tutorial: 'Tutorial'
@@ -67,8 +67,8 @@ module.exports =
       keyboardShortcuts:
         header: "Keyboard Shortcuts"
         keys:
-          x: "X - Start the video / Move to next video"
-          z: "Z - Mark an egg-laying event"
+          x: "<span class='key'>X</span> starts the video"
+          z: "<span class='key'>Z</span> marks an egg-laying event"
 
   siteIntro:
     1: 'test'

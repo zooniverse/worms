@@ -4,18 +4,21 @@
 
   <% if @user: %>
     <%- t 'button.favorite', 'classifyPage.actions.favorite', name: 'favourite' %>
-    <%- t 'button.discuss', 'classifyPage.actions.discuss', name: 'discuss' %>
+    <%- t 'button.discuss', 'classifyPage.actions.discuss', name: 'discuss', target: '_blank' %>
   <% else: %>
     <%- t 'button.favorite disabled', 'classifyPage.actions.favorite', name: 'favourite' %>
-    <%- t 'button.discuss disabled', 'classifyPage.actions.discuss', name: 'discuss' %>
+    <%- t 'button.discuss disabled', 'classifyPage.actions.discuss', name: 'discuss', target: '_blank' %>
   <% end %>
 
   <%- t 'button.next float-right', 'classifyPage.actions.next', name: 'next' %>
   <%- t 'button.help float-right', 'classifyPage.actions.help', name: 'help' %>
+  <%- t 'button.guide float-right', 'classifyPage.actions.guide', name: 'guide' %>
+
 
 <% else: %>
   <%- t 'button.next disabled float-right', 'classifyPage.actions.next', name: 'next' %>
   <%- t 'button.help float-right', 'classifyPage.actions.help', name: 'help' %>
+  <%- t 'button.guide float-right', 'classifyPage.actions.guide', name: 'guide' %>
 <% end %>
 
 
