@@ -118,10 +118,13 @@ class Classifier extends BaseController
       theirEggs = "#{ Game.current.teamMateTimes.length } #{ if Game.current.teamMateTimes.length is 1 then 'egg' else 'eggs' }"
       message = "You marked #{ yourEggs } and #{ Game.current.otherPlayer } marked #{ theirEggs }."
     else
-      if Game.current.times.length is 1
-        message = "You marked 1 egg!"
-      else
-        message = "You marked #{ Game.current.times.length } eggs!"
+      switch Game.current.times.length
+        when 1
+          message = "You marked 1 egg!"
+        when 0
+          message = "You marked #{ Game.current.times.length } eggs! <div class='small-message'>(No eggs laid? No problem! Keep watching!)</div>"
+        else
+          message = "You marked #{ Game.current.times.length } eggs!"
 
     @announcer.announce message
 

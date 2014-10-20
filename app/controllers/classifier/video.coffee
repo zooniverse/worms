@@ -35,7 +35,7 @@ class Video extends Spine.Controller
     @overlay.hide()
 
     Game.current.video = @video
-    
+
     @video.play()
 
     @video.on 'play', =>
