@@ -3,7 +3,7 @@ module.exports =
   navigation:
     home: "Home"
     classify: "Classify"
-    science: "Science"
+    about: "About"
     team: "Team"
     partners: "Partners"
     discuss: "Talk"
@@ -41,6 +41,7 @@ module.exports =
       tutorial: 'Tutorial'
       siteIntro: 'Site Intro'
       guide: 'Guide'
+      eggLaying: 'Egg Laying'
 
     messages:
       startPrompt: "Click to start"
@@ -70,10 +71,51 @@ module.exports =
           x: "<span class='key'>X</span> starts the video"
           z: "<span class='key'>Z</span> marks an egg-laying event"
 
+  guide:
+    content: '''
+      <p>When a worm lays an egg on these videos, it appears as a small, dark bulge that pops out suddenly around the middle of its body (which is marked here by a red dot). Sometimes, a worm will lay multiple eggs at once, or several in rapid succession.</p>
+      <figure>
+        <img src="http://placehold.it/360x270">
+        <figcaption>Example</figcaption>
+      </figure>
+      <figure>
+        <img src="http://placehold.it/360x270">
+        <figcaption>Example</figcaption>
+      </figure>
+      <p>If you see an egg being laid, pause the video by clicking on it, then use the blue scroll bar to scroll to the point where the worm laid the egg and press "Z" to get an accurate timing. If the worm lays multiple eggs during the video, press "Z" once for each egg.</p>
+      <p>If you make a mistake, you can undo it by clicking the X next to the mistaken timing.</p>
+      <figure>
+        <img src="http://placehold.it/360x270">
+        <figcaption>Example</figcaption>
+      </figure>
+      <figure>
+        <img src="http://placehold.it/360x270">
+        <figcaption>Example</figcaption>
+      </figure>
+      <p>There may already be eggs present on the plate or next to the worm at the start of the video.  Don't mark these; only mark eggs that are laid while you're watching.</p>
+      <p>Also look out for food piles&mdash;sometimes the worm is in a pile of food and this can look like an egg. Eggs will appear more suddenly than a patch of food that gets disturbed.</p>
+      <figure>
+        <img src="images/field-guide/egg-present.png" alt="Example of already present eggs">
+        <figcaption>Eggs already present</figcaption>
+      </figure>
+      <figure>
+        <img src="images/field-guide/food-present.png" alt="Example of food present">
+        <figcaption>Food present</figcaption>
+      </figure>
+      <p>Most videos will not have egg-laying events. We only expect eggs in one out of every 30-50 videos. Even if you don't find an egg, every video that you watch helps the project!</p>
+      <p>If you want to classify faster, you may drag the scroll bar to the right to move quickly through each video and scan for new eggs.</p>
+      <p>Finally, don't stress if you're not sure about whether something is an egg or not! Take your best guess. Several people will see each video, so don't worry about any errors.</p>
+      <div class="scroll-up">
+        <img src="images/return-top.svg" alt="Back to top button">
+      </div>
+    '''
+
   siteIntro:
-    1: 'test'
-    2: 'test'
-    3: 'test'
+    1: '''Welcome to Worm Watch Lab! By tracking the egg-laying behavior of nematode worms, you'll be helping us study the function of genes similar to those important for human brain function.'''
+    2: '''View each 30-second video of a worm, and press Z whenever you see the worm lay an egg. Eggs will appear suddenly as small, dark bulges near the red dot that marks each worm's midsection.'''
+    3: '''Press Z for each egg that is laid. Do not mark eggs that are already there. And don't worry if you're unsure&ndash;many people will see each video, so mistakes are not a big problem.'''
+    4: '''It's okay if you don't see an egg laid; we only expect it once in every 30-50 videos. Keep watching, though, and you're likely to spot one. Each video that you watch helps either way!'''
+    5: '''If you need more help, you can click "Field Guide" for more examples of egg-laying behavior. You can also chat with other volunteers at our Talk page, or check out the Worm Watch Lab blog. Good luck, and thanks!'''
 
   profilePage:
     wormsObserved: "Worms Observed: $count"
@@ -93,16 +135,17 @@ module.exports =
       <p>Since it was first established in 1920, the MRC has been able to accept charitable bequests, endowments and donations from the public to contribute towards the costs of the research that it undertakes. The MRC registered these charitable funds with the Charity Commission in the late 1960's and its charity - the Medical Research Foundation - has been successfully supporting medical research for over 80 years.</p>
     """
 
-  sciencePage:
+  aboutPage:
     header: "Our small distant cousins"
     content: """
-      <p>We watch movies of the nematode worm C. elegans to understand how the brain works and how genes affect behaviour. The idea is that if a gene is involved in a visible behaviour, then mutations that break that gene might lead to detectable behavioural changes. The type of change gives us a hint about what the affected gene might be doing. Although it is small and has far fewer cells than we do, C. elegans has almost as many genes and because we share a common ancestor even with worms, many of them are closely related to human genes. This presents us with the opportunity to study the function of genes that are important for human brain function in an animal that is easier to handle, great for microscopy and genetics, and has a generation time of only a few days.</p>
-
+      <p>We watch movies of the nematode worm <em>C. elegans</em> to understand how the brain works and how genes affect behaviour. The idea is that if a gene is involved in a visible behaviour, then mutations that break that gene might lead to detectable behavioural changes. The type of change gives us a hint about what the affected gene might be doing.</p>
+      <p>Although it is small and has far fewer cells than we do, <em>C. elegans</em> has almost as many genes&mdash;and because we share a common ancestor even with worms, many of them are closely related to human genes. This presents us with the opportunity to study the function of genes that are important for human brain function in an animal that is easier to handle, great for microscopy and genetics, and has a generation time of only a few days.</p>
       <h2>The Importance of Egg Laying</h1>
-      <p>Egg laying in C. elegans requires the proper functioning of a neural circuit to activate the muscles that open the vulva to expel eggs. This circuit is modulated by a neurotransmitter called serotonin; the same molecule that affects mood in humans. Antidepressants like prozac work by stimulating serotonergic signaling in humans. They also work in worms and they stimulate egg laying! If we observe a mutant that lays more or fewer eggs than normal, this is a hint that something has gone wrong in the egg laying neural circuit or muscles and this can have far reaching implications, maybe even teaching us something about genes involved in depression in humans. The challenge is that there are thousands of genes without a known function and screening for worms with egg laying defects is time consuming. That's why we need your help!</p>
-
+      <p>Egg laying in <em>C. elegans</em> requires the proper functioning of a neural circuit to activate the muscles that open the vulva to expel eggs. This circuit is modulated by a neurotransmitter called serotonin; the same molecule that affects mood in humans. Antidepressants like prozac work by stimulating serotonergic signaling in humans. They also work in worms and they stimulate egg laying!</p>
+      <p>If we observe a mutant that lays more or fewer eggs than normal, this is a hint that something has gone wrong in the egg laying neural circuit or muscles. This can have far reaching implications, maybe even teaching us something about genes involved in depression in humans. The challenge is that there are thousands of genes without a known function and screening for worms with egg laying defects is time consuming. That's why we need your help!</p>
       <h2>Worm Tracking</h2>
-      <p>We have built tracking microscopes to record video of crawling worms. A USB microscope is mounted on a motorised stage connected to a computer. When the worm moves, the computer analyses the changing image and commands the stage to move to re-centre the worm in the field of view. Because the trackers work without supervision, we can run eight of them in parallel to collect a lot of movies. If you'd like to learn more about worm tracking (or even build a tracker yourself!), we have a parts list and instructions on our <a href="http://www.mrc-lmb.cam.ac.uk/wormtracker/">tracking website</a></p>
+      <p>We have built tracking microscopes to record video of crawling worms. A USB microscope is mounted on a motorised stage connected to a computer. When the worm moves, the computer analyses the changing image and commands the stage to move to re-centre the worm in the field of view. Because the trackers work without supervision, we can run eight of them in parallel to collect a lot of movies.
+      <p>If you'd like to learn more about worm tracking (or even build a tracker yourself!), we have a parts list and instructions on our <a href="http://www.mrc-lmb.cam.ac.uk/wormtracker/">tracking website</a></p>
     """
 
   teamPage:

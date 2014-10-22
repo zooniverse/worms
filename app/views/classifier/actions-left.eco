@@ -1,3 +1,4 @@
 <% t = require 't7e' %>
 
-<%# t 'button.site-intro', 'classifyPage.actions.siteIntro', name: 'site-intro' %>
+<%- t 'button.egg-laying', 'classifyPage.actions.eggLaying', name: 'egg-laying' %>
+<%- t 'button.site-intro', 'classifyPage.actions.siteIntro', name: 'site-intro' %>

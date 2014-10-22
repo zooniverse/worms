@@ -43,7 +43,7 @@ app.stack = new Spine.Stack
   controllers:
     'home': require './controllers/home'
     'classifier': require './controllers/classifier'
-    'science': class extends SubPage then content: require './views/pages/science'
+    'about': class extends SubPage then content: require './views/pages/about'
     'team': class extends SubPage then content: require './views/pages/team'
     'partners': class extends SubPage then content: require './views/pages/partners'
     'profile': require './controllers/profile'
@@ -51,7 +51,7 @@ app.stack = new Spine.Stack
   routes:
     '/': 'home'
     '/classify': 'classifier'
-    '/science': 'science'
+    '/about': 'about'
     '/team': 'team'
     '/partners': 'partners'
     '/profile': 'profile'

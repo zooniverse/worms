@@ -15,6 +15,7 @@ class ActionsRight extends Spine.Controller
     'click .discuss': 'onDiscuss'
     'click .help': 'onHelp'
     'click .next': 'onRequestNext'
+    'click .guide': 'onGuide'
 
 
   constructor: ->
@@ -53,5 +54,8 @@ class ActionsRight extends Spine.Controller
     return if $(e.currentTarget).hasClass 'disabled'
 
     Spine.trigger 'finished-classification'
+
+  onGuide: =>
+    Spine.trigger 'show-guide'
 
 module.exports = ActionsRight

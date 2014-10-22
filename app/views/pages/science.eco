@@ -1,7 +1,0 @@
-<% t = require 't7e' %>
-
-<div class="left"></div>
-<div class="right">
-  <%- t 'h1', 'sciencePage.header' %>
-  <%- t 'span', 'sciencePage.content' %>  
-</div>

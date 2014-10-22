@@ -5,7 +5,7 @@
 <ul>
   <li class="home"><a href="#/"><%- t 'span', 'navigation.home' %></a></li>
   <li class="classify"><a href="#/classify"><%- t 'span', 'navigation.classify' %></a></li>
-  <li class="science"><a href="#/science"><%- t 'span', 'navigation.science' %></a></li>
+  <li class="about"><a href="#/about"><%- t 'span', 'navigation.about' %></a></li>
   <li class="team"><a href="#/team"><%- t 'span', 'navigation.team' %></a></li>
   <li class="partners"><a href="#/partners"><%- t 'span', 'navigation.partners' %></a></li>
   <li class="discuss"><a href="http://talk.wormwatchlab.org"><%- t 'span', 'navigation.discuss' %></a></li>

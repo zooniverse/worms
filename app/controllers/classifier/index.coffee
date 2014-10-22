@@ -28,9 +28,13 @@ class Classifier extends BaseController
   className: 'classifier'
   template: require '../../views/classifier'
 
+  events:
+    'click .scroll-up': 'onScrollUp'
+
   elements:
     '.left': 'left'
     '.right': 'right'
+    '.field-guide': 'fieldGuide'
 
   constructor: ->
     super
@@ -76,6 +80,7 @@ class Classifier extends BaseController
     Spine.on 'finished-classification', @finish
     Spine.on 'click-tutorial', @onClickTutorial
     Spine.on 'click-site-intro', @onClickSiteIntro
+    Spine.on 'show-guide', @showGuide
 
     Game.on 'end', @onGameEnd
 
@@ -171,5 +176,18 @@ class Classifier extends BaseController
   firstVisit: (user) =>
     return true unless user
     !user?.project?.classification_count
+
+  showGuide: =>
+    @fieldGuide.toggle (e) =>
+      if @fieldGuide.is ':visible'
+        $('html, body').animate
+          scrollTop: @fieldGuide.offset().top - 200, 500
+      else
+        @onScrollUp()
+
+  onScrollUp: =>
+    $('html, body').animate
+      scrollTop: $('html, body').offset().top, 500
+
 
 module.exports = Classifier

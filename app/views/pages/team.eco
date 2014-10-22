@@ -1,15 +1,17 @@
 <% t = require 't7e' %>
 <% teamMembers = 'brown grundy yemini jucikas schafer'.split ' ' %>
 
-<div class="left"></div>
-<div class="right">
+<!-- <div class="left"></div> -->
+<div class="right full-width">
   <%- t 'h1', 'teamPage.header' %>
   <% for member in teamMembers: %>
     <div class="section">
-      <%- t 'h3', "teamPage.team.#{ member }.name" %>
       <% try imgSrc = t "teamPage.team.#{ member }.image" %>
       <% if imgSrc: %><figure><%- t 'img', '', src: imgSrc %></figure><% end %>
-      <%- t 'p', "teamPage.team.#{ member }.bio" %>
+      <div>
+        <%- t 'h3', "teamPage.team.#{ member }.name" %>
+        <%- t 'p', "teamPage.team.#{ member }.bio" %>
+      </div>
     </div>
-  <% end %>  
+  <% end %>
 </div>

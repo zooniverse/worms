@@ -1,0 +1,7 @@
+<% t = require 't7e' %>
+
+<div class="left"></div>
+<div class="right">
+  <%- t 'h1', 'aboutPage.header' %>
+  <%- t 'span', 'aboutPage.content' %>
+</div>

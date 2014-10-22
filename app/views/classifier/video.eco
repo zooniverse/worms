@@ -13,7 +13,7 @@
       <source src="<%= @subject.location.mp4 %>" type="video/mp4" />
     </video>
     <div class="key-commands">
-      <%- t 'p.key-commands', 'classifyPage.help.keyboardShortcuts.keys.z' %><%- t 'p.key-commands', 'classifyPage.help.keyboardShortcuts.keys.x' %>
+      <%- t 'p', 'classifyPage.help.keyboardShortcuts.keys.z' %><%- t 'p', 'classifyPage.help.keyboardShortcuts.keys.x' %>
     </div>
   <% end %>
 </div>

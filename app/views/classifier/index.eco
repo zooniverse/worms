@@ -1,2 +1,5 @@
+<% t = require 't7e' %>
+
 <div class="left"></div>
 <div class="right"></div>
+<%- t 'div.field-guide', 'guide.content' %></div>

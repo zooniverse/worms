@@ -45,6 +45,8 @@ body
       box-sizing: border-box
       margin: 0 auto;
       padding: 50px 10px
+      max-width: 1000px
+      width: 100%
 
       .zooniverse-logo-container
         margin: 0
@@ -91,6 +93,12 @@ body
     display: block
     padding: 50px 0 70px 0
 
+    @media screen and (max-width: 900px)
+      padding: 50px 0 85px 0
+
+    @media screen and (max-width: 540px)
+      padding: 50px 0 120px 0
+
 #app
   border-top: 5px solid #000
   padding-top: 80px
@@ -103,6 +111,8 @@ body
   font-size: 12px
   font-weight: 700
   text-shadow: 0 1px 1px rgba(#000, 0.5)
+  max-width: 1000px
+  width: 100%
 
   .logo
     float: left
@@ -110,7 +120,7 @@ body
   ul
     margin: 0 auto
     text-align: right
-    width: 1000px
+    max-width: 1000px
 
     li
       border-radius: 30px

@@ -9,8 +9,10 @@
           <%- t 'h2', 'homePage.slides.first.imageHeader' %>
           <%- t 'p', 'homePage.slides.first.imageTagline' %>
         </div>
-        <img class="img person" src="images/scene/person.png">
-        <img class="img genes" src="images/genes.png">
+        <div class="image-container">
+          <img class="img person" src="images/scene/person.png">
+          <img class="img genes" src="images/genes.png">
+        </div>
       </div>
 
       <div class="right">
@@ -54,17 +56,17 @@
 <button id="back"></button>
 <button id="forward"></button>
 
-<div class="sponsors-container">
-
+<div>
   <a id="classify-button" class="big-button" href="#/classify">
     <%- t 'span', 'homePage.callToAction' %>
   </a>
+</div>
 
+<div class="sponsors-container">
   <div class="sponsors">
     <figure>
       <a href="http://www.mrc.ac.uk/mrf"><img src="images/mrc-logo.png"></a>
       <%- t 'figcaption', 'homePage.sponsorCredit' %>
     </figure>
   </div>
-  
 </div>

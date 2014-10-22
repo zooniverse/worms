@@ -71,31 +71,36 @@ $slider-height = 500px
     .container
       @extends #site-container
       position: relative
+      display: flex
+      justify-content: center
 
-    .left, .right
-      position: absolute
+    // .left, .right
+    //   position: absolute
 
     .left
-      width: 400px
+      width: 40%
+    //   width: 400px
 
-      .details
-        left: 50px
-        position: absolute
-        text-align: right
-        top: 175px
-        width: 90px
+    .details
+      left: 50px
+      position: absolute
+      text-align: right
+      top: 175px
+      width: 90px
 
 
     .right
+      width: 55%
       left: 420px
       top: 91px
-      width: 540px
+      position: absolute
+    //   width: 540px
 
-      p
-        font-size: 16px
-        font-weight: 700
-        line-height: 1.5em
-        margin-bottom: 40px
+    p
+      font-size: 16px
+      font-weight: 700
+      line-height: 1.5em
+      margin-bottom: 40px
 
     img
       left: 150px
@@ -114,7 +119,7 @@ $slider-height = 500px
         left: 165px
 
   #classify-button
-    bottom: 180px
+    bottom: 250px
     left: 42%
     position: absolute
 
@@ -122,12 +127,22 @@ $slider-height = 500px
     @extends #site-container
     position: relative
 
+    @media screen and (max-width: 900px)
+      max-width: 700px
+      width: 100%
+
   .sponsors
     border-top: 1px solid rgba(#fff, 0.2)
     bottom: 79px
     left: 42%
     padding-top: 8px
     position: absolute
+
+    @media screen and (max-width: 900px)
+      position: relative
+      bottom: initial
+      left: initial
+      padding: 10px
 
     figure
       margin: 0
@@ -137,10 +152,17 @@ $slider-height = 500px
       figcaption
         @extends p
         padding: 0 0 0 130px
+        max-width: 75%
 
       img
         left: 0
         position: absolute
         top: 2px
+
+        @media screen and (max-width: 900px)
+          position: relative
+          left: initial
+          top: initial
+          float: left
 
 
