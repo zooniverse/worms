@@ -20,6 +20,9 @@
   width: 100% !important
   max-width: 1000px
 
+  @media screen and (max-width: 1000px)
+    text-align: center
+
   > .left
     width: 100%
     max-width: 575px
@@ -29,6 +32,8 @@
     vertical-align: top_bar
     position: relative
 
+    @media screen and (max-width: 1000px)
+      margin: 0 0 45px 0
     @media screen and (max-width: 400px)
       display: block
       margin: 0 0 25px 0
@@ -46,7 +51,7 @@
           cursor: not-allowed
           opacity: 0.5
 
-        @media screen and (max-width: 400px)
+        @media screen and (max-width: 515px)
           float: none
 
     .video-container
@@ -64,7 +69,7 @@
         padding-top: 0px
 
       .key-commands
-        @media screen and (max-width: 400px)
+        @media screen and (max-width: 515px)
           width: 320px
           margin: 0 auto
         p
@@ -172,10 +177,10 @@
     font-weight: 700
     text-shadow: 0 1px 0 #0089c8
     vertical-align: top
-    width: 360px
+    max-width: 360px
+    width: 100%
 
     @media screen and (max-width: 400px)
-      display: block
       max-width: 360px
       width: 100%
       margin: 0 auto

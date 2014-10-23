@@ -47,7 +47,7 @@
       <div class="left">
         <div class="details"></div>
         <div class="image-container">
-          <img class="img genes" src="images/genes.png">
+          <img class="img genes mobile-center" src="images/genes.png">
         </div>
       </div>
       <div class="right">

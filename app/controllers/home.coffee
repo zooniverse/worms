@@ -15,7 +15,7 @@ class Home extends BaseController
     @delay =>
       @slider.carouFredSel
         height: 500
-        width: '100%'
+        width: 'variable'
         responsive: true
         items: 1
         prev: '#back'
