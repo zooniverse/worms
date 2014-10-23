@@ -23,6 +23,9 @@ $slider-height = 500px
   overflow: hidden
   width: 100%
 
+  @media screen and (max-width: 950px)
+    padding-bottom: 200px !important
+
   > #back, > #forward
     appearance: none
     background: none
@@ -72,29 +75,22 @@ $slider-height = 500px
       @extends #site-container
       position: relative
       display: flex
-      justify-content: center
-
-    // .left, .right
-    //   position: absolute
+      align-items: center
+      justify-content: space-around
 
     .left
       width: 40%
-    //   width: 400px
 
     .details
-      left: 50px
-      position: absolute
-      text-align: right
-      top: 175px
       width: 90px
-
+      margin-top: 50%
+      margin-left: 50px
 
     .right
       width: 55%
-      left: 420px
-      top: 91px
-      position: absolute
-    //   width: 540px
+
+      .third.header
+        margin-top: 120px
 
     p
       font-size: 16px
@@ -102,46 +98,53 @@ $slider-height = 500px
       line-height: 1.5em
       margin-bottom: 40px
 
-    img
-      left: 150px
-      position: absolute
-      top: 0
+    .image-container
+      order: 2
+      align-self: center
 
-      &.genes
-        left: 155px
-        top: 128px
+      img
+        left: 150px
+        position: absolute
+        top: 0
 
-      &.person
-        left: 220px
-        top: 33px
+        &.genes
+          left: 155px
+          top: 128px
 
-      &.worm
-        left: 165px
+        &.person
+          left: 220px
+          top: 33px
+
+        &.worm
+          left: 165px
 
   #classify-button
-    bottom: 250px
-    left: 42%
-    position: absolute
+    order: 1
+    margin: 10px 0
 
   .sponsors-container
     @extends #site-container
-    position: relative
+    display: flex
+    flex-direction: column
+    position: absolute
+    width: 500px
+    left: 45%
+    bottom: 22%
 
-    @media screen and (max-width: 900px)
+    @media screen and (max-width: 950px)
+      position: relative
       max-width: 700px
       width: 100%
+      left: initial
+      bottom: initial
+      align-items: center
 
   .sponsors
     border-top: 1px solid rgba(#fff, 0.2)
-    bottom: 79px
-    left: 42%
     padding-top: 8px
-    position: absolute
+    order: 2
 
-    @media screen and (max-width: 900px)
-      position: relative
-      bottom: initial
-      left: initial
+    @media screen and (max-width: 950px)
       padding: 10px
 
     figure

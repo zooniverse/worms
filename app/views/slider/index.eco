@@ -29,8 +29,10 @@
           <%- t 'h2', 'homePage.slides.second.imageHeader' %>
           <%- t 'p', 'homePage.slides.second.imageTagline' %>
         </div>
-        <img class="img worm" src="images/scene/worm.png">
-        <img class="img genes" src="images/genes.png">
+        <div class="image-container">
+          <img class="img worm" src="images/scene/worm.png">
+          <img class="img genes" src="images/genes.png">
+        </div>
       </div>
 
       <div class="right">
@@ -43,10 +45,13 @@
   <div class="section">
     <div class="container">
       <div class="left">
-        <img class="img genes" src="images/genes.png">
+        <div class="details"></div>
+        <div class="image-container">
+          <img class="img genes" src="images/genes.png">
+        </div>
       </div>
       <div class="right">
-        <%- t 'h1', 'homePage.slides.third.header' %>
+        <%- t 'h1.third.header', 'homePage.slides.third.header' %>
         <%- t 'p', 'homePage.slides.third.text' %>
       </div>
     </div>
@@ -56,13 +61,10 @@
 <button id="back"></button>
 <button id="forward"></button>
 
-<div>
+<div class="sponsors-container">
   <a id="classify-button" class="big-button" href="#/classify">
     <%- t 'span', 'homePage.callToAction' %>
   </a>
-</div>
-
-<div class="sponsors-container">
   <div class="sponsors">
     <figure>
       <a href="http://www.mrc.ac.uk/mrf"><img src="images/mrc-logo.png"></a>

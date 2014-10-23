@@ -1,7 +1,7 @@
 <% t = require 't7e' %>
 
-<div class="left"></div>
-<div class="right">
+<!-- <div class="left"></div> -->
+<div class="right body-copy">
   <%- t 'h1', 'partnersPage.header' %>
-  <%- t 'span', 'partnersPage.content' %>  
+  <%- t 'span', 'partnersPage.content' %>
 </div>

@@ -1,8 +1,7 @@
 <% t = require 't7e' %>
 <% teamMembers = 'brown grundy yemini jucikas schafer'.split ' ' %>
 
-<!-- <div class="left"></div> -->
-<div class="right full-width">
+<div class="right full-width body-copy">
   <%- t 'h1', 'teamPage.header' %>
   <% for member in teamMembers: %>
     <div class="section">

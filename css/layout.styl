@@ -30,7 +30,7 @@ body
     margin: 0 auto
     position: absolute
     top: 0
-    width: $site-width
+    max-width: $site-width
     z-index: -1
 
   > .footer
@@ -92,12 +92,6 @@ body
     @extends #clearfix
     display: block
     padding: 50px 0 70px 0
-
-    @media screen and (max-width: 900px)
-      padding: 50px 0 85px 0
-
-    @media screen and (max-width: 540px)
-      padding: 50px 0 120px 0
 
 #app
   border-top: 5px solid #000

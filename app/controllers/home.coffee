@@ -16,6 +16,7 @@ class Home extends BaseController
       @slider.carouFredSel
         height: 500
         width: '100%'
+        responsive: true
         items: 1
         prev: '#back'
         next: '#forward'

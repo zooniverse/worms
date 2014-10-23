@@ -1,7 +1,7 @@
 .slide-tutorial
   z-index: 100
   color: #003143
-  // background: #ecf3f8
+  // text-shadow: initial
   button
     cursor: pointer
   .slide-tutorial-container
@@ -11,7 +11,10 @@
     transition: width .7s
     .slide-tutorial-slide-bottom
       min-height: 160px
+      h1
+        text-shadow: initial
       p
+        text-shadow: initial
         font-weight: 300
     .slide-tutorial-dots
       .slide-tutorial-dot
@@ -26,9 +29,9 @@
       color: #fff
       border: none
   .slide-tutorial-next-button
-    @extend .big-button
+    @extend #small-button
     margin: 0 auto !important
-    width: 150px
+    // width: 150px
     font-size: 14px
     -webkit-font-smoothing: antialiased
   h1

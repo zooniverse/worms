@@ -17,14 +17,21 @@
 
 
 .stack > .classifier
+  width: 100% !important
+  max-width: 1000px
 
   > .left
-    width: 575px
-    height: 447px
+    width: 100%
+    max-width: 575px
+    max-height: 447px
     padding: 0px 40px 0 0
     display: inline-block
     vertical-align: top_bar
     position: relative
+
+    @media screen and (max-width: 400px)
+      display: block
+      margin: 0 0 25px 0
 
     .actions
       padding: 14px 0 0 0 !important // sigh
@@ -33,25 +40,40 @@
       button
         @extends #small-button
         transition: all 0.3s ease-in-out
+        margin: 0 2.5px
 
         &.disabled
           cursor: not-allowed
           opacity: 0.5
 
+        @media screen and (max-width: 400px)
+          float: none
+
     .video-container
       position: relative
-      width: 575px
-      height: 432px
-      border: 2px solid black
+      width: 100%
+      max-width: 555px
+      max-height: 432px
+      border: 8px solid black
       z-index: 0
 
-      .key-commands p
-        color: #014e6a
-        font-size: 12px
-        float: left
-        padding: 24px 20px 0 0
-        -webkit-font-smoothing: antialiased
-        font-weight: inherit
+      .video-js
+        padding-top: 75.25%
+
+      .vjs-fullscreen
+        padding-top: 0px
+
+      .key-commands
+        @media screen and (max-width: 400px)
+          width: 320px
+          margin: 0 auto
+        p
+          color: #014e6a
+          font-size: 12px
+          float: left
+          padding: 24px 20px 0 0
+          text-shadow: initial
+          font-weight: inherit
 
         .key
           border: solid 2px #014e6a
@@ -109,7 +131,7 @@
           display: none
 
         > .vjs-control-bar
-          bottom: 6px
+          bottom: 0
           box-sizing: border-box
           color: #fff
           font-size: 14px
@@ -133,8 +155,8 @@
         z-index: 1
 
       video, object
-        width: 575px
-        height: 432px
+        max-width: 575px
+        max-height: 432px
 
       .vjs-poster
         height: 100%
@@ -151,6 +173,12 @@
     text-shadow: 0 1px 0 #0089c8
     vertical-align: top
     width: 360px
+
+    @media screen and (max-width: 400px)
+      display: block
+      max-width: 360px
+      width: 100%
+      margin: 0 auto
 
     > div.section
       border-top: 1px solid #0283AF
@@ -267,6 +295,10 @@
           cursor: not-allowed
           opacity: 0.5
 
+      button[name="next"]
+        background: #81e007
+        padding: 0 13px
+
   .bubble
     background: #ecf3f8
     border-radius: 0px
@@ -297,6 +329,7 @@
     .small-message
       font-size: 14px
       margin-top: 10px
+      font-weight: normal
 
     p
       margin: 0
@@ -305,9 +338,10 @@
     display: none
     padding: 20px 0 0
     margin: 20px 10px 0
-    border-top: 1px solid #0283af
     text-align: center
-    color: #014e6a;
+    color: #014e6a
+    background-color: #fff
+    border-radius: 6px
 
     figure
       display: inline-block
@@ -319,11 +353,17 @@
       max-width: 600px
       width: 100%
       margin: 1em auto
-      font-weight: 300
+      font-weight: normal
+      text-shadow: initial
 
     .scroll-up
       font-size: 20px
-      padding: 70px 0 0
+      padding: 30px 0
       cursor: pointer
+
+      img
+        background-color: #81e007
+        padding: 8px 5px
+        border-radius: 20px
 
 

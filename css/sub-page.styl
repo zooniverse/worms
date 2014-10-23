@@ -3,19 +3,17 @@
   max-width: 1000px
   width: 100%
 
-  figure
-    margin: 0 40px 0 0
-    order: 1
-    min-width: 150px
-
-    img
-      box-shadow: 0 0 10px 1px rgba(#000, 0.3)
-      width: 150px
+  p
+    font-weight: normal
+    text-shadow: initial
 
   h1
     font-size: 30px
     font-weight: bold
     margin-bottom: 20px
+
+    @media screen and (max-width: 1000px)
+      padding: 0 10px
 
   h3
     font-size: 18px
@@ -28,22 +26,52 @@
     position: relative
     display: flex
     justify-content: space-around
+    margin: 0 0 10px 0
+    border-radius: 6px
+
+    @media screen and (max-width: 768px)
+      flex-direction: column
+      text-align: center
+
+    figure
+      margin: 0 40px 0 0
+      order: 1
+      min-width: 150px
+
+      img
+        box-shadow: 0 0 10px 1px rgba(#000, 0.3)
+        width: 150px
+
+      @media screen and (max-width: 768px)
+        margin: 20px 0
+
 
     div
       order: 2
 
-  > div
-      box-sizing: border-box
-      display: inline-block
-      vertical-align: top
+  // > div
+  //     box-sizing: border-box
+  //     display: inline-block
+  //     vertical-align: top
 
   .left
-    // width: 330px
     width: 39%
 
   .right
-    // width: 540px
-    width: 60%
+    width: 59%
 
   .full-width
-    width: 99%
+    width: 98%
+    margin: 0 auto
+
+  .body-copy
+    background: #fff
+    color: #014e6a
+    border-radius: 6px
+    padding: 20px
+    font-weight: normal
+    box-sizing: border-box
+
+    a
+      color: #81e007
+
