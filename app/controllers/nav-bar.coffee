@@ -9,6 +9,10 @@ class NavBarController extends Spine.Controller
   elements:
     'li': 'menuItems'
 
+  events:
+    'click .hamburger-menu': 'onClickHamburger'
+    'click a': 'onChangePage'
+
   route: 'home'
 
   constructor: ->
@@ -31,5 +35,14 @@ class NavBarController extends Spine.Controller
   activateRoute: =>
     @menuItems.removeClass 'active'
     $(".#{ @route }").addClass 'active'
+
+  onClickHamburger: =>
+    @menuItems.slideToggle(200)
+    $('div.header').toggleClass 'add-margin'
+
+  onChangePage: =>
+    if window.innerWidth < 768
+      @menuItems.slideUp(200)
+      $('div.header').removeClass 'add-margin'
 
 module.exports = NavBarController

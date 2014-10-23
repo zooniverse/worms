@@ -52,8 +52,7 @@ body
         margin: 0
         width: 100%
         &:hover
-          transition: transform 0.8s
-          transform: rotate(720deg)
+          color: #81e007
 
         .zooniverse-logo
           max-height: 100px
@@ -99,6 +98,9 @@ body
   position: relative
   z-index: 1
 
+.add-margin
+  margin-bottom: 240px !important // hack-y fix for mobile nav toggle
+
 #app > .header
   @extends #site-container
   color: white
@@ -107,14 +109,32 @@ body
   text-shadow: 0 1px 1px rgba(#000, 0.5)
   max-width: 1000px
   width: 100%
+  height: 25px
 
   .logo
     float: left
 
+  .hamburger-menu
+    font-size: 20px
+    display: none
+    cursor: pointer
+    margin: 0 10px
+    float: right
+    vertical-align: top
+
+    @media screen and (max-width: 768px)
+      display: initial
+
   ul
-    margin: 0 auto
+    margin: 0 auto 220px
     text-align: right
     max-width: 1000px
+    box-sizing: border-box
+    list-style: none
+
+    @media screen and (max-width: 768px)
+      clear: both
+      padding: 0
 
     li
       border-radius: 30px
@@ -125,6 +145,9 @@ body
       line-height: 30px
       text-align: center
       vertical-align: top
+
+      @media screen and (min-width: 768px)
+        display: inline-block !important
 
       &.active
         background-color: #0383AF
@@ -138,6 +161,10 @@ body
         display: block
         padding: 0 15px
         text-decoration: none
+
+      @media screen and (max-width: 768px)
+        display: none
+        width: 100%
 
     &.selected
       background-color: #0384B0

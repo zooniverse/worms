@@ -33,7 +33,9 @@
     position: relative
 
     @media screen and (max-width: 1000px)
-      margin: 0 0 45px 0
+      margin: 0 auto 45px
+      padding: 0
+
     @media screen and (max-width: 400px)
       display: block
       margin: 0 0 25px 0
@@ -61,6 +63,9 @@
       max-height: 432px
       border: 8px solid black
       z-index: 0
+
+      @media screen and (max-width: 575px)
+        box-sizing: border-box
 
       .video-js
         padding-top: 75.25%

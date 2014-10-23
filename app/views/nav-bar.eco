@@ -1,7 +1,7 @@
 <% t = require 't7e' %>
 
 <a href="#/"><img class="logo" src="images/worm-watch-lab.png"></a>
-
+<span class="hamburger-menu">&#9776;</span>
 <ul>
   <li class="home"><a href="#/"><%- t 'span', 'navigation.home' %></a></li>
   <li class="classify"><a href="#/classify"><%- t 'span', 'navigation.classify' %></a></li>
