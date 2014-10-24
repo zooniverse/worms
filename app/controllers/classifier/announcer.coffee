@@ -18,11 +18,14 @@ class Announcer extends Spine.Controller
 
   constructor: ->
     super
-    
+
     @html @template()
 
     Subject.on 'select', =>
-      @announce t 'span', 'classifyPage.messages.startPrompt'
+      if window.innerWidth < 768
+        @announce t 'span', 'classifyPage.messages.startPrompt.touch'
+      else
+        @announce t 'span', 'classifyPage.messages.startPrompt.desktop'
 
     Game.on 'score', (e, game, points) =>
       @announce "You matched #{ Game.current.otherPlayer } and earned #{ points } points!"
@@ -31,7 +34,10 @@ class Announcer extends Spine.Controller
       @announce t 'span', 'classifyPage.messages.onRemoveMark', $time: "#{ removedTime.toFixed 2 }"
 
     Game.on 'start', =>
-      @announce t 'span', 'classifyPage.messages.onStart'
+      if window.innerWidth < 768
+        @announce t 'span', 'classifyPage.messages.onStart.touch'
+      else
+        @announce t 'span', 'classifyPage.messages.onStart.desktop'
 
   render: =>
     @html @template

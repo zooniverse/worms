@@ -34,11 +34,15 @@
 
     @media screen and (max-width: 1000px)
       margin: 0 auto 45px
-      padding: 0
+      padding: 0 20px
+      box-sizing: border-box
 
-    @media screen and (max-width: 400px)
-      display: block
+    @media screen and (max-width: 960px)
       margin: 0 0 25px 0
+
+    @media screen and (max-width: 500px)
+      display: block
+      margin: 0 0 15px 0
 
     .actions
       padding: 14px 0 0 0 !important // sigh
@@ -49,11 +53,15 @@
         transition: all 0.3s ease-in-out
         margin: 0 2.5px
 
+        @media screen and (max-width: 768px)
+          height: 35px
+          padding: 0 18px
+
         &.disabled
           cursor: not-allowed
           opacity: 0.5
 
-        @media screen and (max-width: 515px)
+        @media screen and (max-width: 768px)
           float: none
 
     .video-container
@@ -74,9 +82,6 @@
         padding-top: 0px
 
       .key-commands
-        @media screen and (max-width: 515px)
-          width: 320px
-          margin: 0 auto
         p
           color: #014e6a
           font-size: 12px
@@ -93,6 +98,9 @@
           font-size: 10px
           font-weight: bold
 
+        @media screen and (max-width: 768px)
+          display: none
+
       .tutorial-circle
         animation: 1.5s tutorial-circle linear infinite
         border: 2px solid #f00
@@ -107,32 +115,6 @@
       > .video-border
         position: absolute
         z-index: 1
-
-        &.top, &.right, &.bottom, &.left
-          border: 6px solid #000
-          box-shadow: inset 0 0 10px 1px rgba(#000, 0.7)
-          box-sizing: border-box
-
-        &.top, &.bottom
-          height: 0
-          width: 100%
-
-        &.left, &.right
-          height: 100%
-          width: 0
-
-        &.top
-          top: 0
-
-        &.bottom
-          bottom: 0
-
-        &.left
-          left: 0
-
-        &.right
-          right: 0
-
 
       #worm-video
         position: relative
@@ -184,11 +166,13 @@
     vertical-align: top
     max-width: 360px
     width: 100%
+    padding: 0 0 0 20px
 
-    @media screen and (max-width: 400px)
-      max-width: 360px
-      width: 100%
+    @media screen and (max-width: 960px)
+      max-width: 575px
       margin: 0 auto
+      padding: 0 20px
+      box-sizing: border-box
 
     > div.section
       border-top: 1px solid #0283AF
@@ -296,18 +280,67 @@
     .actions
       padding: 14px 0 0 0 !important // sigh
 
+      @media screen and (max-width: 960px)
+        height: 30px
+        padding: 14px 0 !important
+
+      @media screen and (max-width: 768px)
+        height: 35px
+        margin-top: 14px
+
+      @media screen and (max-width: 500px)
+        height: 75px
+        margin-top: 0
+
+      div
+        &:first-child
+          display: inline-block
+          float: left
+          @media screen and (max-width: 500px)
+            display: block
+            margin: 0 0 5px 0
+            float: none
+
+        &:last-child
+          display: inline-block
+          float: left
+
+          @media screen and (max-width: 500px)
+            display: flex
+            justify-content: center
+            margin: 0 0 5px 0
+            float: none
+
+
       button
         @extends #small-button
         transition: all 0.3s ease-in-out
         margin: 0 2.5px
 
+        @media screen and (max-width: 768px)
+          height: 35px
+          padding: 0 18px
+
         &.disabled
           cursor: not-allowed
           opacity: 0.5
 
+      .help
+        order: 2
+
+      .guide
+        order: 1
+
       button[name="next"]
         background: #81e007
         padding: 0 13px
+        text-shadow: 0 1px 0 rgba(255,255,255,0.75)
+        box-shadow: 0 3px 5px 0 rgba(0,0,0,0.15), inset 0 1px 0 0 rgba(255,255,255,0.75)
+
+        @media screen and (max-width: 768px)
+          height: 35px
+          padding: 0 18px
+          order: 3
 
   .bubble
     background: #ecf3f8
@@ -316,13 +349,16 @@
     box-sizing: border-box
     color: #003143
     cursor: pointer
-    font-size: 24px
+    font-size: 22px
     font-weight: 700
     height: 100px
     padding: 17px 24px
     position: relative
     text-shadow: 0 1px 0 #fff
     width: 360px
+
+    @media screen and (max-width: 960px)
+      margin: 0 auto
 
     &:after
       border-color: transparent #ecf3f8
@@ -335,6 +371,13 @@
       top: 35px
       width: 0
       z-index: 1
+
+      @media screen and (max-width: 960px)
+        left: 160px
+        top: -30px
+        border-left: 15px solid transparent
+        border-right: 15px solid transparent
+        border-bottom: 15px solid #ecf3f8
 
     .small-message
       font-size: 14px

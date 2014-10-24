@@ -44,8 +44,12 @@ module.exports =
       eggLaying: 'Egg Laying'
 
     messages:
-      startPrompt: "Click to start"
-      onStart: "Press \"Z\" if you see the worm lay an egg"
+      startPrompt:
+        desktop: "Click to start"
+        touch: "Tap to start"
+      onStart:
+        desktop: "Press \"Z\" if you see the worm lay an egg"
+        touch: "Press \"Egg Laying\" if you see the worm lay an egg"
       onRemoveMark: "You removed a mark at $time"
 
     stats:

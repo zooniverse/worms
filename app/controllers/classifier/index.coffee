@@ -55,7 +55,10 @@ class Classifier extends BaseController
     @video.el.appendTo @left
 
     @actionsRight = new ActionsRight
-    @actionsRight.el.appendTo @right
+    if window.innerWidth < 960
+      @actionsRight.el.prependTo @right
+    else
+      @actionsRight.el.appendTo @right
 
     @actionsLeft = new ActionsLeft
     @actionsLeft.el.appendTo @left
