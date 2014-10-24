@@ -292,26 +292,6 @@
         height: 75px
         margin-top: 0
 
-      div
-        &:first-child
-          display: inline-block
-          float: left
-          @media screen and (max-width: 500px)
-            display: block
-            margin: 0 0 5px 0
-            float: none
-
-        &:last-child
-          display: inline-block
-          float: left
-
-          @media screen and (max-width: 500px)
-            display: flex
-            justify-content: center
-            margin: 0 0 5px 0
-            float: none
-
-
       button
         @extends #small-button
         transition: all 0.3s ease-in-out
@@ -325,23 +305,38 @@
           cursor: not-allowed
           opacity: 0.5
 
+      .favorite
+        float: left
+
+      .discuss
+        float: left
+
       .help
-        order: 2
+        float: left
+
+        @media screen and (max-width: 400px)
+          float: none
 
       .guide
-        order: 1
+        float: left
+
+        @media screen and (max-width: 400px)
+          float: none
 
       button[name="next"]
         background: #81e007
         padding: 0 13px
         text-shadow: 0 1px 0 rgba(255,255,255,0.75)
         box-shadow: 0 3px 5px 0 rgba(0,0,0,0.15), inset 0 1px 0 0 rgba(255,255,255,0.75)
+        float: right
 
         @media screen and (max-width: 768px)
           height: 35px
           padding: 0 18px
-          order: 3
 
+        @media screen and (max-width: 400px)
+          float: none
+          margin-top: 5px
   .bubble
     background: #ecf3f8
     border-radius: 0px

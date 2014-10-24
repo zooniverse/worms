@@ -3,30 +3,23 @@
 <% if @game?.status is 'finished': %>
 
   <% if @user: %>
-    <div>
-      <%- t 'button.favorite', 'classifyPage.actions.favorite', name: 'favourite' %>
-      <%- t 'button.discuss', 'classifyPage.actions.discuss', name: 'discuss', target: '_blank' %>
-    </div>
+    <%- t 'button.favorite', 'classifyPage.actions.favorite', name: 'favourite' %>
+    <%- t 'button.discuss', 'classifyPage.actions.discuss', name: 'discuss', target: '_blank' %>
   <% else: %>
-    <div>
-      <%- t 'button.favorite disabled', 'classifyPage.actions.favorite', name: 'favourite' %>
-      <%- t 'button.discuss disabled', 'classifyPage.actions.discuss', name: 'discuss', target: '_blank' %>
-    </div>
+    <%- t 'button.favorite disabled', 'classifyPage.actions.favorite', name: 'favourite' %>
+    <%- t 'button.discuss disabled', 'classifyPage.actions.discuss', name: 'discuss', target: '_blank' %>
   <% end %>
 
-  <div>
-    <%- t 'button.next float-right', 'classifyPage.actions.next', name: 'next' %>
-    <%- t 'button.help float-right', 'classifyPage.actions.help', name: 'help' %>
-    <%- t 'button.guide float-right', 'classifyPage.actions.guide', name: 'field-guide' %>
-  </div>
-
+  <%- t 'button.help', 'classifyPage.actions.help', name: 'help' %>
+  <%- t 'button.guide', 'classifyPage.actions.guide', name: 'field-guide' %>
+  <%- t 'button.next', 'classifyPage.actions.next', name: 'next' %>
 
 <% else: %>
-  <div>
-    <%- t 'button.next disabled float-right', 'classifyPage.actions.next', name: 'next' %>
-    <%- t 'button.help float-right', 'classifyPage.actions.help', name: 'help' %>
-    <%- t 'button.guide float-right', 'classifyPage.actions.guide', name: 'field-guide' %>
-  </div>
+
+  <%- t 'button.help', 'classifyPage.actions.help', name: 'help' %>
+  <%- t 'button.guide', 'classifyPage.actions.guide', name: 'field-guide' %>
+  <%- t 'button.next disabled', 'classifyPage.actions.next', name: 'next' %>
+
 <% end %>
 
 

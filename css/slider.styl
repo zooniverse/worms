@@ -27,8 +27,13 @@ $slider-height = 500px
   @media screen and (max-width: 1000px)
     padding-bottom: 200px !important
 
-  @media screen and (max-width: 400px)
-    padding-bottom: 225px !important
+  @media screen and (max-width: 850px)
+    height: 100%
+    padding: 0 !important
+
+  .caroufredsel_wrapper
+    @media screen and (max-width: 850px)
+      display: none !important
 
   > #back, > #forward
     appearance: none
@@ -45,6 +50,9 @@ $slider-height = 500px
     width: 100px
     z-index: 1
     cursor: pointer
+
+    @media screen and (max-width: 850px)
+      display: none !important
 
     &:hover
       opacity: 0.8
@@ -160,6 +168,35 @@ $slider-height = 500px
     order: 1
     margin: 10px 0
 
+  .static-container
+    width: 100%
+    max-width: 1000px
+    padding: 0 20px
+    box-sizing: border-box
+    display: none
+
+    @media screen and (max-width: 850px)
+      display: flex
+
+    @media screen and (max-width: 768px)
+      flex-direction: column
+
+    .image-container
+      display: inline-block
+      width: 100%
+      max-width: 250px
+      margin: 0 auto
+
+    .static-copy
+      display: inline-block
+      width: 100%
+      max-width: 480px
+      padding: 0 20px 0 0
+
+      @media screen and (max-width: 768px)
+        max-width: 100%
+        text-align: center
+
   .sponsors-container
     @extends #site-container
     display: flex
@@ -205,5 +242,6 @@ $slider-height = 500px
           left: initial
           top: initial
           float: left
+
 
 

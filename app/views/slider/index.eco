@@ -61,6 +61,16 @@
 <button id="back"></button>
 <button id="forward"></button>
 
+<div class="static-container">
+  <div class="image-container">
+    <img class="img genes" src="images/genes.png" alt="Cartoon of DNA">
+  </div>
+  <div class="static-copy">
+    <%- t 'h1', 'homePage.slides.first.header' %>
+    <%- t 'p', 'homePage.slides.first.text' %>
+  </div>
+</div>
+
 <div class="sponsors-container">
   <a id="classify-button" class="big-button" href="#/classify">
     <%- t 'span', 'homePage.callToAction' %>
