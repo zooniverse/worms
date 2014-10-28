@@ -23,9 +23,9 @@ class Announcer extends Spine.Controller
 
     Subject.on 'select', =>
       if window.innerWidth < 768
-        @announce t 'span', 'classifyPage.messages.startPrompt.touch'
+        @announce t 'span.middle-pos', 'classifyPage.messages.startPrompt.touch'
       else
-        @announce t 'span', 'classifyPage.messages.startPrompt.desktop'
+        @announce t 'span.middle-pos', 'classifyPage.messages.startPrompt.desktop'
 
     Game.on 'score', (e, game, points) =>
       @announce "You matched #{ Game.current.otherPlayer } and earned #{ points } points!"

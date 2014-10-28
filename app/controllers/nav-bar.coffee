@@ -38,11 +38,9 @@ class NavBarController extends Spine.Controller
 
   onClickHamburger: =>
     @menuItems.slideToggle(200)
-    # $('div.header').toggleClass 'add-margin'
 
   onChangePage: =>
     if window.innerWidth < 768
       @menuItems.slideUp(200)
-      # $('div.header').removeClass 'add-margin'
 
 module.exports = NavBarController

@@ -86,7 +86,7 @@ module.exports =
         <img src="http://placehold.it/360x270">
         <figcaption>Example</figcaption>
       </figure>
-      <p>If you see an egg being laid, pause the video by clicking on it, then use the blue scroll bar to scroll to the point where the worm laid the egg and press "Z" to get an accurate timing. If the worm lays multiple eggs during the video, press "Z" once for each egg.</p>
+      <p>If you see an egg being laid, pause the video by clicking on it, then use the blue scroll bar to scroll to the point where the worm laid the egg and press "Z" or tap "Egg Laying" to get an accurate timing. If the worm lays multiple eggs during the video, press "Z" or tap "Egg Laying" once for each egg.</p>
       <p>If you make a mistake, you can undo it by clicking the X next to the mistaken timing.</p>
       <figure>
         <img src="http://placehold.it/360x270">
@@ -116,8 +116,8 @@ module.exports =
 
   siteIntro:
     1: '''Welcome to Worm Watch Lab! By tracking the egg-laying behavior of nematode worms, you'll be helping us study the function of genes similar to those important for human brain function.'''
-    2: '''View each 30-second video of a worm, and press Z whenever you see the worm lay an egg. Eggs will appear suddenly as small, dark bulges near the red dot that marks each worm's midsection.'''
-    3: '''Press Z for each egg that is laid. Do not mark eggs that are already there. And don't worry if you're unsure&ndash;many people will see each video, so mistakes are not a big problem.'''
+    2: '''View each 30-second video of a worm, and press "Z" or tap "Egg Laying" whenever you see the worm lay an egg. Eggs will appear suddenly as small, dark bulges near the red dot that marks each worm's midsection.'''
+    3: '''Press "Z" or tap "Egg Laying" for each egg that is laid. Do not mark eggs that are already there. And don't worry if you're unsure&ndash;many people will see each video, so mistakes are not a big problem.'''
     4: '''It's okay if you don't see an egg laid; we only expect it once in every 30-50 videos. Keep watching, though, and you're likely to spot one. Each video that you watch helps either way!'''
     5: '''If you need more help, you can click "Field Guide" for more examples of egg-laying behavior. You can also chat with other volunteers at our Talk page, or check out the Worm Watch Lab blog. Good luck, and thanks!'''
 
