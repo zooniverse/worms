@@ -79,12 +79,12 @@ module.exports =
     content: '''
       <p>When a worm lays an egg on these videos, it appears as a small, dark bulge that pops out suddenly around the middle of its body (which is marked here by a red dot). Sometimes, a worm will lay multiple eggs at once, or several in rapid succession.</p>
       <figure>
-        <img src="http://placehold.it/360x270">
-        <figcaption>Example</figcaption>
+        <video src="http://www.wormwatchlab.org/subjects/51b9c2122d5d3ad242007481.mp4" controls></video>
+        <figcaption>Worm laying one egg</figcaption>
       </figure>
       <figure>
-        <img src="http://placehold.it/360x270">
-        <figcaption>Example</figcaption>
+        <video src="http://www.wormwatchlab.org/subjects/51b7af002d5d3ad242003a73.mp4" controls></video>
+        <figcaption>Worm laying multiple eggs.</figcaption>
       </figure>
       <p>If you see an egg being laid, pause the video by clicking on it, then use the blue scroll bar to scroll to the point where the worm laid the egg and press "Z" or tap "Egg Laying" to get an accurate timing. If the worm lays multiple eggs during the video, press "Z" or tap "Egg Laying" once for each egg.</p>
       <p>If you make a mistake, you can undo it by clicking the X next to the mistaken timing.</p>

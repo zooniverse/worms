@@ -40,7 +40,7 @@ class NavBarController extends Spine.Controller
     @menuItems.slideToggle(200)
 
   onChangePage: =>
-    if window.innerWidth < 768
+    if window.innerWidth < 800
       @menuItems.slideUp(200)
 
 module.exports = NavBarController
