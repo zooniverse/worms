@@ -77,40 +77,48 @@ module.exports =
 
   guide:
     content: '''
-      <p>When a worm lays an egg on these videos, it appears as a small, dark bulge that pops out suddenly around the middle of its body (which is marked here by a red dot). Sometimes, a worm will lay multiple eggs at once, or several in rapid succession.</p>
-      <figure>
-        <video src="http://www.wormwatchlab.org/subjects/51b9c2122d5d3ad242007481.mp4" controls></video>
-        <figcaption>Worm laying one egg</figcaption>
-      </figure>
-      <figure>
-        <video src="http://www.wormwatchlab.org/subjects/51b7af002d5d3ad242003a73.mp4" controls></video>
-        <figcaption>Worm laying multiple eggs.</figcaption>
-      </figure>
-      <p>If you see an egg being laid, pause the video by clicking on it, then use the blue scroll bar to scroll to the point where the worm laid the egg and press "Z" or tap "Egg Laying" to get an accurate timing. If the worm lays multiple eggs during the video, press "Z" or tap "Egg Laying" once for each egg.</p>
-      <p>If you make a mistake, you can undo it by clicking the X next to the mistaken timing.</p>
-      <figure>
-        <img src="http://placehold.it/360x270">
-        <figcaption>Example</figcaption>
-      </figure>
-      <figure>
-        <img src="http://placehold.it/360x270">
-        <figcaption>Example</figcaption>
-      </figure>
-      <p>There may already be eggs present on the plate or next to the worm at the start of the video.  Don't mark these; only mark eggs that are laid while you're watching.</p>
-      <p>Also look out for food piles&mdash;sometimes the worm is in a pile of food and this can look like an egg. Eggs will appear more suddenly than a patch of food that gets disturbed.</p>
-      <figure>
-        <img src="images/field-guide/egg-present.png" alt="Example of already present eggs">
-        <figcaption>Eggs already present</figcaption>
-      </figure>
-      <figure>
-        <img src="images/field-guide/food-present.png" alt="Example of food present">
-        <figcaption>Food present</figcaption>
-      </figure>
-      <p>Most videos will not have egg-laying events. We only expect eggs in one out of every 30-50 videos. Even if you don't find an egg, every video that you watch helps the project!</p>
-      <p>If you want to classify faster, you may drag the scroll bar to the right to move quickly through each video and scan for new eggs.</p>
-      <p>Finally, don't stress if you're not sure about whether something is an egg or not! Take your best guess. Several people will see each video, so don't worry about any errors.</p>
+      <section>
+        <p>When a worm lays an egg on these videos, it appears as a small, dark bulge that pops out suddenly around the middle of its body (which is marked here by a red dot). Sometimes, a worm will lay multiple eggs at once, or several in rapid succession.</p>
+        <figure>
+          <video src="http://www.wormwatchlab.org/subjects/51b9c2122d5d3ad242007481.mp4" poster="http://www.wormwatchlab.org/subjects/51b9c2122d5d3ad242007481.jpg" controls></video>
+          <figcaption>Worm laying one egg at 0:03.<br><a href="http://talk.wormwatchlab.org/#/subjects/AWS0000n0c" target="_blank">View Talk video source.</a></figcaption>
+        </figure>
+        <figure>
+          <video src="http://www.wormwatchlab.org/subjects/51b7af002d5d3ad242003a73.mp4" poster="http://www.wormwatchlab.org/subjects/51b7af002d5d3ad242003a73.jpg" controls></video>
+          <figcaption>Worm laying multiple eggs at 0:03.<br><a href="http://talk.wormwatchlab.org/#/subjects/AWS0000bjo" target="_blank">View Talk video source.</a></figcaption>
+        </figure>
+      </section>
+      <section>
+        <p>If you see an egg being laid, pause the video by clicking on it, then use the blue scroll bar to scroll to the point where the worm laid the egg and press "Z" or tap "Egg Laying" to get an accurate timing. If the worm lays multiple eggs during the video, press "Z" or tap "Egg Laying" once for each egg.</p>
+        <p>If you make a mistake, you can undo it by clicking the X next to the mistaken timing.</p>
+        <figure>
+          <img src="images/field-guide/wwl-success.gif" alt="Successful classification">
+          <figcaption>Successful classification</figcaption>
+        </figure>
+        <figure>
+          <img src="images/field-guide/wwl-remove-score.gif" alt="Cancelling classification">
+          <figcaption>Cancelling classification</figcaption>
+        </figure>
+      </section>
+      <section>
+        <p>There may already be eggs present on the plate or next to the worm at the start of the video.  Don't mark these; only mark eggs that are laid while you're watching.</p>
+        <p>Also look out for food piles&mdash;sometimes the worm is in a pile of food and this can look like an egg. Eggs will appear more suddenly than a patch of food that gets disturbed.</p>
+        <figure>
+          <img src="images/field-guide/egg-present.png" alt="Example of already present eggs">
+          <figcaption>Eggs already present</figcaption>
+        </figure>
+        <figure>
+          <img src="images/field-guide/food-present.png" alt="Example of food present">
+          <figcaption>Food present</figcaption>
+        </figure>
+      </section>
+      <section>
+        <p>Most videos will not have egg-laying events. We only expect eggs in one out of every 30-50 videos. Even if you don't find an egg, every video that you watch helps the project!</p>
+        <p>If you want to classify faster, you may drag the scroll bar to the right to move quickly through each video and scan for new eggs.</p>
+        <p>Finally, don't stress if you're not sure about whether something is an egg or not! Take your best guess. Several people will see each video, so don't worry about any errors.</p>
+      </section>
       <div class="scroll-up">
-        <img src="images/return-top.svg" alt="Back to top button">
+          <img src="images/return-top.svg" alt="Back to top button">
       </div>
     '''
 

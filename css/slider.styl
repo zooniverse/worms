@@ -180,12 +180,13 @@ $slider-height = 500px
 
     @media screen and (max-width: 768px)
       flex-direction: column
+      align-items: center
 
     .image-container
       display: inline-block
-      width: 100%
-      max-width: 242px
-      margin: 0 auto
+
+      @media screen and (max-width: 768px)
+        display: block // Mobile Safari fix
 
     .static-copy
       display: inline-block
