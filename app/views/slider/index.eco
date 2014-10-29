@@ -24,7 +24,7 @@
 
   <div class="section">
     <div class="container">
-      <div class="left">
+      <div class="left second-slide">
         <div class="details">
           <%- t 'h2', 'homePage.slides.second.imageHeader' %>
           <%- t 'p', 'homePage.slides.second.imageTagline' %>
@@ -47,7 +47,7 @@
       <div class="left">
         <div class="details"></div>
         <div class="image-container">
-          <img class="img genes mobile-center" src="images/genes.png">
+          <img class="img genes" src="images/genes.png">
         </div>
       </div>
       <div class="right">
