@@ -14,6 +14,7 @@ Announcer = require './announcer'
 Details = require './details'
 Stats = require './stats'
 Video = require './video'
+# Guide = require './guide'
 
 { Tutorial } = require 'zootorial'
 translate = require 't7e'
@@ -75,6 +76,8 @@ class Classifier extends BaseController
 
     @siteIntro = new SlideTutorial
       slides: slideTutorialSlides
+
+    @loadGuideVideos()
 
     User.on 'change', @onUserChange
     Subject.on 'select', @onSubjectSelect
@@ -179,6 +182,12 @@ class Classifier extends BaseController
   firstVisit: (user) =>
     return true unless user
     !user?.project?.classification_count
+
+  loadGuideVideos: =>
+    window.setTimeout =>
+      videojs 'guide-video-one', {}
+      videojs 'guide-video-two', {}
+      300
 
   showGuide: =>
     @fieldGuide.toggle (e) =>
