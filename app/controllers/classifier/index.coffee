@@ -175,11 +175,10 @@ class Classifier extends BaseController
     @siteIntro.start()
 
   startSiteIntro: ->
-    user = User.current
-
-    @siteIntro.start() if @firstVisit(user)
+    @siteIntro.start() if @firstVisit User.current
 
   firstVisit: (user) =>
+    return false if user is false
     return true unless user
     !user?.project?.classification_count
 
