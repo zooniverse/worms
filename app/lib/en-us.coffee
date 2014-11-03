@@ -107,7 +107,7 @@ module.exports =
         </figure>
       </section>
       <section>
-        <p>There may already be eggs present on the plate or next to the worm at the start of the video.  Don't mark these; only mark eggs that are laid while you're watching.</p>
+        <p>There may already be eggs present on the plate or next to the worm at the start of the video.  <strong>Don't mark these; only mark eggs that are laid while you're watching.</strong></p>
         <p>Also look out for food piles&mdash;sometimes the worm is in a pile of food and this can look like an egg. Eggs will appear more suddenly than a patch of food that gets disturbed.</p>
         <figure>
           <img src="images/field-guide/egg-present.png" alt="Example of already present eggs">
@@ -131,7 +131,7 @@ module.exports =
   siteIntro:
     1: '''Welcome to Worm Watch Lab! By tracking the egg-laying behavior of nematode worms, you'll be helping us study the function of genes similar to those important for human brain function.'''
     2: '''View each 30-second video of a worm, and press "Z" or tap "Egg Laying" whenever you see the worm lay an egg. Eggs will appear suddenly as small, dark bulges near the red dot that marks each worm's midsection.'''
-    3: '''Press "Z" or tap "Egg Laying" for each egg that is laid. Do not mark eggs that are already there. And don't worry if you're unsure&ndash;many people will see each video, so mistakes are not a big problem.'''
+    3: '''Press "Z" or tap "Egg Laying" for each egg that is laid. <strong>Do not mark eggs that are already there.</strong> And don't worry if you're unsure&ndash;many people will see each video, so mistakes are not a big problem.'''
     4: '''It's okay if you don't see an egg laid; we only expect it once in every 30-50 videos. Keep watching, though, and you're likely to spot one. Each video that you watch helps either way!'''
     5: '''If you need more help, you can click "Field Guide" for more examples of egg-laying behavior. You can also chat with other volunteers at our Talk page, or check out the Worm Watch Lab blog. Good luck, and thanks!'''
 
