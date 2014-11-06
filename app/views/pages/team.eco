@@ -6,7 +6,7 @@
   <% for member in teamMembers: %>
     <div class="section">
       <% try imgSrc = t "teamPage.team.#{ member }.image" %>
-      <% if imgSrc: %><figure><%- t 'img', '', src: imgSrc %></figure><% end %>
+      <% if imgSrc: %><figure><%- t 'img.shadow', '', src: imgSrc %></figure><% end %>
       <div>
         <%- t 'h3', "teamPage.team.#{ member }.name" %>
         <%- t 'p', "teamPage.team.#{ member }.bio" %>

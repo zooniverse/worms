@@ -6,7 +6,7 @@
   <% for partner in partners: %>
     <div class="section">
       <% try imgSrc = t "partnersPage.partners.#{ partner }.image" %>
-      <% if imgSrc: %><figure><%- t 'img.no-shadow', '', src: imgSrc %></figure><% end %>
+      <% if imgSrc: %><figure><%- t 'img', '', src: imgSrc %></figure><% end %>
       <div>
         <%- t 'h3', "partnersPage.partners.#{ partner }.name" %>
         <%- t 'div', "partnersPage.partners.#{ partner }.description" %>
