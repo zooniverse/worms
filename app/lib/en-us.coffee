@@ -175,7 +175,7 @@ module.exports =
     content: """
       <section class="about-section">
         <h2>Our small distant cousins</h2>
-        <figure class="about-figure"><img src="images/c-elegans.jpg" alt="C. Elegans"><figcaption>Credit: MRC Clinical Sciences Centre</figcaption></figure>
+        <figure class="about-figure"><img src="images/c-elegans.jpg" alt="C. Elegans"><figcaption>Credit: J&uuml;rgen Berger<br>Max Planck Institute for Developmental Biology</figcaption></figure>
         <p>We watch movies of the nematode worm <em>C. elegans</em> to understand how the brain works and how genes affect behaviour. The idea is that if a gene is involved in a visible behaviour, then mutations that break that gene might lead to detectable behavioural changes. The type of change gives us a hint about what the affected gene might be doing.</p>
         <p>Although it is small and has far fewer cells than we do, <em>C. elegans</em> has almost as many genes&mdash;and because we share a common ancestor even with worms, many of them are closely related to human genes. This presents us with the opportunity to study the function of genes that are important for human brain function in an animal that is easier to handle, great for microscopy and genetics, and has a generation time of only a few days.</p>
       </section>
