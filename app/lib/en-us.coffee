@@ -140,30 +140,57 @@ module.exports =
     score: "Score: $score"
     notLoggedIn: "Login to view profile"
 
-
   partnersPage:
     header: "Partner Organisations"
-    content: """
-      <h3>MRC Laboratory of Molecular Biology</h3>
-      <p>The MRC Laboratory of Molecular Biology (LMB) is a world-class research laboratory, dedicated to understanding important biological processes at the molecular level - with the goal of using this knowledge to tackle major problems in human health and disease. The LMB is one of the birthplaces of modern molecular biology. Many techniques were pioneered at the laboratory, including DNA sequencing, methods for determining the three-dimensional structure of proteins and the development of monoclonal antibodies.</p>
-      <p>Over the years, the work of LMB scientists has attracted nine Nobel prizes, shared between 13 LMB scientists, dozens of Royal Society awards and numerous other scientific honours.</p>
-
-      <h3>Medical Research Foundation</h3>
-      <p>The Medical Research Foundation is the Medical Research Council's independently managed charity. It receives funds from the giving public to support medical research, training, public engagement and dissemination of knowledge.</p>
-      <p>Since it was first established in 1920, the MRC has been able to accept charitable bequests, endowments and donations from the public to contribute towards the costs of the research that it undertakes. The MRC registered these charitable funds with the Charity Commission in the late 1960's and its charity - the Medical Research Foundation - has been successfully supporting medical research for over 80 years.</p>
-    """
+    partners:
+      mrc:
+        name: "MRC Laboratory of Molecular Biology"
+        image: "images/mrc-lmb-logo.svg"
+        description:
+          "<p>The MRC Laboratory of Molecular Biology (LMB) is a world-class research laboratory, dedicated to understanding important biological processes at the molecular level - with the goal of using this knowledge to tackle major problems in human health and disease. The LMB is one of the birthplaces of modern molecular biology. Many techniques were pioneered at the laboratory, including DNA sequencing, methods for determining the three-dimensional structure of proteins and the development of monoclonal antibodies.</p>
+          <p>Over the years, the work of LMB scientists has attracted nine Nobel prizes, shared between 13 LMB scientists, dozens of Royal Society awards and numerous other scientific honours.</p>"
+      mrf:
+        name: "Medical Research Foundation"
+        image: "images/mrc-mrf-logo.svg"
+        description:
+          "<p>The Medical Research Foundation is the Medical Research Council's independently managed charity. It receives funds from the giving public to support medical research, training, public engagement and dissemination of knowledge.</p>
+          <p>Since it was first established in 1920, the MRC has been able to accept charitable bequests, endowments and donations from the public to contribute towards the costs of the research that it undertakes. The MRC registered these charitable funds with the Charity Commission in the late 1960's and its charity - the Medical Research Foundation - has been successfully supporting medical research for over 80 years.</p>"
+      csc:
+        name: "Clinical Sciences Center"
+        image: "images/mrc-csc-logo.svg"
+        description:
+          "<p>The CSC aims to be at the forefront of innovative biomedical research and in partnership with Imperial College London and others, to promote the translation of its research for maximal benefit. The institute trains and mentors the next generation of clinical and non-clinical scientists and strives to enhance the public's interest, understanding and trust in science.<p>"
+      genie:
+        name: "Group of <em>C. Elegans</em> New Investigators in Europe"
+        image: "images/genie-logo.png"
+        description:
+          "<p>GENiE (Group of <em>C. elegans</em> New Investigators in Europe) is a network of more than 80 worm labs that aims to encourage interdisciplinary scientific communication, accelerate the spread of new nematode techniques, and improve the establishment of collaborations between European laboratories. Part of its mission is also to reach out to the public to improve understand of nematode biology and the use of <em>C. elegans</em> as a model organism in biomedical research.</p>"
+      zooniverse:
+        name: "Zooniverse"
+        image: "images/zooniverse-icon-web-black.png"
+        description:
+          "<p>The Zooniverse and the suite of projects it contains is produced, maintained and developed by the Citizen Science Alliance. The member institutions of the CSA work with many academic and other partners around the world to produce projects that use the efforts and ability of volunteers to help scientists and researchers deal with the flood of data that confronts them.</p>"
 
   aboutPage:
     header: "Our small distant cousins"
     content: """
-      <p>We watch movies of the nematode worm <em>C. elegans</em> to understand how the brain works and how genes affect behaviour. The idea is that if a gene is involved in a visible behaviour, then mutations that break that gene might lead to detectable behavioural changes. The type of change gives us a hint about what the affected gene might be doing.</p>
-      <p>Although it is small and has far fewer cells than we do, <em>C. elegans</em> has almost as many genes&mdash;and because we share a common ancestor even with worms, many of them are closely related to human genes. This presents us with the opportunity to study the function of genes that are important for human brain function in an animal that is easier to handle, great for microscopy and genetics, and has a generation time of only a few days.</p>
-      <h2>The Importance of Egg Laying</h1>
-      <p>Egg laying in <em>C. elegans</em> requires the proper functioning of a neural circuit to activate the muscles that open the vulva to expel eggs. This circuit is modulated by a neurotransmitter called serotonin; the same molecule that affects mood in humans. Antidepressants like prozac work by stimulating serotonergic signaling in humans. They also work in worms and they stimulate egg laying!</p>
-      <p>If we observe a mutant that lays more or fewer eggs than normal, this is a hint that something has gone wrong in the egg laying neural circuit or muscles. This can have far reaching implications, maybe even teaching us something about genes involved in depression in humans. The challenge is that there are thousands of genes without a known function and screening for worms with egg laying defects is time consuming. That's why we need your help!</p>
-      <h2>Worm Tracking</h2>
-      <p>We have built tracking microscopes to record video of crawling worms. A USB microscope is mounted on a motorised stage connected to a computer. When the worm moves, the computer analyses the changing image and commands the stage to move to re-centre the worm in the field of view. Because the trackers work without supervision, we can run eight of them in parallel to collect a lot of movies.
-      <p>If you'd like to learn more about worm tracking (or even build a tracker yourself!), we have a parts list and instructions on our <a href="http://www.mrc-lmb.cam.ac.uk/wormtracker/">tracking website</a></p>
+      <section class="about-section">
+        <figure class="about-figure"><img src="images/c-elegans.jpg" alt="C. Elegans"><figcaption>Credit: MRC Clinical Sciences Centre</figcaption></figure>
+        <p>We watch movies of the nematode worm <em>C. elegans</em> to understand how the brain works and how genes affect behaviour. The idea is that if a gene is involved in a visible behaviour, then mutations that break that gene might lead to detectable behavioural changes. The type of change gives us a hint about what the affected gene might be doing.</p>
+        <p>Although it is small and has far fewer cells than we do, <em>C. elegans</em> has almost as many genes&mdash;and because we share a common ancestor even with worms, many of them are closely related to human genes. This presents us with the opportunity to study the function of genes that are important for human brain function in an animal that is easier to handle, great for microscopy and genetics, and has a generation time of only a few days.</p>
+      </section>
+      <section class="about-section">
+        <h2>The Importance of Egg Laying</h1>
+        <figure class="about-figure"><iframe width="200" src="//www.youtube.com/embed/H131yA9AYss" frameborder="0" allowfullscreen></iframe><figcaption>Credit: Robyn Branicky</figcaption></figure>
+        <p>Egg laying in <em>C. elegans</em> requires the proper functioning of a neural circuit to activate the muscles that open the vulva to expel eggs. This circuit is modulated by a neurotransmitter called serotonin; the same molecule that affects mood in humans. Antidepressants like prozac work by stimulating serotonergic signaling in humans. They also work in worms and they stimulate egg laying!</p>
+        <p>If we observe a mutant that lays more or fewer eggs than normal, this is a hint that something has gone wrong in the egg laying neural circuit or muscles. This can have far reaching implications, maybe even teaching us something about genes involved in depression in humans. The challenge is that there are thousands of genes without a known function and screening for worms with egg laying defects is time consuming. That's why we need your help!</p>
+      </section>
+      <section class="about-section">
+        <h2>Worm Tracking</h2>
+        <figure class="about-figure"><img src="images/lab-setup.jpg" alt="Worm Lab Setup"><figcaption>Credit: Ralf Sommer</figcaption></figure>
+        <p>We have built tracking microscopes to record video of crawling worms. A USB microscope is mounted on a motorised stage connected to a computer. When the worm moves, the computer analyses the changing image and commands the stage to move to re-centre the worm in the field of view. Because the trackers work without supervision, we can run eight of them in parallel to collect a lot of movies.
+        <p>If you'd like to learn more about worm tracking (or even build a tracker yourself!), we have a parts list and instructions on our <a href="http://www.mrc-lmb.cam.ac.uk/wormtracker/">tracking website</a></p>
+      </section>
     """
 
   teamPage:

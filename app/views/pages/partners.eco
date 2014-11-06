@@ -1,6 +1,16 @@
 <% t = require 't7e' %>
+<% partners = 'mrc mrf csc genie zooniverse'.split ' ' %>
 
 <div class="right full-width body-copy">
   <%- t 'h1', 'partnersPage.header' %>
-  <%- t 'span', 'partnersPage.content' %>
+  <% for partner in partners: %>
+    <div class="section">
+      <% try imgSrc = t "partnersPage.partners.#{ partner }.image" %>
+      <% if imgSrc: %><figure><%- t 'img.no-shadow', '', src: imgSrc %></figure><% end %>
+      <div>
+        <%- t 'h3', "partnersPage.partners.#{ partner }.name" %>
+        <%- t 'div', "partnersPage.partners.#{ partner }.description" %>
+      </div>
+    </div>
+  <% end %>
 </div>
