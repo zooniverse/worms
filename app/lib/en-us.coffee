@@ -161,7 +161,7 @@ module.exports =
         description:
           "<p>The CSC aims to be at the forefront of innovative biomedical research and in partnership with Imperial College London and others, to promote the translation of its research for maximal benefit. The institute trains and mentors the next generation of clinical and non-clinical scientists and strives to enhance the public's interest, understanding and trust in science.<p>"
       genie:
-        name: "Group of <em>C. Elegans</em> New Investigators in Europe"
+        name: "GENiE"
         image: "images/genie-logo.png"
         description:
           "<p>GENiE (Group of <em>C. elegans</em> New Investigators in Europe) is a network of more than 80 worm labs that aims to encourage interdisciplinary scientific communication, accelerate the spread of new nematode techniques, and improve the establishment of collaborations between European laboratories. Part of its mission is also to reach out to the public to improve understand of nematode biology and the use of <em>C. elegans</em> as a model organism in biomedical research.</p>"
