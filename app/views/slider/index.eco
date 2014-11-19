@@ -1,4 +1,19 @@
 <% t = require 't7e' %>
+<% { formatNumber } = require '../../lib/utils' %>
+
+<div class="container">
+  <div class="bsw-promotion">
+    <h2>British Science Week</h2>
+    <div class="current-progress-numbers">
+      <span id="current-progress-number">-</span> of
+      <span id="desired-classifications"><%- formatNumber @desiredClassifications %></span>
+      to our goal.
+    </div>
+    <div class="progress-bar">
+      <div class="current-progress" id="current-progress"></div>
+    </div>
+  </div>
+</div>
 
 <div id="slider" class="section-container">
 
