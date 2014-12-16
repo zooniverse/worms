@@ -25,7 +25,7 @@ class Home extends BaseController
     Api.current.get '/projects/worms', (project) =>
       progress = project.classification_count - PROGRESS_BAR_STARTING_POINT
       percentComplete = progress / DESIRED_CLASSIFICATIONS * 100
-      @currentProgress.width percentComplete
+      @currentProgress.css 'width': "#{percentComplete}%"
       @currentProgressNumber.html formatNumber Math.max(progress, 0)
 
     @delay =>
