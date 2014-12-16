@@ -15,7 +15,7 @@ $reset-width = 150px
   width: $reset-width
   z-index: 1
 
-$slider-height = 500px
+$slider-height = 750px
 
 .stack > .slider
   height: $slider-height
@@ -34,11 +34,27 @@ $slider-height = 500px
     max-width: 600px
 
   .current-progress
+    background: white
     border-radius: 10px
     height: 20px 
+    transition: width 0.3s ease-in-out
+    width: 0
 
   .current-progress-numbers
-    margin: 5px 0
+    margin: 7px 0
+
+  .promotion-description
+    margin: 20px auto
+    max-width: 600px
+    text-align: center
+
+    img
+      margin: 10px
+      max-height: 100px
+
+    .sponsored-by
+      font-size: 12px
+
 
   @media screen and (max-width: 1000px)
     padding-bottom: 200px !important
@@ -58,7 +74,7 @@ $slider-height = 500px
     background-repeat: no-repeat
     border: 0
     color: #fff
-    height: $slider-height
+    height: $slider-height + 300px
     opacity: 0.35
     position: absolute
     transition: all 0.2s ease-in-out
