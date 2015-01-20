@@ -27,8 +27,14 @@
       padding: 5px 10px
       text-shadow: none
 
+      span
+        pointer-events: none
+
       &.active
         background: #fff
+
+      &:not(.active)
+        cursor: pointer
 
       &:hover
         box-shadow: 0 0 5px rgba(black, 0.5)
