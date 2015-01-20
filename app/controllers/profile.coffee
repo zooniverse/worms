@@ -9,7 +9,7 @@ class Profile extends BaseController
   template: require '../views/profile'
 
   elements:
-    '#zooniverse-default-profile': 'zooniverseDefailtProfile'
+    '#zooniverse-default-profile': 'zooniverseDefaultProfile'
 
   constructor: ->
     super
@@ -18,6 +18,7 @@ class Profile extends BaseController
     @render()
 
     User.on 'change', @render
+    User.on 'fetch', @onUserFetch
 
   render: =>
     @html @template
@@ -25,18 +26,10 @@ class Profile extends BaseController
       format: @formatNumber
 
     setTimeout =>
-      @zooniverseDefailtProfile.append @zooProfile.el
+      @zooniverseDefaultProfile?.append @zooProfile.el
 
   active: =>
     super
-    @el.css 'opacity', '0.5'
-
-    @loading = new Spinner().spin @el.get(0)
-
-    User.fetch().done =>
-      @el.css 'opacity', '1'
-      @loading.stop()
-      @render()
 
   formatNumber: (n) ->
     return n unless n
