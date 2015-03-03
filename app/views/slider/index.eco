@@ -13,7 +13,7 @@
       <div class="current-progress" id="current-progress"></div>
     </div>
     <div class="promotion-description">
-      <img src="./images/bsw.png">
+      <a href="http://www.britishscienceassociation.org/"><img src="./images/bsw.png"></a>
       <div class="sponsored-by">Sponsored by the <a href="http://www.britishscienceassociation.org/" target="_blank">British Science Association</a></div>
     </div>
   </div>

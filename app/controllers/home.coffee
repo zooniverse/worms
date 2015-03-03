@@ -3,7 +3,7 @@ Api = require 'zooniverse/lib/api'
 require '../lib/carousel'
 { formatNumber } = require '../lib/utils'
 
-PROGRESS_BAR_STARTING_POINT = 214653
+PROGRESS_BAR_STARTING_POINT = 292157
 DESIRED_CLASSIFICATIONS = 100000
 
 class Home extends BaseController
