@@ -4,6 +4,7 @@
 <div class="container">
   <div class="bsw-promotion">
     <h2>British Science Week</h2>
+    <p>We completed our first goal of 100,000 classifications! Let's see if we can get to 200,000!</p>
     <div class="current-progress-numbers">
       <span id="current-progress-number">-</span> of
       <span id="desired-classifications"><%- formatNumber @desiredClassifications %></span>

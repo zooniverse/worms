@@ -4,7 +4,7 @@ require '../lib/carousel'
 { formatNumber } = require '../lib/utils'
 
 PROGRESS_BAR_STARTING_POINT = 292157
-DESIRED_CLASSIFICATIONS = 100000
+DESIRED_CLASSIFICATIONS = 200000
 
 class Home extends BaseController
   className: 'slider'
