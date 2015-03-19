@@ -14,8 +14,9 @@
   },
   "scripts": {
     "start": "haw serve",
-    "deploy-to-staging": "haw build ./build --force && publisssh ./build demo.zooniverse.org/worms && rm -rf ./build",
-    "deploy-to-production": "npm run deploy-locale && haw build && publisssh ./build zooniverse-static/www.wormwatchlab.org && rm -rf ./build",
+    "deploy-to-demo": "haw build ./build --force && publisssh ./build demo.zooniverse.org/worms && rm -rf ./build",
+    "deploy-to-staging": "haw build && publisssh ./build zooniverse-static/www.wormwatchlab.org/staging && rm -rf ./build",
+    "deploy-to-production": "npm run deploy-locale && haw build && publisssh ./build zooniverse-static/www.wormwatchlab.org/ && rm -rf ./build",
     "deploy-locale": "seed-translation --project worms --env production",
     "deploy": "npm run deploy-to-production"
   }
