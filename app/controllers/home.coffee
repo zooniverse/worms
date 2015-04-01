@@ -1,32 +1,36 @@
 BaseController = require './base-controller'
 Api = require 'zooniverse/lib/api'
 require '../lib/carousel'
-{ formatNumber } = require '../lib/utils'
-
-PROGRESS_BAR_STARTING_POINT = 292157
-DESIRED_CLASSIFICATIONS = 200000
+ProjectStats = require './project-stats'
 
 class Home extends BaseController
   className: 'slider'
   template: require '../views/slider'
 
-  desiredClassifications: DESIRED_CLASSIFICATIONS
-  progressBarStartingPoint: PROGRESS_BAR_STARTING_POINT
-
   elements:
     '#slider': 'slider'
-    '#current-progress': 'currentProgress'
-    '#current-progress-number': 'currentProgressNumber'
 
   constructor: ->
     super
     @html @template @
 
-    Api.current.get '/projects/worms', (project) =>
-      progress = project.classification_count - PROGRESS_BAR_STARTING_POINT
-      percentComplete = progress / DESIRED_CLASSIFICATIONS * 100
-      @currentProgress.css 'width': "#{percentComplete}%"
-      @currentProgressNumber.html formatNumber Math.max(progress, 0)
+    projectStats = new ProjectStats
+    @el.append projectStats.el
+
+    projectFetch = $.getJSON "https://api.zooniverse.org/projects/worms"
+    statusFetch = $.getJSON "https://api.zooniverse.org/projects/worms/status?status_type=subjects"
+
+    $.when(projectFetch, statusFetch).done (projectResult, statusResult) =>
+      return unless projectResult[1] == 'success' && statusResult[1] == 'success'
+
+      projectStats.classificationCount = projectResult[0].classification_count
+      projectStats.completeCount = projectResult[0].complete_count
+      projectStats.userCount = projectResult[0].user_count
+      projectStats.subjectCount = statusResult[0].reduce (p, v) ->
+        p + v.count
+      , 0
+
+      projectStats.render()
 
     @delay =>
       @slider.carouFredSel

@@ -15,7 +15,7 @@ $reset-width = 150px
   width: $reset-width
   z-index: 1
 
-$slider-height = 750px
+$slider-height = 650px
 
 .stack > .slider
   height: $slider-height
@@ -23,38 +23,24 @@ $slider-height = 750px
   overflow: hidden
   width: 100%
 
-  .bsw-promotion
-    margin: 0 0 30px 0
-    text-align: center
-
-  .progress-bar
-    background: rgba(white, 0.3)
-    border-radius: 10px
+  .stats-container
+    border-bottom: 1px solid rgba(white, 0.4)
+    border-top: 1px solid rgba(white, 0.4)
+    display: flex
+    justify-content: space-around
     margin: 0 auto
-    max-width: 600px
+    max-width: 1000px
+    padding: 1em 0
 
-  .current-progress
-    background: white
-    border-radius: 10px
-    height: 20px 
-    transition: width 0.3s ease-in-out
-    width: 0
+    .stat-container
+      text-align: center
 
-  .current-progress-numbers
-    margin: 7px 0
+      .stat-label
+        font-weight: 300
 
-  .promotion-description
-    margin: 20px auto
-    max-width: 600px
-    text-align: center
-
-    img
-      margin: 10px
-      max-height: 100px
-
-    .sponsored-by
-      font-size: 12px
-
+      .stat-value
+        font-size: 36px
+        font-weight: 300
 
   @media screen and (max-width: 1000px)
     padding-bottom: 200px !important
@@ -74,7 +60,7 @@ $slider-height = 750px
     background-repeat: no-repeat
     border: 0
     color: #fff
-    height: $slider-height + 300px
+    height: $slider-height
     opacity: 0.35
     position: absolute
     transition: all 0.2s ease-in-out

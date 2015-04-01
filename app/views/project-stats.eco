@@ -1,0 +1,28 @@
+<% { formatNumber } = require '../lib/utils' %>
+
+<div class="stats-container">
+  <div class="stat-container">
+    <div class="stat-value" id="classification-count">
+      <%- formatNumber(@classificationCount) || '-' %>
+    </div>
+    <div class="stat-label">Classifications</div>
+  </div>
+  <div class="stat-container">
+    <div class="stat-value" id="complete-count">
+      <%- formatNumber(@completeCount) || '-' %>
+    </div>
+    <div class="stat-label">Completed Videos</div>
+  </div>
+  <div class="stat-container">
+    <div class="stat-value" id="user-count">
+      <%- formatNumber(@userCount) || '-' %>
+    </div>
+    <div class="stat-label">Volunteers</div>
+  </div>
+  <div class="stat-container">
+    <div class="stat-value" id="subject-count">
+      <%- formatNumber(@subjectCount) || '-' %>
+    </div>
+    <div class="stat-label">Videos</div>
+  </div>
+</div>
