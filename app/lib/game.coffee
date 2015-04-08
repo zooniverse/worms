@@ -31,7 +31,7 @@ class Game extends EventEmitter
     if Subject.current.classification_count > 0 and Subject.current.metadata.timings?
       previousGame = _(Subject.current.metadata.timings).shuffle()[0]
       
-      unless previousGame.name is 'Anonymous'
+      unless previousGame.name is 'Anonymous' || previousGame.times.length > 15
         for time in previousGame.times
           @teamMateTimes.push { used: false, time: parseInt time }
         @otherPlayer = previousGame.name
