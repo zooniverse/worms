@@ -1,0 +1,49 @@
+<% t = require 't7e' %>
+<% { formatNumber } = require '../../lib/utils' %>
+
+<div class="hero">
+  <div class="hero-title">Worm Watch Lab</div>
+
+  <div class="tagline-container">
+    <%- t 'h2', 'homePage.slides.first.header' %>
+    <%- t 'p', 'homePage.slides.first.text' %>
+  </div>
+
+  <div class="call-to-actions">
+    <%- t 'a.big-button', 'homePage.callToAction', href: '#/classify', id: 'classify-button' %>
+  </div>
+
+  <!-- <div class="sponsors">
+    <a href="http://www.mrc.ac.uk/mrf"><img src="images/mrc-logo.png"></a>
+    <%- t 'figcaption', 'homePage.sponsorCredit' %>
+  </div> -->
+</div>
+
+<div id="stats-container"></div>
+
+<div class="zebra-container">
+  <div class="zebra-stripe">
+    <div class="details-container">
+      <div class="image-container">
+        <img class="genes" src="images/genes.png">
+      </div>
+    </div>
+
+    <div class="text-container">
+      <%- t 'h1', 'homePage.slides.second.header' %>
+      <%- t 'p', 'homePage.slides.second.text' %>
+    </div>
+  </div>
+
+  <div class="zebra-stripe reverse">
+    <div class="details-container">
+      <div class="image-container">
+        <img class="genes rotated" src="images/genes.png">
+      </div>
+    </div>
+    <div class="text-container">
+      <%- t 'h1.third.header', 'homePage.slides.third.header' %>
+      <%- t 'p', 'homePage.slides.third.text' %>
+    </div>
+  </div>
+</div>

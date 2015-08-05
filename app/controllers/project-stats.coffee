@@ -5,7 +5,6 @@ class ProjectStats extends BaseController
   template: require '../views/project-stats'
 
   render: ->
-    console.log @
     @html @template @
 
 module.exports = ProjectStats

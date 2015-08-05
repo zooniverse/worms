@@ -1,0 +1,59 @@
+
+.stack > .home
+  .hero
+    align-items: center
+    display: flex
+    flex-direction: column
+    padding: 3rem 0
+    text-align: center
+
+    .hero-title
+      @extends h1
+      font-family: 'Cabin', sans-serif
+      font-size: 3em
+      font-weight: 700
+      text-transform: uppercase
+
+    .tagline-container
+      max-width: 600px
+
+  .zebra-container
+    display: flex
+    flex-direction: column
+
+  .zebra-stripe
+    display: flex
+    margin: 0 auto
+    max-width: 800px
+    padding: 4rem 1rem
+
+    .details-container
+      width: 42%
+
+    .text-container
+      width: 58%
+
+    &.reverse
+      flex-direction: row-reverse
+
+  .stats-container
+    border-bottom: 1px solid rgba(white, 0.4)
+    border-top: 1px solid rgba(white, 0.4)
+    display: flex
+    justify-content: space-around
+    margin: 0 auto
+    max-width: 1000px
+    padding: 1em 0
+
+    > *
+      text-shadow: 0 1px 0 #0089c8
+
+    .stat-container
+      text-align: center
+
+      .stat-label
+        font-weight: 300
+
+      .stat-value
+        font-size: 36px
+        font-weight: 300

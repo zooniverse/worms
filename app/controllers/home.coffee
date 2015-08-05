@@ -1,21 +1,20 @@
 BaseController = require './base-controller'
 Api = require 'zooniverse/lib/api'
-require '../lib/carousel'
 ProjectStats = require './project-stats'
 
 class Home extends BaseController
-  className: 'slider'
-  template: require '../views/slider'
+  className: 'home'
+  template: require '../views/pages/home'
 
   elements:
-    '#slider': 'slider'
+    '#stats-container': 'statsContainer'
 
   constructor: ->
     super
     @html @template @
 
     projectStats = new ProjectStats
-    @el.append projectStats.el
+    @statsContainer.append projectStats.el
 
     projectFetch = $.getJSON "https://api.zooniverse.org/projects/worms"
     statusFetch = $.getJSON "https://api.zooniverse.org/projects/worms/status?status_type=subjects"
@@ -31,27 +30,5 @@ class Home extends BaseController
       , 0
 
       projectStats.render()
-
-    @delay =>
-      @slider.carouFredSel
-        height: 500
-        width: '100%'
-        items: 1
-        prev: '#back'
-        next: '#forward'
-        auto:
-          play: true
-          timeoutDuration: 5000
-
-  activate: =>
-    super
-    setTimeout =>
-      @slider.trigger 'updateSizes'
-      @slider.trigger 'play', true
-    , 100
-
-  deactivate: =>
-    super
-    @slider.trigger 'stop'
 
 module.exports = Home

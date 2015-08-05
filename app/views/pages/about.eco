@@ -1,6 +1,5 @@
 <% t = require 't7e' %>
 
 <div class="right full-width body-copy">
-  <%# t 'h1', 'aboutPage.header' %>
   <%- t 'span', 'aboutPage.content' %>
 </div>
