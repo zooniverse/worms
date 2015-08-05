@@ -5,6 +5,7 @@ Subject = require 'zooniverse/models/subject'
 User = require 'zooniverse/models/user'
 
 Game = require '../../lib/game'
+{ showOutOfDataMessage } = require '../../lib/flags'
 
 BaseController = require '../base-controller'
 
@@ -14,7 +15,6 @@ Announcer = require './announcer'
 Details = require './details'
 Stats = require './stats'
 Video = require './video'
-# Guide = require './guide'
 
 { Tutorial } = require 'zootorial'
 translate = require 't7e'
@@ -39,6 +39,11 @@ class Classifier extends BaseController
 
   constructor: ->
     super
+
+    if showOutOfDataMessage
+      @html require('../../views/out-of-data')()
+      return
+
     @html @template()
     $(document).keydown @onKeyDown
 
@@ -112,7 +117,7 @@ class Classifier extends BaseController
   activate: =>
     super
 
-    @startSiteIntro()
+    @startSiteIntro() unless showOutOfDataMessage
 
   makeFavorite: =>
     @classification.favorite = true if @classification?
@@ -199,6 +204,5 @@ class Classifier extends BaseController
   onScrollUp: =>
     $('html, body').animate
       scrollTop: $('html, body').offset().top, 500
-
 
 module.exports = Classifier

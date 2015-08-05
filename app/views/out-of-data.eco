@@ -1,0 +1,23 @@
+<div class="out-of-data">
+  <h3>We’re done for now, but we still need you!</h3>
+  <p>Thanks to our volunteers, we’ve currently classified all of our available worm videos. More footage is coming soon!</p>
+  <p>In the meantime, if you’d like to keep exploring microscopic worlds, please visit one of our other Zooniverse projects, for instance:</p>
+
+  <div class="alternative-projects">
+    <div class="project">
+      <a href="http://www.planktonportal.org">
+        <img src="https://panoptes-uploads.zooniverse.org/production/project_avatar/420b2e5e-3181-400e-8e09-3c92849c8863.jpeg" alt="Plankton Portal"><br>
+        Plankton Portal
+      </a>
+    </div>
+
+    <div class="project">
+      <a href="http://www.cyclonecenter.org">
+        <img src="https://panoptes-uploads.zooniverse.org/production/project_avatar/443eb5a0-1053-431a-b9fb-648c507423cd.jpeg" alt="Cyclone Center" /><br>
+        Cyclone Center
+      </a>
+    </div>
+  </div>
+
+  <p>Or choose from dozens of other projects at <a href="http://www.zooniverse.org">zooniverse.org</a>!</p>
+</div>

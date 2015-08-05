@@ -1,6 +1,7 @@
 <% t = require 't7e' %>
 <% { formatNumber } = require '../../lib/utils' %>
-
+<% { showOutOfDataMessage } = require '../../lib/flags' %>
+<% console.log showOutOfDataMessage %>
 <div class="hero">
   <div class="hero-title">Worm Watch Lab</div>
 
@@ -9,14 +10,19 @@
     <%- t 'p', 'homePage.slides.first.text' %>
   </div>
 
-  <div class="call-to-actions">
-    <%- t 'a.big-button', 'homePage.callToAction', href: '#/classify', id: 'classify-button' %>
-  </div>
+  <% unless showOutOfDataMessage: %>
+    <div class="call-to-actions">
+      <%- t 'a.big-button', 'homePage.callToAction', href: '#/classify', id: 'classify-button' %>
+    </div>
 
-  <!-- <div class="sponsors">
-    <a href="http://www.mrc.ac.uk/mrf"><img src="images/mrc-logo.png"></a>
-    <%- t 'figcaption', 'homePage.sponsorCredit' %>
-  </div> -->
+    <!-- <div class="sponsors">
+      <a href="http://www.mrc.ac.uk/mrf"><img src="images/mrc-logo.png"></a>
+      <%- t 'figcaption', 'homePage.sponsorCredit' %>
+    </div> -->
+  <% else: %>
+    <%- require('../out-of-data')() %>
+  <% end %>
+
 </div>
 
 <div id="stats-container"></div>
