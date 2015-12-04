@@ -18,7 +18,10 @@ User = require 'zooniverse/models/user'
 Footer = require 'zooniverse/controllers/footer'
 TopBar = require 'zooniverse/controllers/top-bar'
 
-new Api project: 'worms'
+api = if window.location.hostname is 'www.wormwatchlab.org'
+  new zooniverse.Api project: 'worms', host: 'http://www.wormwatchlab.org', path: '/_ouroboros_api/proxy'
+else
+  new zooniverse.Api project: 'worms'
 
 _V_.options.flash.swf = 'video/video-js.swf'
 
