@@ -1,2 +1,2 @@
 module.exports =
-  showOutOfDataMessage: true
+  showOutOfDataMessage: false
