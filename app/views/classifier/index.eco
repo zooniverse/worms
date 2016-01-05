@@ -1,5 +1,8 @@
 <% t = require 't7e' %>
-
+<div>
+  <p>All of the current data in the project has been classified, and we will soon be adding new data.<br>
+  In the meantime, if you still want to try it out, get started below.</p>
+</div>
 <div class="left"></div>
 <div class="right"></div>
 <%- t 'div.field-guide', 'guide.content' %>

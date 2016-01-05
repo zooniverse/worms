@@ -12,12 +12,13 @@
 
   <% unless showOutOfDataMessage: %>
     <div class="call-to-actions">
+      <p>All of the current data in the project has been classified, and we will soon be adding more. In the meantime, if you still want to try it out,</p>
       <%- t 'a.big-button', 'homePage.callToAction', href: '#/classify', id: 'classify-button' %>
     </div>
 
     <!-- <div class="sponsors">
       <a href="http://www.mrc.ac.uk/mrf"><img src="images/mrc-logo.png"></a>
-      <%- t 'figcaption', 'homePage.sponsorCredit' %>
+      <%# t 'figcaption', 'homePage.sponsorCredit' %>
     </div> -->
   <% else: %>
     <%- require('../out-of-data')() %>
