@@ -81,17 +81,17 @@ module.exports =
         <p>When a worm lays an egg on these videos, it appears as a small, dark bulge that pops out suddenly around the middle of its body (which is marked here by a red dot). Sometimes, a worm will lay multiple eggs at once, or several in rapid succession.</p>
         <figure class="video-container">
           <div class="overlay"></div>
-          <video id="guide-video-one" class="video-js vjs-default-skin" poster="http://www.wormwatchlab.org/subjects/51b9c2122d5d3ad242007481.jpg" width="auto" height="auto" controls>
-            <source src="http://www.wormwatchlab.org/subjects/51b9c2122d5d3ad242007481.mp4" type="video/mp4">
+          <video id="guide-video-one" class="video-js vjs-default-skin" poster="https://www.wormwatchlab.org/subjects/51b9c2122d5d3ad242007481.jpg" width="auto" height="auto" controls>
+            <source src="https://www.wormwatchlab.org/subjects/51b9c2122d5d3ad242007481.mp4" type="video/mp4">
           </video>
-          <figcaption>Worm laying one egg at 0:03.<br><a href="http://talk.wormwatchlab.org/#/subjects/AWS0000n0c" target="_blank">View Talk video source.</a></figcaption>
+          <figcaption>Worm laying one egg at 0:03.<br><a href="https://talk.wormwatchlab.org/#/subjects/AWS0000n0c" target="_blank">View Talk video source.</a></figcaption>
         </figure>
         <figure class="video-container">
           <div class="overlay"></div>
-          <video id="guide-video-two" class="video-js vjs-default-skin" poster="http://www.wormwatchlab.org/subjects/51b7af002d5d3ad242003a73.jpg" width="auto" height="auto" controls>
-            <source src="http://www.wormwatchlab.org/subjects/51b7af002d5d3ad242003a73.mp4" type="video/mp4">
+          <video id="guide-video-two" class="video-js vjs-default-skin" poster="https://www.wormwatchlab.org/subjects/51b7af002d5d3ad242003a73.jpg" width="auto" height="auto" controls>
+            <source src="https://www.wormwatchlab.org/subjects/51b7af002d5d3ad242003a73.mp4" type="video/mp4">
           </video>
-          <figcaption>Worm laying multiple eggs at 0:03.<br><a href="http://talk.wormwatchlab.org/#/subjects/AWS0000bjo" target="_blank">View Talk video source.</a></figcaption>
+          <figcaption>Worm laying multiple eggs at 0:03.<br><a href="https://talk.wormwatchlab.org/#/subjects/AWS0000bjo" target="_blank">View Talk video source.</a></figcaption>
         </figure>
       </section>
       <section>

@@ -19,7 +19,7 @@ Footer = require 'zooniverse/controllers/footer'
 TopBar = require 'zooniverse/controllers/top-bar'
 
 api = if window.location.hostname is 'www.wormwatchlab.org'
-  new zooniverse.Api project: 'worms', host: 'http://www.wormwatchlab.org', path: '/_ouroboros_api/proxy'
+  new zooniverse.Api project: 'worms', host: 'https://www.wormwatchlab.org', path: '/_ouroboros_api/proxy'
 else
   new zooniverse.Api project: 'worms'
 

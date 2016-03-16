@@ -8,7 +8,7 @@
   <li class="about"><a href="#/about"><%- t 'span', 'navigation.about' %></a></li>
   <li class="team"><a href="#/team"><%- t 'span', 'navigation.team' %></a></li>
   <li class="partners"><a href="#/partners"><%- t 'span', 'navigation.partners' %></a></li>
-  <li class="discuss"><a href="http://talk.wormwatchlab.org"><%- t 'span', 'navigation.discuss' %></a></li>
+  <li class="discuss"><a href="https://talk.wormwatchlab.org"><%- t 'span', 'navigation.discuss' %></a></li>
   <li class="blog"><a href="http://blog.wormwatchlab.org/"><%- t 'span', 'navigation.blog' %></a></li>
   <li class="profile"><a href="#/profile"><%- t 'span', 'navigation.profile' %></a></li>
 </ul>
