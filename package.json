@@ -1,16 +1,19 @@
 {
   "name": "worms",
   "version": "0.0.1",
+  "engines": {
+    "node": "0.10.x"
+  },
   "dependencies": {
-    "spine": "~1.1.0",
-    "zooniverse": "~0.7.1",
     "haw": "~0.2.15",
     "publisssh": "~0.2.2",
-    "underscore": "~1.5.2",
-    "zootorial": "~0.3.6",
-    "t7e": "~0.2.3",
+    "slide-tutorial": "~0.0.3",
+    "spine": "~1.1.0",
+    "t7e": "~0.4.0",
     "translator-seed": "~0.1.1",
-    "slide-tutorial": "~0.0.3"
+    "underscore": "~1.5.2",
+    "zooniverse": "~0.7.1",
+    "zootorial": "~0.3.6"
   },
   "scripts": {
     "start": "haw serve",
