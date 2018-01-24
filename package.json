@@ -2,11 +2,11 @@
   "name": "worms",
   "version": "0.0.1",
   "engines": {
-    "node": "0.10.x"
+    "node": "0.12.x"
   },
   "dependencies": {
     "haw": "~0.2.15",
-    "publisssh": "~0.2.2",
+    "publisssh": "~1.1.0",
     "slide-tutorial": "~0.0.3",
     "spine": "~1.1.0",
     "t7e": "~0.4.0",
@@ -18,8 +18,8 @@
   "scripts": {
     "start": "haw serve",
     "deploy-to-demo": "haw build ./build --force && publisssh ./build demo.zooniverse.org/worms && rm -rf ./build",
-    "deploy-to-staging": "haw build && publisssh ./build zooniverse-static/www.wormwatchlab.org/staging && rm -rf ./build",
-    "deploy-to-production": "npm run deploy-locale && haw build && publisssh ./build zooniverse-static/www.wormwatchlab.org/ && rm -rf ./build",
+    "deploy-to-staging": "haw build ./build --force && publisssh ./build zooniverse-static/www.wormwatchlab.org/staging --force && rm -rf ./build",
+    "deploy-to-production": "npm run deploy-locale && haw build ./build --force && publisssh ./build zooniverse-static/www.wormwatchlab.org/ --force && rm -rf ./build",
     "deploy-locale": "seed-translation --project worms --env production",
     "deploy": "npm run deploy-to-production"
   }
